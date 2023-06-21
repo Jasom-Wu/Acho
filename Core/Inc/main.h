@@ -69,10 +69,18 @@ void Error_Handler(void);
 #define BUSY_GPIO_Port GPIOA
 #define SPI_CS_Pin GPIO_PIN_4
 #define SPI_CS_GPIO_Port GPIOA
+#define VS_RST_Pin GPIO_PIN_12
+#define VS_RST_GPIO_Port GPIOB
 #define RST_Pin GPIO_PIN_6
 #define RST_GPIO_Port GPIOC
+#define VS_XDCS_Pin GPIO_PIN_7
+#define VS_XDCS_GPIO_Port GPIOC
 #define USB_EN_Pin GPIO_PIN_6
 #define USB_EN_GPIO_Port GPIOD
+#define VS_DREQ_Pin GPIO_PIN_8
+#define VS_DREQ_GPIO_Port GPIOB
+#define VS_XCS_Pin GPIO_PIN_9
+#define VS_XCS_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

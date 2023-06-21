@@ -16,6 +16,7 @@
   ******************************************************************************
   */
 	#include "bsp_ink_paper.h"
+    #include "fops.h"
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -26,6 +27,7 @@
 #include "usart.h"
 #include "usb_device.h"
 #include "gpio.h"
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -61,37 +63,7 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint32_t exf_showfree(uint8_t *drv)
-{
-	FATFS *fs1;
-	uint8_t res;
-    uint32_t fre_clust=0, fre_sect=0, tot_sect=0;
-    //得到磁盘信息及空闲簇数量
-    res = f_getfree((const TCHAR*)drv,(DWORD*)&fre_clust, &fs1);
-    if(res==0)
-	{											   
-	    tot_sect = (fs1->n_fatent - 2) * fs1->csize;//得到总扇区数
-	    fre_sect = fre_clust * fs1->csize;			//得到空闲扇区数	   
-#if _MAX_SS!=512
-		tot_sect*=fs1->ssize/512;
-		fre_sect*=fs1->ssize/512;
-#endif	  
-		if(tot_sect<20480)//总容量小于10M
-		{
-		    /* Print free space in unit of KB (assuming 512 bytes/sector) */
-		    printf("\r\n磁盘总容量%d KB\r\n"
-		           "可用空间:%d KB\r\n",
-		           tot_sect>>1,fre_sect>>1);
-		}else
-		{
-		    /* Print free space in unit of KB (assuming 512 bytes/sector) */
-		    printf("\r\n磁盘总容量:%d MB\r\n"
-		           "可用空间:%d MB\r\n",
-		           tot_sect>>11,fre_sect>>11);
-		}
-	}
-	return fre_sect;
-}
+
 /* USER CODE END 0 */
 
 /**
@@ -126,6 +98,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_SDIO_SD_Init();
   MX_FATFS_Init();
+  MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
     printf("%d",f_mount(&SDFatFS,SDPath,0));
     exf_showfree((uint8_t*)"0:");

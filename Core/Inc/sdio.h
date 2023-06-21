@@ -29,7 +29,7 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+extern SD_HandleTypeDef hsd;
 /* USER CODE END Includes */
 
 extern SD_HandleTypeDef hsd;

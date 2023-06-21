@@ -3,7 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Lib/CmBacktrace-1.4.1/demos/non_os/stm32f10x/Libraries/CMSIS_EWARM/CM3/DeviceSupport/ST/STM32F10x/startup/iar/startup_stm32f10x_md.s" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Lib/CmBacktrace-1.4.1/demos/non_os/stm32f10x/Libraries/CMSIS_EWARM/CM3/DeviceSupport/ST/STM32F10x/stm32f10x.h" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" charset="GBK" />
     <file url="mock:///cmsis_os.c" charset="UTF-8" />
   </component>
 </project>

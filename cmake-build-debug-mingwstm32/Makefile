@@ -5080,6 +5080,30 @@ User/Src/Img/me2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.s
 .PHONY : User/Src/Img/me2.c.s
 
+User/Src/bsp_delay.obj: User/Src/bsp_delay.c.obj
+.PHONY : User/Src/bsp_delay.obj
+
+# target to build an object file
+User/Src/bsp_delay.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj
+.PHONY : User/Src/bsp_delay.c.obj
+
+User/Src/bsp_delay.i: User/Src/bsp_delay.c.i
+.PHONY : User/Src/bsp_delay.i
+
+# target to preprocess a source file
+User/Src/bsp_delay.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.i
+.PHONY : User/Src/bsp_delay.c.i
+
+User/Src/bsp_delay.s: User/Src/bsp_delay.c.s
+.PHONY : User/Src/bsp_delay.s
+
+# target to generate assembly for a file
+User/Src/bsp_delay.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.s
+.PHONY : User/Src/bsp_delay.c.s
+
 User/Src/bsp_ink_paper.obj: User/Src/bsp_ink_paper.c.obj
 .PHONY : User/Src/bsp_ink_paper.obj
 
@@ -5127,6 +5151,102 @@ User/Src/bsp_key.s: User/Src/bsp_key.c.s
 User/Src/bsp_key.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.s
 .PHONY : User/Src/bsp_key.c.s
+
+User/Src/bsp_usart.obj: User/Src/bsp_usart.c.obj
+.PHONY : User/Src/bsp_usart.obj
+
+# target to build an object file
+User/Src/bsp_usart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj
+.PHONY : User/Src/bsp_usart.c.obj
+
+User/Src/bsp_usart.i: User/Src/bsp_usart.c.i
+.PHONY : User/Src/bsp_usart.i
+
+# target to preprocess a source file
+User/Src/bsp_usart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.i
+.PHONY : User/Src/bsp_usart.c.i
+
+User/Src/bsp_usart.s: User/Src/bsp_usart.c.s
+.PHONY : User/Src/bsp_usart.s
+
+# target to generate assembly for a file
+User/Src/bsp_usart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.s
+.PHONY : User/Src/bsp_usart.c.s
+
+User/Src/bsp_vs10xx.obj: User/Src/bsp_vs10xx.c.obj
+.PHONY : User/Src/bsp_vs10xx.obj
+
+# target to build an object file
+User/Src/bsp_vs10xx.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj
+.PHONY : User/Src/bsp_vs10xx.c.obj
+
+User/Src/bsp_vs10xx.i: User/Src/bsp_vs10xx.c.i
+.PHONY : User/Src/bsp_vs10xx.i
+
+# target to preprocess a source file
+User/Src/bsp_vs10xx.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.i
+.PHONY : User/Src/bsp_vs10xx.c.i
+
+User/Src/bsp_vs10xx.s: User/Src/bsp_vs10xx.c.s
+.PHONY : User/Src/bsp_vs10xx.s
+
+# target to generate assembly for a file
+User/Src/bsp_vs10xx.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.s
+.PHONY : User/Src/bsp_vs10xx.c.s
+
+User/Src/fops.obj: User/Src/fops.c.obj
+.PHONY : User/Src/fops.obj
+
+# target to build an object file
+User/Src/fops.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj
+.PHONY : User/Src/fops.c.obj
+
+User/Src/fops.i: User/Src/fops.c.i
+.PHONY : User/Src/fops.i
+
+# target to preprocess a source file
+User/Src/fops.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.i
+.PHONY : User/Src/fops.c.i
+
+User/Src/fops.s: User/Src/fops.c.s
+.PHONY : User/Src/fops.s
+
+# target to generate assembly for a file
+User/Src/fops.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.s
+.PHONY : User/Src/fops.c.s
+
+User/Src/recorder.obj: User/Src/recorder.c.obj
+.PHONY : User/Src/recorder.obj
+
+# target to build an object file
+User/Src/recorder.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj
+.PHONY : User/Src/recorder.c.obj
+
+User/Src/recorder.i: User/Src/recorder.c.i
+.PHONY : User/Src/recorder.i
+
+# target to preprocess a source file
+User/Src/recorder.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.i
+.PHONY : User/Src/recorder.c.i
+
+User/Src/recorder.s: User/Src/recorder.c.s
+.PHONY : User/Src/recorder.s
+
+# target to generate assembly for a file
+User/Src/recorder.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.s
+.PHONY : User/Src/recorder.c.s
 
 # Help Target
 help:
@@ -5756,12 +5876,27 @@ help:
 	@echo ... User/Src/Img/me2.obj
 	@echo ... User/Src/Img/me2.i
 	@echo ... User/Src/Img/me2.s
+	@echo ... User/Src/bsp_delay.obj
+	@echo ... User/Src/bsp_delay.i
+	@echo ... User/Src/bsp_delay.s
 	@echo ... User/Src/bsp_ink_paper.obj
 	@echo ... User/Src/bsp_ink_paper.i
 	@echo ... User/Src/bsp_ink_paper.s
 	@echo ... User/Src/bsp_key.obj
 	@echo ... User/Src/bsp_key.i
 	@echo ... User/Src/bsp_key.s
+	@echo ... User/Src/bsp_usart.obj
+	@echo ... User/Src/bsp_usart.i
+	@echo ... User/Src/bsp_usart.s
+	@echo ... User/Src/bsp_vs10xx.obj
+	@echo ... User/Src/bsp_vs10xx.i
+	@echo ... User/Src/bsp_vs10xx.s
+	@echo ... User/Src/fops.obj
+	@echo ... User/Src/fops.i
+	@echo ... User/Src/fops.s
+	@echo ... User/Src/recorder.obj
+	@echo ... User/Src/recorder.i
+	@echo ... User/Src/recorder.s
 .PHONY : help
 
 
