@@ -116,11 +116,11 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityAboveNormal, 0, 512);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityAboveNormal, 0, 1024);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of mainTask */
-  osThreadDef(mainTask, StartMainTask, osPriorityNormal, 0, 512);
+  osThreadDef(mainTask, StartMainTask, osPriorityNormal, 0, 1024);
   mainTaskHandle = osThreadCreate(osThread(mainTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -139,6 +139,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
+
   /* USER CODE BEGIN StartDefaultTask */
 	static portTickType PreviousWakeTime;
 	const portTickType TimeIncrement = pdMS_TO_TICKS(5);
@@ -292,22 +293,21 @@ void lv_example2(void)
 
 void lv_example3(void)
 {
-    taskENTER_CRITICAL();
-    lv_obj_t *img = lv_img_create(lv_scr_act());//不能写成lv_obj_create!!!不然会总线错误！呜呜呜这个小问题调了两天，特此记录qwq
-    //lv_obj_set_style_text_font(img,&lv_font_montserrat_18,0);
-    lv_img_set_src(img,"P:me2.bin");
-    lv_obj_center(img);
-    //lv_obj_t *label = lv_label_create(lv_scr_act());
-    taskEXIT_CRITICAL();
-    vTaskDelay(7000);
-    taskENTER_CRITICAL();
-    EPD_1N54_V2_FullClearToPartial();
-    lv_img_set_src(img,"P:me.bin");
-    taskEXIT_CRITICAL();
-    vTaskDelay(7000);
-    EPD_1N54_V2_FullClearToPartial();
+//    taskENTER_CRITICAL();
+//    lv_obj_t *img = lv_img_create(lv_scr_act());//不能写成lv_obj_create!!!不然会总线错误！呜呜呜这个小问题调了两天，特此记录qwq
+//    //lv_obj_set_style_text_font(img,&lv_font_montserrat_18,0);
+//    lv_img_set_src(img,"P:me2.bin");
+//    lv_obj_center(img);
+//    //lv_obj_t *label = lv_label_create(lv_scr_act());
+//    taskEXIT_CRITICAL();
+//    vTaskDelay(3000);
+//    taskENTER_CRITICAL();
+//    EPD_1N54_V2_FullClearToPartial();
+//    lv_img_set_src(img,"P:me.bin");
+//    taskEXIT_CRITICAL();
+//    vTaskDelay(7000);
+//    EPD_1N54_V2_FullClearToPartial();
     while(HAL_SD_GetState(&hsd)==HAL_SD_STATE_BUSY);
-    MX_USB_DEVICE_Init();
     HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_RESET);
 
 //    vTaskDelay(7000);

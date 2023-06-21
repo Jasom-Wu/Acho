@@ -194,7 +194,6 @@ int8_t STORAGE_GetCapacity_FS(uint8_t lun, uint32_t *block_num, uint16_t *block_
   /* USER CODE BEGIN 3 */
     HAL_SD_CardInfoTypeDef info;
     if(HAL_SD_GetCardState(&hsd) == HAL_SD_CARD_TRANSFER)
-
         HAL_SD_GetCardInfo(&hsd, &info);
     *block_num = info.LogBlockNbr;
     *block_size = info.LogBlockSize;
