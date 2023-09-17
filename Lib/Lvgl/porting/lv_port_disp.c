@@ -147,10 +147,10 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
             /*put_px(x, y, *color_p)*/
             Paint_SetPixel(x,y,*(uint8_t *)(color_p));
             color_p++;
-            if(color_p->full==0)
-            {
-                printf("ok");
-            }
+//            if(color_p->full==0)
+//            {
+//                printf("ok");
+//            }
         }
     }
 		if(disp_drv->draw_buf->flushing_last)//Custom_EPD_FillColor(area->x1,area->y1,area->x2,area->y2,BlackImage);

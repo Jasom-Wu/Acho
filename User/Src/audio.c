@@ -1,4 +1,4 @@
-#include "recorder.h"
+#include "audio.h"
 #include "bsp_delay.h"
 #include "bsp_usart.h"
 #include "bsp_vs10xx.h"
@@ -6,7 +6,8 @@
 #include "fops.h"
 #include "flac.h"
 #include "fatfs.h"
-
+__WaveHeader global_wavheader;//很显然是函数栈空间不足。要定义在函数外面
+uint8_t global_buff512[512] = {0};
 ///////////////////////////////移植映射修改区////////////////////////////////////////////
 static FIL *file = (FIL *) &SDFile;        //为file申请内存
 static FIL *ftemp = (FIL *) &SDFile;        //为ftemp申请内存
@@ -49,7 +50,7 @@ void recoder_wav_init(__WaveHeader *wavhead) //初始化WAV头
     wavhead->riff.Format = 0X45564157;    //"WAVE"
     wavhead->fmt.ChunkID = 0X20746D66;    //"fmt "
     wavhead->fmt.ChunkSize = 16;            //大小为16个字节
-    wavhead->fmt.AudioFormat = 0X01;        //0X01,表示PCM;0X01,表示IMA ADPCM
+    wavhead->fmt.AudioFormat = 0X01;        //0X01,表示PCM;0X11,表示IMA ADPCM
     wavhead->fmt.NumOfChannels = 1;        //单声道
     wavhead->fmt.SampleRate = 8000;        //8Khz采样率 采样速率
     wavhead->fmt.ByteRate = wavhead->fmt.SampleRate * 2;//16位,即2个字节
@@ -85,42 +86,39 @@ uint8_t audio_play(uint8_t *pname) {
     uint8_t res, rval = 0;
     uint16_t i = 0;
     UINT count;
-    if (rval == 0) {
-        //VS_WR_Cmd(SPI_MODE,0x4000);
-        VS_Restart_Play();                    //重启播放
-        VS_Set_All();                            //设置音量等信息
-        VS_Set_Vol(190);        //设置音量
-        VS_Reset_DecodeTime();    //复位解码时间
-        res = f_typetell(pname);                    //得到文件后缀
-        if (res == 0x4c)//如果是flac,加载patch
-        {
-            VS_Load_Patch((uint16_t *) vs1053b_patch, VS1053B_PATCHLEN);
-        }
-        res = f_open(fmp3, (const TCHAR *) pname, FA_READ);//打开文件
-        printf("%d", res);
-        if (res == 0)//打开成功.
-        {
-            VS_SPI_SpeedHigh();    //高速
-            decode_time = 0;
-            while (rval == 0) {
-                res = f_read(fmp3, data_buff, 4096, (UINT *) &count);//读出4096个字节
-                i = 0;
-                do//主播放循环
-                {
-                    if (VS_Send_MusicData(data_buff + i) == 0) { i += 32; }//给VS10XX发送音频数据
-                    else {
-                        decode_time = VS_Get_DecodeTime();
-                        printf("%d\n", decode_time);//显示播放时间
-                    }
-                } while (i < 4096);//循环发送4096个字节
-                if (count != 4096 || res != 0) {
-                    rval = 0;
-                    break;//读完了.
+    VS_Restart_Play();                    //重启播放
+    VS_Set_All();                            //设置音量等信息
+    VS_Set_Vol(190);        //设置音量
+    VS_Reset_DecodeTime();    //复位解码时间
+    res = f_typetell(pname);                    //得到文件后缀
+//    if (res == 0x4c)//如果是flac,加载patch
+//    {
+//        VS_Load_Patch((uint16_t *) vs1053b_patch, VS1053B_PATCHLEN);
+//    }
+    res = f_open(fmp3, (const TCHAR *) pname, FA_READ);//打开文件
+    printf("%d", res);
+    if (res == 0)//打开成功.
+    {
+        VS_SPI_SpeedHigh();    //高速
+        decode_time = 0;
+        while (rval == 0) {
+            res = f_read(fmp3, data_buff, 4096, (UINT *) &count);//读出4096个字节
+            i = 0;
+            do//主播放循环
+            {
+                if (VS_Send_MusicData(data_buff + i) == 0) { i += 32; }//给VS10XX发送音频数据
+                else {
+                    decode_time = VS_Get_DecodeTime();
+                    printf("%d\n", decode_time);//显示播放时间
                 }
+            } while (i < 4096);//循环发送4096个字节
+            if (count != 4096 || res != 0) {
+                rval = 0;
+                break;//读完了.
             }
-            f_close(fmp3);
-        } else rval = 0XFF;//出现错误
-    }
+        }
+        f_close(fmp3);
+    } else rval = 0XFF;//出现错误
     return rval;
 }
 
@@ -129,9 +127,8 @@ uint8_t audio_play(uint8_t *pname) {
 	变量：
 				agc 录音增益倍数
 */
-__WaveHeader wavheader;//很显然是函数栈空间不足。要定义在函数外面
-uint8_t recbuff[512] = {0};
-uint8_t pname[30] = {0};//申请30个字节内存,类似"0:RECORDER/REC00001.wav"
+
+
 uint8_t audio_recorde(float agc, uint32_t sec) {
     FIL *f_rec = file;//不能将fil文件定义在这里，否则栈溢出（除非malloc栈空间很足），应该定义在函数外边。
     uint8_t rval = 0;
@@ -141,20 +138,19 @@ uint8_t audio_recorde(float agc, uint32_t sec) {
     uint16_t w;
     uint16_t idx = 0;
     UINT count;
-    if (rval == 0)                                    //内存申请OK
+    uint8_t pname[30] = {0};//申请30个字节内存,类似"0:RECORDER/REC00001.wav"
+
+    recoder_enter_rec_mode(512 * agc);
+    while (VS_RD_Reg(SPI_HDAT1) >> 8);            //等到buf 较为空闲再开始
+    pname[0] = 0;                                //pname没有任何文件名
+    recoder_new_pathname(pname);            //得到新的名字
+    recoder_wav_init(&global_wavheader);                //初始化wav数据
+    res = f_open(f_rec, (const TCHAR *) pname, FA_CREATE_ALWAYS | FA_WRITE);
+    if (res)            //文件创建失败
     {
-        recoder_enter_rec_mode(514 * agc);
-        while (VS_RD_Reg(SPI_HDAT1) >> 8);            //等到buf 较为空闲再开始
-        pname[0] = 0;                                //pname没有任何文件名
-        recoder_new_pathname(pname);            //得到新的名字
-        recoder_wav_init(&wavheader);                //初始化wav数据
-        res = f_open(f_rec, (const TCHAR *) pname, FA_CREATE_ALWAYS | FA_WRITE);
-        if (res)            //文件创建失败
-        {
-            printf("failed1");
-            rval = 0XFE;    //提示是否存在SD卡
-        } else res = f_write(f_rec, (const void *) &wavheader, sizeof(__WaveHeader), &count);//写入头数据
-    }
+        printf("failed1\n");
+        rval = 0XFE;    //提示是否存在SD卡
+    } else res = f_write(f_rec, (const void *) &global_wavheader, sizeof(__WaveHeader), &count);//写入头数据
     if (rval == 0) {
         while (recsec < sec) {
             w = VS_RD_Reg(SPI_HDAT1);
@@ -163,10 +159,10 @@ uint8_t audio_recorde(float agc, uint32_t sec) {
                 while (idx < 512)    //一次读取512字节
                 {
                     w = VS_RD_Reg(SPI_HDAT0);
-                    recbuff[idx++] = w & 0XFF;
-                    recbuff[idx++] = w >> 8;
+                    global_buff512[idx++] = w & 0XFF;
+                    global_buff512[idx++] = w >> 8;
                 }
-                res = f_write(f_rec, recbuff, 512, &count);//写入文件
+                res = f_write(f_rec, global_buff512, 512, &count);//写入文件
                 if (res) {
                     printf("err\r\n");
                     break;//写入出错.
@@ -176,16 +172,20 @@ uint8_t audio_recorde(float agc, uint32_t sec) {
             if (recsec != (sectorsize * 4 / 125))//录音时间显示
             {
                 recsec = sectorsize * 4 / 125;
-                printf("%d ", recsec);
+                printf("%d\n", recsec);
             }
         }
         if (res == 0) {
-            wavheader.riff.ChunkSize = sectorsize * 512 + 36;    //整个文件的大小-8;
-            wavheader.data.ChunkSize = sectorsize * 512;        //数据大小
-            f_lseek(f_rec, 0);                            //偏移到文件头.
-            f_write(f_rec, (const void *) &wavheader, sizeof(__WaveHeader), &count);//写入头数据
+            global_wavheader.riff.ChunkSize = sectorsize * 512 + 36;   //整个文件的大小-8;    sizeof(__WaveHeader)-8=36 bytes
+            global_wavheader.data.ChunkSize = sectorsize * 512;        //数据大小
+            f_lseek(f_rec, 0);                                  //偏移到文件头.
+            f_write(f_rec, (const void *) &global_wavheader, sizeof(__WaveHeader), &count);//写入头数据
             f_close(f_rec);
         }
+        uint16_t temp;
+        temp=VS_RD_Reg(SPI_MODE);	//读取SPI_MODE的内容
+        temp &= ~(1<<12);
+        VS_WR_Cmd(SPI_MODE,temp);
     }
     return rval;
 }

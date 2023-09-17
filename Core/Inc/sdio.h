@@ -29,10 +29,9 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-extern SD_HandleTypeDef hsd;
+
 /* USER CODE END Includes */
 
-extern SD_HandleTypeDef hsd;
 
 /* USER CODE BEGIN Private defines */
 
@@ -41,7 +40,7 @@ extern SD_HandleTypeDef hsd;
 void MX_SDIO_SD_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+extern SD_HandleTypeDef hsd;
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

@@ -8,7 +8,7 @@
 
 uint32_t exf_showfree(uint8_t *drv);
 void exf_mount(void);
-uint8_t exf_scan_files(DIR *dir,uint8_t * path);
+uint8_t exf_scan_files(DIR *dir, uint8_t *path, char **file_name);
 uint8_t exf_readdir(DIR *dir);
 uint8_t char_upper(uint8_t c);
 uint8_t f_typetell(uint8_t *fname);

@@ -270,6 +270,22 @@ CMakeFiles/Ink-Paper.elf.dir/Core/Src/freertos.c.obj: E:/WorkSpace/MyCodes/TI/ST
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/sdio.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/ffconf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/bsp_driver_sd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/App/fatfs.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/diskio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/audio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_vs10xx.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/spi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/gui_setup.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/fops.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
@@ -574,6 +590,12 @@ CMakeFiles/Ink-Paper.elf.dir/Core/Src/main.c.obj: E:/WorkSpace/MyCodes/TI/STM32/
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/ffconf.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/bsp_driver_sd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/audio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/simple_gpio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_vs10xx.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/spi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_delay.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/FreeRTOSConfig.h \
@@ -597,8 +619,6 @@ CMakeFiles/Ink-Paper.elf.dir/Core/Src/main.c.obj: E:/WorkSpace/MyCodes/TI/STM32/
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/sdio.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/spi.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/usart.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/USB_DEVICE/App/usb_device.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
@@ -21426,6 +21446,154 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.obj: E:/WorkSpace/MyCodes/TI/STM
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/basic/lv_theme_basic.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h
 
+CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/audio.c \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/audio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/simple_gpio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/stm32f1xx_hal_conf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/core_cm3.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdint.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_version.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_compiler.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_gcc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stddef.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_sdmmc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_delay.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_usart.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdio.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/newlib.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/config.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdarg.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_vs10xx.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/spi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/ffconf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/bsp_driver_sd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/fops.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/flac.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/App/fatfs.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/diskio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h
+
+CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/broker_app.c \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/broker_app.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_usart.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdio.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/newlib.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/config.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stddef.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdarg.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/usart.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/stm32f1xx_hal_conf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/core_cm3.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdint.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_version.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_compiler.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_gcc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_sdmmc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/App/fatfs.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/ffconf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/bsp_driver_sd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/diskio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/audio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/simple_gpio.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/string.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/strings.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/string.h
+
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_delay.c \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_delay.h \
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h \
@@ -21880,7 +22048,19 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj: E:/WorkSpace/MyCodes/TI/
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/spi.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_delay.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/usart.h
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdio.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/newlib.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/config.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdarg.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/stdio.h
 
 CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/fops.c \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/fops.h \
@@ -21950,20 +22130,14 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj: E:/WorkSpace/MyCodes/TI/STM32/
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/string.h \
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/strings.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/string.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/malloc.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/malloc.h
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/string.h
 
-CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/recorder.c \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/recorder.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/simple_gpio.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/stm32f1xx_hal_conf.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/core_cm3.h \
+CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/gui_setup.c \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/gui_setup.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_log.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h \
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdint.h \
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
@@ -21971,12 +22145,419 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj: E:/WorkSpace/MyCodes/TI/ST
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_kconfig.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/lv_conf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_timer.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdbool.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_mem.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stddef.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_log.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_types.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_ll.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_math.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_async.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_timer.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal_disp.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_color.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_math.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_types.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/string.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/newlib.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/config.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/strings.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_ll.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_timer.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal_indev.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal_tick.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_style.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_symbol_def.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_color.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_anim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_txt.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdarg.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_printf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_assert.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_bidi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_style_gen.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_types.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_color.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_assert.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_tree.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_pos.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_scroll.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_anim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_style.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_bidi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_style_gen.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_draw.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_style.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_txt.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_img_decoder.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_img_buf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_color.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_fs.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_types.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_img_cache.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_rect.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_blend.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_mask.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_math.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_label.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_bidi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_img.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_line.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_triangle.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_arc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_class.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_event.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_group.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_ll.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_group.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_indev.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal_indev.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_refr.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_disp.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_theme.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_theme.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font_loader.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font_fmt_txt.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_printf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_arc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btn.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_img.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_fs.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_label.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_symbol_def.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_txt.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_line.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_table.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_label.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_checkbox.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_bar.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_anim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btn.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_slider.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_bar.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btnmatrix.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_dropdown.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_label.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_roller.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_textarea.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_canvas.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_img.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_img.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_switch.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_api_map.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/lv_extra.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/lv_widgets.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/animimg/lv_animimg.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/calendar/lv_calendar.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btnmatrix.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/chart/lv_chart.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/keyboard/lv_keyboard.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btnmatrix.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/list/lv_list.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/layouts/flex/lv_flex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/msgbox/lv_msgbox.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/meter/lv_meter.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/spinbox/lv_spinbox.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/spinner/lv_spinner.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/tabview/lv_tabview.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/tileview/lv_tileview.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/win/lv_win.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/colorwheel/lv_colorwheel.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/led/lv_led.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/span/lv_span.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/layouts/lv_layouts.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/layouts/flex/lv_flex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/layouts/grid/lv_grid.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/lv_themes.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/default/lv_theme_default.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/mono/lv_theme_mono.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/basic/lv_theme_basic.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h
+
+CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.c \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_log.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdint.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_kconfig.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/lv_conf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_timer.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdbool.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_mem.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stddef.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_log.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_types.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_ll.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_math.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_async.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_timer.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal_disp.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_color.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_math.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_types.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/string.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/newlib.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/config.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/strings.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_ll.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_timer.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal_indev.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal_tick.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_style.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_symbol_def.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_color.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_anim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_txt.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdarg.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_printf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_assert.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_bidi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_style_gen.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_types.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_color.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_assert.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_tree.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_pos.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_scroll.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_anim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_style.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_bidi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_style_gen.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_draw.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_style.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_txt.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_img_decoder.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_img_buf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_color.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_area.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_fs.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_types.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_img_cache.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_rect.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_blend.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_mask.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_math.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_label.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_bidi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_img.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_line.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_triangle.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_arc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_class.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_event.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_group.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_ll.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_group.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_indev.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal_indev.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_refr.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_disp.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_theme.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_theme.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font_loader.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font_fmt_txt.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_printf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_arc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_conf_internal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btn.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_img.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_fs.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_label.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_symbol_def.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_txt.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_line.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_table.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_label.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_checkbox.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_bar.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/misc/lv_anim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btn.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_slider.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_bar.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btnmatrix.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_dropdown.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_label.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_roller.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_textarea.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_canvas.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_img.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw_img.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_switch.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lv_api_map.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/lv_extra.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/lv_widgets.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/animimg/lv_animimg.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/calendar/lv_calendar.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btnmatrix.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/chart/lv_chart.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/keyboard/lv_keyboard.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_btnmatrix.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/list/lv_list.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/layouts/flex/lv_flex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/msgbox/lv_msgbox.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/meter/lv_meter.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/spinbox/lv_spinbox.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/spinner/lv_spinner.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/tabview/lv_tabview.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/tileview/lv_tileview.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/win/lv_win.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/colorwheel/lv_colorwheel.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/led/lv_led.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/span/lv_span.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/lvgl.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/layouts/lv_layouts.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/layouts/flex/lv_flex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/layouts/grid/lv_grid.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/lv_themes.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/default/lv_theme_default.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/mono/lv_theme_mono.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/basic/lv_theme_basic.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/gui_setup.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdio.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/broker_app.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_usart.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/usart.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/stm32f1xx_hal_conf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/core_cm3.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_version.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_compiler.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_gcc.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stddef.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
@@ -21996,37 +22577,18 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj: E:/WorkSpace/MyCodes/TI/ST
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_delay.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_usart.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdio.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/newlib.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/config.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdarg.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_ansi.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
-  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_vs10xx.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/spi.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/App/fatfs.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/ffconf.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/bsp_driver_sd.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/fops.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/flac.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/App/fatfs.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/diskio.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/audio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/simple_gpio.h
 
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c:
@@ -22215,6 +22777,8 @@ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/draw/lv_draw.h:
 
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/audio.h:
+
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/hal/lv_hal_tick.h:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h:
@@ -22306,8 +22870,6 @@ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/layouts/
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_indev.h:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_refr.h:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/recorder.h:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_theme.h:
 
@@ -22579,27 +23141,11 @@ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/ST/STM32_USB_De
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/sdio.h:
 
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h:
 
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/gpio.c:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_table.c:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/main.c:
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.h:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/FATFS/Target/ffconf.h:
 
@@ -22621,6 +23167,28 @@ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj_tr
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/spi.h:
 
+E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_endian.h:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/gui_setup.h:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/gpio.c:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_table.c:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/main.c:
+
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/usart.h:
 
 E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/sched.h:
@@ -22638,8 +23206,6 @@ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font_m
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/calendar/lv_calendar.c:
 
 E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/types.h:
-
-E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_endian.h:
 
 E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h:
 
@@ -22797,6 +23363,8 @@ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/widgets/tileview/lv_tileview.c:
 
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/gui_setup.c:
+
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/font/lv_font_montserrat_10.c:
@@ -22875,8 +23443,6 @@ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_obj
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_roller.c:
 
-E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/malloc.h:
-
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_slider.c:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_switch.c:
@@ -22937,20 +23503,24 @@ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/USB_DEVICE/App/usbd_desc.c:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/USB_DEVICE/App/usbd_storage_if.c:
 
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/recorder.c:
-
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/USB_DEVICE/Target/usbd_conf.c:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/CustomFonts/custom_yaheiBold_26.c:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/Img/me2.c:
 
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_delay.c:
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/audio.c:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_usart.h:
 
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/flac.h:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/broker_app.c:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/broker_app.h:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_delay.c:
+
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/fops.c:
 
-E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/malloc.h:
-
-E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/flac.h:
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.c:

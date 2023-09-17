@@ -78,6 +78,8 @@ lv_obj_t * lv_list_add_btn(lv_obj_t * list, const char * icon, const char * txt)
     LV_LOG_INFO("begin")
     lv_obj_t * obj = lv_obj_class_create_obj(&lv_list_btn_class, list);
     lv_obj_class_init_obj(obj);
+//魔改了一下，貌似普通obj属性没有LV_STATE_FOCUSED属性
+//    lv_obj_t * obj = lv_label_create(list);
     lv_obj_set_size(obj, LV_PCT(100), LV_SIZE_CONTENT);
     lv_obj_set_flex_flow(obj, LV_FLEX_FLOW_ROW);
 

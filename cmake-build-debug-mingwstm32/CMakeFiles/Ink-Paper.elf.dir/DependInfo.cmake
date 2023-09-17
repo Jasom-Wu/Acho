@@ -42,6 +42,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/WaveShare1in54v2"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc"
+  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/WaveShare1in54v2/Fonts"
   )
 
@@ -253,13 +254,16 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/CustomFonts/custom_yahei_26.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_26.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_26.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/Img/me.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/Img/me2.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.obj.d"
+  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/audio.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj.d"
+  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/broker_app.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_delay.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_ink_paper.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_key.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_usart.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_vs10xx.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/fops.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj.d"
-  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/recorder.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj.d"
+  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/gui_setup.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj.d"
+  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.c" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj.d"
   )
 
 # Targets to which this target links.

@@ -77,6 +77,8 @@ void Error_Handler(void);
 #define VS_XDCS_GPIO_Port GPIOC
 #define USB_EN_Pin GPIO_PIN_6
 #define USB_EN_GPIO_Port GPIOD
+#define LED_BLUE_Pin GPIO_PIN_5
+#define LED_BLUE_GPIO_Port GPIOB
 #define VS_DREQ_Pin GPIO_PIN_8
 #define VS_DREQ_GPIO_Port GPIOB
 #define VS_XCS_Pin GPIO_PIN_9

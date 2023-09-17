@@ -2965,10 +2965,38 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.s"
 	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\Img\me2.c -o CMakeFiles\Ink-Paper.elf.dir\User\Src\Img\me2.c.s
 
+CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
+CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/audio.c
+CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\audio.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\audio.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\audio.c
+
+CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.i"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\audio.c > CMakeFiles\Ink-Paper.elf.dir\User\Src\audio.c.i
+
+CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.s"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\audio.c -o CMakeFiles\Ink-Paper.elf.dir\User\Src\audio.c.s
+
+CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
+CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/broker_app.c
+CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\broker_app.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\broker_app.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\broker_app.c
+
+CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.i"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\broker_app.c > CMakeFiles\Ink-Paper.elf.dir\User\Src\broker_app.c.i
+
+CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.s"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\broker_app.c -o CMakeFiles\Ink-Paper.elf.dir\User\Src\broker_app.c.s
+
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_delay.c
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj"
 	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_delay.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_delay.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\bsp_delay.c
 
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.i: cmake_force
@@ -2982,7 +3010,7 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.s: cmake_force
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_ink_paper.c
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj"
 	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_ink_paper.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_ink_paper.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\bsp_ink_paper.c
 
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.i: cmake_force
@@ -2996,7 +3024,7 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.s: cmake_force
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_key.c
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj"
 	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_key.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_key.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\bsp_key.c
 
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.i: cmake_force
@@ -3010,7 +3038,7 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.s: cmake_force
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_usart.c
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj"
 	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_usart.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_usart.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\bsp_usart.c
 
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.i: cmake_force
@@ -3024,7 +3052,7 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.s: cmake_force
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_vs10xx.c
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj"
 	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_vs10xx.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\bsp_vs10xx.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\bsp_vs10xx.c
 
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.i: cmake_force
@@ -3038,7 +3066,7 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.s: cmake_force
 CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
 CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/fops.c
 CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj"
 	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\fops.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\fops.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\fops.c
 
 CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.i: cmake_force
@@ -3049,19 +3077,33 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.s"
 	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\fops.c -o CMakeFiles\Ink-Paper.elf.dir\User\Src\fops.c.s
 
-CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
-CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/recorder.c
-CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj"
-	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\recorder.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\recorder.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\recorder.c
+CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
+CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/gui_setup.c
+CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\Src\gui_setup.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\Src\gui_setup.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\gui_setup.c
 
-CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.i"
-	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\recorder.c > CMakeFiles\Ink-Paper.elf.dir\User\Src\recorder.c.i
+CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.i"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\gui_setup.c > CMakeFiles\Ink-Paper.elf.dir\User\Src\gui_setup.c.i
 
-CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.s"
-	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\recorder.c -o CMakeFiles\Ink-Paper.elf.dir\User\Src\recorder.c.s
+CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.s"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\gui_setup.c -o CMakeFiles\Ink-Paper.elf.dir\User\Src\gui_setup.c.s
+
+CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj: CMakeFiles/Ink-Paper.elf.dir/flags.make
+CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.c
+CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj: CMakeFiles/Ink-Paper.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building C object CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj -MF CMakeFiles\Ink-Paper.elf.dir\User\gui_pages\page_test.c.obj.d -o CMakeFiles\Ink-Paper.elf.dir\User\gui_pages\page_test.c.obj -c E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_test.c
+
+CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.i"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_test.c > CMakeFiles\Ink-Paper.elf.dir\User\gui_pages\page_test.c.i
+
+CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.s"
+	E:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_test.c -o CMakeFiles\Ink-Paper.elf.dir\User\gui_pages\page_test.c.s
 
 # Object files for target Ink-Paper.elf
 Ink__Paper_elf_OBJECTS = \
@@ -3272,13 +3314,16 @@ Ink__Paper_elf_OBJECTS = \
 "CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_26.c.obj" \
 "CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me.c.obj" \
 "CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.obj" \
+"CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj" \
+"CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj" \
 "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj" \
 "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj" \
 "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj" \
 "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj" \
 "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj" \
 "CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj" \
-"CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj"
+"CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj" \
+"CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj"
 
 # External object files for target Ink-Paper.elf
 Ink__Paper_elf_EXTERNAL_OBJECTS =
@@ -3490,17 +3535,20 @@ Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_22
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_26.c.obj
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me.c.obj
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.obj
+Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj
+Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj
-Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj
+Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj
+Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/build.make
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/objects1.rsp
 Ink-Paper.elf: CMakeFiles/Ink-Paper.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Linking C executable Ink-Paper.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\cmake-build-debug-mingwstm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Linking C executable Ink-Paper.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Ink-Paper.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/cmake-build-debug-mingwstm32/Ink-Paper.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/cmake-build-debug-mingwstm32/Ink-Paper.bin"

@@ -1,6 +1,6 @@
-CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj: \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\recorder.c \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/recorder.h \
+CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj: \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\audio.c \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/audio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/simple_gpio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Drivers\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/stm32f1xx_hal_conf.h \

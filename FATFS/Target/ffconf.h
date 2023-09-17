@@ -114,7 +114,7 @@
 /   1    - ASCII (No extended character. Valid for only non-LFN configuration.) */
 
 #define _USE_LFN     2    /* 0 to 3 */
-#define _MAX_LFN     255    /* Maximum LFN length to handle (12 to 255) */
+#define _MAX_LFN     100    /* Maximum LFN length to handle (12 to 255) */
 /* The _USE_LFN option switches the LFN feature.
 /
 /   0: Disable LFN feature. _MAX_LFN has no effect.
@@ -219,7 +219,7 @@
 /  _NORTC_MDAY and _NORTC_YEAR have no effect.
 /  These options have no effect at read-only configuration (_FS_READONLY == 1). */
 
-#define _FS_LOCK    2     /* 0:Disable or >=1:Enable */
+#define _FS_LOCK    50     /* 0:Disable or >=1:Enable */
 /* The _FS_LOCK option switches file lock feature to control duplicated file open
 /  and illegal operation to open objects. This option must be 0 when _FS_READONLY
 /  is 1.

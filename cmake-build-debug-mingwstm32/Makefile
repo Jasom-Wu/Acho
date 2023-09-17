@@ -5080,6 +5080,54 @@ User/Src/Img/me2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.s
 .PHONY : User/Src/Img/me2.c.s
 
+User/Src/audio.obj: User/Src/audio.c.obj
+.PHONY : User/Src/audio.obj
+
+# target to build an object file
+User/Src/audio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj
+.PHONY : User/Src/audio.c.obj
+
+User/Src/audio.i: User/Src/audio.c.i
+.PHONY : User/Src/audio.i
+
+# target to preprocess a source file
+User/Src/audio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.i
+.PHONY : User/Src/audio.c.i
+
+User/Src/audio.s: User/Src/audio.c.s
+.PHONY : User/Src/audio.s
+
+# target to generate assembly for a file
+User/Src/audio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.s
+.PHONY : User/Src/audio.c.s
+
+User/Src/broker_app.obj: User/Src/broker_app.c.obj
+.PHONY : User/Src/broker_app.obj
+
+# target to build an object file
+User/Src/broker_app.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj
+.PHONY : User/Src/broker_app.c.obj
+
+User/Src/broker_app.i: User/Src/broker_app.c.i
+.PHONY : User/Src/broker_app.i
+
+# target to preprocess a source file
+User/Src/broker_app.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.i
+.PHONY : User/Src/broker_app.c.i
+
+User/Src/broker_app.s: User/Src/broker_app.c.s
+.PHONY : User/Src/broker_app.s
+
+# target to generate assembly for a file
+User/Src/broker_app.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.s
+.PHONY : User/Src/broker_app.c.s
+
 User/Src/bsp_delay.obj: User/Src/bsp_delay.c.obj
 .PHONY : User/Src/bsp_delay.obj
 
@@ -5224,29 +5272,53 @@ User/Src/fops.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.s
 .PHONY : User/Src/fops.c.s
 
-User/Src/recorder.obj: User/Src/recorder.c.obj
-.PHONY : User/Src/recorder.obj
+User/Src/gui_setup.obj: User/Src/gui_setup.c.obj
+.PHONY : User/Src/gui_setup.obj
 
 # target to build an object file
-User/Src/recorder.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.obj
-.PHONY : User/Src/recorder.c.obj
+User/Src/gui_setup.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj
+.PHONY : User/Src/gui_setup.c.obj
 
-User/Src/recorder.i: User/Src/recorder.c.i
-.PHONY : User/Src/recorder.i
+User/Src/gui_setup.i: User/Src/gui_setup.c.i
+.PHONY : User/Src/gui_setup.i
 
 # target to preprocess a source file
-User/Src/recorder.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.i
-.PHONY : User/Src/recorder.c.i
+User/Src/gui_setup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.i
+.PHONY : User/Src/gui_setup.c.i
 
-User/Src/recorder.s: User/Src/recorder.c.s
-.PHONY : User/Src/recorder.s
+User/Src/gui_setup.s: User/Src/gui_setup.c.s
+.PHONY : User/Src/gui_setup.s
 
 # target to generate assembly for a file
-User/Src/recorder.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/recorder.c.s
-.PHONY : User/Src/recorder.c.s
+User/Src/gui_setup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.s
+.PHONY : User/Src/gui_setup.c.s
+
+User/gui_pages/page_test.obj: User/gui_pages/page_test.c.obj
+.PHONY : User/gui_pages/page_test.obj
+
+# target to build an object file
+User/gui_pages/page_test.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj
+.PHONY : User/gui_pages/page_test.c.obj
+
+User/gui_pages/page_test.i: User/gui_pages/page_test.c.i
+.PHONY : User/gui_pages/page_test.i
+
+# target to preprocess a source file
+User/gui_pages/page_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.i
+.PHONY : User/gui_pages/page_test.c.i
+
+User/gui_pages/page_test.s: User/gui_pages/page_test.c.s
+.PHONY : User/gui_pages/page_test.s
+
+# target to generate assembly for a file
+User/gui_pages/page_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.s
+.PHONY : User/gui_pages/page_test.c.s
 
 # Help Target
 help:
@@ -5876,6 +5948,12 @@ help:
 	@echo ... User/Src/Img/me2.obj
 	@echo ... User/Src/Img/me2.i
 	@echo ... User/Src/Img/me2.s
+	@echo ... User/Src/audio.obj
+	@echo ... User/Src/audio.i
+	@echo ... User/Src/audio.s
+	@echo ... User/Src/broker_app.obj
+	@echo ... User/Src/broker_app.i
+	@echo ... User/Src/broker_app.s
 	@echo ... User/Src/bsp_delay.obj
 	@echo ... User/Src/bsp_delay.i
 	@echo ... User/Src/bsp_delay.s
@@ -5894,9 +5972,12 @@ help:
 	@echo ... User/Src/fops.obj
 	@echo ... User/Src/fops.i
 	@echo ... User/Src/fops.s
-	@echo ... User/Src/recorder.obj
-	@echo ... User/Src/recorder.i
-	@echo ... User/Src/recorder.s
+	@echo ... User/Src/gui_setup.obj
+	@echo ... User/Src/gui_setup.i
+	@echo ... User/Src/gui_setup.s
+	@echo ... User/gui_pages/page_test.obj
+	@echo ... User/gui_pages/page_test.i
+	@echo ... User/gui_pages/page_test.s
 .PHONY : help
 
 

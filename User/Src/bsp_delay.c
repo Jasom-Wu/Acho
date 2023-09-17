@@ -6,24 +6,23 @@ static uint32_t fac_ms = 0;
 
 void delay_init(void)
 {
-    fac_us = SystemCoreClock / 1000000;
-    fac_ms = SystemCoreClock / 1000;
-
+    fac_us = 1;//SystemCoreClock / 1000000;
+    fac_ms = 1;//SystemCoreClock / 1000;
 }
 
-void delay_us(uint16_t nus)
+void delay_us(uint16_t nus)  //Be Sure Maximum Value Is Under 1000 !!
 {
     uint32_t ticks = 0;
     uint32_t told = 0;
     uint32_t tnow = 0;
     uint32_t tcnt = 0;
     uint32_t reload = 0;
-    reload = SysTick->LOAD;
+    reload = TIM1->ARR + 1;//SysTick->LOAD;
     ticks = nus * fac_us;
-    told = SysTick->VAL;
+    told = TIM1->CNT;//SysTick->VAL;  // 'TIM1->CNT' Measurement is 1Us per-tick
     while (1)
     {
-        tnow = SysTick->VAL;
+        tnow = TIM1->CNT;
         if (tnow != told)
         {
             if (tnow < told)
@@ -45,32 +44,33 @@ void delay_us(uint16_t nus)
 
 void delay_ms(uint16_t nms)
 {
-    uint32_t ticks = 0;
-    uint32_t told = 0;
-    uint32_t tnow = 0;
-    uint32_t tcnt = 0;
-    uint32_t reload = 0;
-    reload = SysTick->LOAD;
-    ticks = nms * fac_ms;
-    told = SysTick->VAL;
-    while (1)
-    {
-        tnow = SysTick->VAL;
-        if (tnow != told)
-        {
-            if (tnow < told)
-            {
-                tcnt += told - tnow;
-            }
-            else
-            {
-                tcnt += reload - tnow + told;
-            }
-            told = tnow;
-            if (tcnt >= ticks)
-            {
-                break;
-            }
-        }
-    }
+    HAL_Delay(nms);
+//    uint32_t ticks = 0;
+//    uint32_t told = 0;
+//    uint32_t tnow = 0;
+//    uint32_t tcnt = 0;
+//    uint32_t reload = 0;
+//    reload = 65535;//SysTick->LOAD;  //Truly Maximum Value Is 'pow(2,32)', But This is Enough
+//    ticks = nms * fac_ms;
+//    told = HAL_GetTick();//SysTick->VAL;  //Function 'HAL_GetTick()' Whose Result Measurement is 1Ms per-tick
+//    while (1)
+//    {
+//        tnow = HAL_GetTick();//SysTick->VAL;
+//        if (tnow != told)
+//        {
+//            if (tnow < told)
+//            {
+//                tcnt += told - tnow;
+//            }
+//            else
+//            {
+//                tcnt += reload - tnow + told;
+//            }
+//            told = tnow;
+//            if (tcnt >= ticks)
+//            {
+//                break;
+//            }
+//        }
+//    }
 }

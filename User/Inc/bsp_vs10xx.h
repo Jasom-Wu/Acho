@@ -18,11 +18,11 @@
 
 //////////////////////////////////////////////////////////////
 //与外部的接口
-#define VS_SPI			hspi2
-#define VS_DQ       PAin(8)  		//DREQ 
-#define VS_RST      PBout(10) 		//RST
-#define VS_XCS      PBout(12)  		//XCS
-#define VS_XDCS     PBout(11)  		//XDCS 
+#define VS_SPI	    hspi2
+#define VS_DQ       PBin(8)  		//DREQ
+#define VS_RST      PBout(12) 		//RST
+#define VS_XCS      PBout(9)  		//XCS
+#define VS_XDCS     PCout(7)  		//XDCS
 //////////////////////////////////////////////////////////////
 
 __packed typedef struct 

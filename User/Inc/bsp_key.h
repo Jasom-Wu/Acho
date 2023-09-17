@@ -19,8 +19,8 @@ typedef enum
 #define KEY2READ   PCin(13)
 #define TIME_DIV_MS 100
 #define VALID_LEVEL HIGH
-#define TIME_DIV_MAX 10
-#define KEY_DELAY_MS(_ms) vTaskDelay(_ms)
+#define TIME_TICK_MAX 10
+#define KEY_DELAY_MS(_ms) HAL_Delay(_ms)//vTaskDelay(_ms)
 
 #define __KEY_LINK2(x,y)(x##y)
 #define __KEY_PROCESS_(KEYx){if(key_select==KEYx)\
@@ -28,7 +28,7 @@ typedef enum
 					while(__KEY_LINK2(KEYx,READ)==VALID_LEVEL)\
 					{\
 						KEY_DELAY_MS(TIME_DIV_MS);\
-						if(++total_cnt>=TIME_DIV_MAX)break;\
+						if(++total_cnt>=TIME_TICK_MAX)break;\
 					}\
 				}\
 			}

@@ -1,8 +1,7 @@
 #include "bsp_vs10xx.h"	
 #include "bsp_delay.h"
 #include "spi.h"
-#include "usart.h"	  	    
-
+#include "stdio.h"
 //VS10XX默认设置参数
 _vs10xx_obj vsset=
 {
@@ -49,7 +48,7 @@ void VS_SPI_SpeedHigh(void)
 {				
 	VS_SPI.Instance->CR1&=0XFFC7; 
 	VS_SPI.Instance->CR1|=SPI_BAUDRATEPRESCALER_8 ;	//设置SPI1速度  
-	VS_SPI.Instance->CR1|=1<<6; 		//SPI设备使能 		 
+	VS_SPI.Instance->CR1|=1<<6; 		//SPI设备使能
 }  
 ////////////////////////////////////////////////////////////////////////////////	 	  
 //软复位VS10XX
@@ -87,7 +86,7 @@ uint8_t VS_HD_Reset(void)
 	while(VS_DQ==0&&retry<200)//等待DREQ为高
 	{
 		retry++;
-		delay_us(50);
+		delay_ms(1);
 	};
 	delay_ms(20);	
 	if(retry>=200)return 1;
@@ -103,43 +102,20 @@ void VS_Sine_Test(void)
 	//printf("mode sin:%x\n",VS_RD_Reg(SPI_MODE));
  	//向VS10XX发送正弦测试命令：0x53 0xef 0x6e n 0x00 0x00 0x00 0x00
  	//其中n = 0x24, 设定VS10XX所产生的正弦波的频率值，具体计算方法见VS10XX的datasheet
-  	VS_SPI_SpeedLow();//低速 
-	VS_XDCS=0;//选中数据传输
-	VS_SPI_ReadWriteByte(0x53);
-	VS_SPI_ReadWriteByte(0xef);
-	VS_SPI_ReadWriteByte(0x6e);
-	VS_SPI_ReadWriteByte(0x22);
-	VS_SPI_ReadWriteByte(0x00);
-	VS_SPI_ReadWriteByte(0x00);
-	VS_SPI_ReadWriteByte(0x00);
-	VS_SPI_ReadWriteByte(0x00);
-	delay_ms(100);
-	VS_XDCS=1; 
-	
-    //退出正弦测试
-    VS_XDCS=0;//选中数据传输
-	VS_SPI_ReadWriteByte(0x45);
-	VS_SPI_ReadWriteByte(0x78);
-	VS_SPI_ReadWriteByte(0x69);
-	VS_SPI_ReadWriteByte(0x74);
-	VS_SPI_ReadWriteByte(0x00);
-	VS_SPI_ReadWriteByte(0x00);
-	VS_SPI_ReadWriteByte(0x00);
-	VS_SPI_ReadWriteByte(0x00);
-	delay_ms(100);
-	VS_XDCS=1;		 
-    //再次进入正弦测试并设置n值为0x44，即将正弦波的频率设置为另外的值
+  	VS_SPI_SpeedLow();//低速
+    //进入正弦测试并设置n值为0x44，即将正弦波的频率设置为另外的值
     VS_XDCS=0;//选中数据传输      
 	VS_SPI_ReadWriteByte(0x53);
 	VS_SPI_ReadWriteByte(0xef);
 	VS_SPI_ReadWriteByte(0x6e);
-	VS_SPI_ReadWriteByte(0x24);
+	VS_SPI_ReadWriteByte(0x44);
 	VS_SPI_ReadWriteByte(0x00);
 	VS_SPI_ReadWriteByte(0x00);
 	VS_SPI_ReadWriteByte(0x00);
 	VS_SPI_ReadWriteByte(0x00);
-	delay_ms(100);
- 	VS_XDCS=1;
+	delay_ms(1000);
+    printf("ok\n");
+    VS_XDCS=1;
     //退出正弦测试
     VS_XDCS=0;//选中数据传输
 	VS_SPI_ReadWriteByte(0x45);
@@ -147,11 +123,11 @@ void VS_Sine_Test(void)
 	VS_SPI_ReadWriteByte(0x69);
 	VS_SPI_ReadWriteByte(0x74);
 	VS_SPI_ReadWriteByte(0x00);
-	VS_SPI_ReadWriteByte(0x00);delay_ms(100);
+	VS_SPI_ReadWriteByte(0x00);
 	VS_SPI_ReadWriteByte(0x00);
 	VS_SPI_ReadWriteByte(0x00);
 	delay_ms(100);
-	VS_XDCS=1;	 
+	VS_XDCS=1;
 }	 
 //ram 测试 
 //返回值:RAM测试结果
@@ -208,7 +184,7 @@ void VS_WR_Data(uint8_t data)
 uint16_t VS_RD_Reg(uint8_t address)
 { 
 	uint16_t temp=0; 
-	while(VS_DQ==0);		//等待空闲	   
+	while(VS_DQ==0);		//等待空闲
 	VS_SPI_SpeedLow();//低速 
 	VS_XDCS=1;       
 	VS_XCS=0;        
@@ -321,11 +297,10 @@ void VS_Restart_Play(void)
 	uint16_t temp;
 	uint16_t i;
 	uint8_t n;	  
-	uint8_t vsbuf[32];
-	for(n=0;n<32;n++)vsbuf[n]=0;//清零
+	uint8_t vsbuf[32]={0};
 	temp=VS_RD_Reg(SPI_MODE);	//读取SPI_MODE的内容
 	temp|=1<<3;					//设置SM_CANCEL位
-	temp|=1<<1;					//设置SM_LAYER12位,允许播放MP1,MP2
+	temp|=1<<2;					//设置SM_LAYER12位,允许播放MP1,MP2
 	temp &= ~(1<<11);//==================取消本地模式！！！！！！！！！！！===================
 	VS_WR_Cmd(SPI_MODE,temp);	//设置取消当前解码指令
 	for(i=0;i<2048;)			//发送2048个0,期间读取SM_CANCEL位.如果为0,则表示已经取消了当前解码

@@ -17,6 +17,10 @@
   */
 	#include "bsp_ink_paper.h"
     #include "fops.h"
+    #include "audio.h"
+    #include "ff.h"
+    #include "bsp_vs10xx.h"
+    #include "bsp_delay.h"
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -27,7 +31,6 @@
 #include "usart.h"
 #include "usb_device.h"
 #include "gpio.h"
-
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -100,18 +103,17 @@ int main(void)
   MX_FATFS_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
+    delay_init();
     printf("%d",f_mount(&SDFatFS,SDPath,0));
     exf_showfree((uint8_t*)"0:");
-	//MX_USB_DEVICE_Init();
-	//printf("%d",f_open(&SDFile,"0:me.bin",FA_READ));
+    VS_HD_Reset();  // 初始化一定要硬复位VS1053b 不然DREQ一直为低
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
-//  MX_FREERTOS_Init();
-    MX_USB_DEVICE_Init();
-    HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_RESET);
+  MX_FREERTOS_Init();
+
   /* Start scheduler */
-//  osKernelStart();
+  osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
@@ -193,9 +195,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
-	if (htim->Instance == TIM1) {
-		lv_tick_inc(1);
-	}
+    if (htim->Instance == TIM1) {  // 1ms
+        lv_tick_inc(1);
+    }
   /* USER CODE END Callback 1 */
 }
 

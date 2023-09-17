@@ -26,6 +26,13 @@
 #include "usbd_def.h"
 #include "usbd_core.h"
 #include "sdio.h"
+#include "ff.h"
+#include "fatfs.h"
+#include "audio.h"
+#include "bsp_vs10xx.h"
+#include "page_test.h"
+#include "gui_setup.h"
+#include "fops.h"
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -139,7 +146,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
-
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN StartDefaultTask */
 	static portTickType PreviousWakeTime;
 	const portTickType TimeIncrement = pdMS_TO_TICKS(5);
@@ -153,8 +160,8 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		lv_task_handler();
-    vTaskDelayUntil( &PreviousWakeTime,TimeIncrement );
+      lv_task_handler();
+      vTaskDelayUntil( &PreviousWakeTime,TimeIncrement );
   }
   /* USER CODE END StartDefaultTask */
 }
@@ -176,10 +183,10 @@ void StartMainTask(void const * argument)
 	const portTickType TimeIncrement = pdMS_TO_TICKS(5);
 	PreviousWakeTime = xTaskGetTickCount();
 	
-	extern void lv_example3(void);
-	lv_example3();
-	vTaskDelay(3000);
-	vTaskDelete(NULL);
+	extern void lv_example4(void);
+	lv_example4();
+//	vTaskDelay(3000);
+//	vTaskDelete(NULL);
 	//lv_example1();
   /* Infinite loop */
 //	lv_obj_t *sym_label = lv_label_create(lv_scr_act());
@@ -284,7 +291,7 @@ void lv_example2(void)
 		lv_obj_align_to(btn_temp,btn_last,LV_ALIGN_OUT_BOTTOM_MID,0,5);
 		btn_last = btn_temp;
 		
-		//lv_obj_add_event_cb(label_temp,&label_style_cb,LV_EVENT_DEFOCUSED|LV_EVENT_FOCUSED,NULL);
+//		lv_obj_add_event_cb(label_temp,&label_style_cb,LV_EVENT_DEFOCUSED|LV_EVENT_FOCUSED,NULL);
 	}
 		
 		lv_indev_set_group(indev_encoder,g);
@@ -293,42 +300,69 @@ void lv_example2(void)
 
 void lv_example3(void)
 {
-//    taskENTER_CRITICAL();
-//    lv_obj_t *img = lv_img_create(lv_scr_act());//²»ÄÜÐ´³Élv_obj_create!!!²»È»»á×ÜÏß´íÎó£¡ÎØÎØÎØÕâ¸öÐ¡ÎÊÌâµ÷ÁËÁ½Ìì£¬ÌØ´Ë¼ÇÂ¼qwq
-//    //lv_obj_set_style_text_font(img,&lv_font_montserrat_18,0);
+    taskENTER_CRITICAL();
+    lv_obj_t *img = lv_img_create(lv_scr_act());  // don't use lv_obj_create!!!   qwq
+    //lv_obj_set_style_text_font(img,&lv_font_montserrat_18,0);
 //    lv_img_set_src(img,"P:me2.bin");
-//    lv_obj_center(img);
-//    //lv_obj_t *label = lv_label_create(lv_scr_act());
+    lv_obj_center(img);
+    //lv_obj_t *label = lv_label_create(lv_scr_act());
 //    taskEXIT_CRITICAL();
 //    vTaskDelay(3000);
 //    taskENTER_CRITICAL();
 //    EPD_1N54_V2_FullClearToPartial();
-//    lv_img_set_src(img,"P:me.bin");
-//    taskEXIT_CRITICAL();
-//    vTaskDelay(7000);
-//    EPD_1N54_V2_FullClearToPartial();
+    lv_img_set_src(img,"P:haha.bin");
+    taskEXIT_CRITICAL();
+    vTaskDelay(5000);
+    EPD_1N54_V2_FullClearToPartial();
     while(HAL_SD_GetState(&hsd)==HAL_SD_STATE_BUSY);
+//    printf("\n%d",audio_play((uint8_t *)"0:song1.mp3"));
+//    vTaskDelay(10000);
+//    printf("recording...\n");
+//    FRESULT state =  f_opendir(&SDDir,"0:Records");
+//    if(state != FR_OK)f_closedir(&SDDir);
+//    else{
+//        printf("\n%d",audio_recorde(1,10));
+//    }
+    MX_USB_DEVICE_Init();
     HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_RESET);
-
-//    vTaskDelay(7000);
+    vTaskDelay(7000);
 //    while(HAL_SD_GetState(&hsd)!=HAL_SD_STATE_READY);
 //    HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_SET);
 
 }
+void lv_example4(void)
+{
+    setup_ui(&ui_test);
+    while(HAL_SD_GetState(&hsd)==HAL_SD_STATE_BUSY);
+    MX_USB_DEVICE_Init();
+    HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_RESET);
+    vTaskDelay(3000);
+    delete_ui(&ui_test);
 
-/**USB¼ì²â**/
+}
+
+
+
+
+
+
+
+
+
+
+/**USB???**/
 //void App_USB_State_IRQHandler(void)
 //{
 // static uint8_t old_state = 0;
-//  /* Èç¹ûusbÉè±¸×´Ì¬·¢Éú±ä»¯ */
+//  /* ???usb?è±¸???????ä»¯ */
 //  if(old_state)
 //  {
-//    /* USBÁ¬½Ó */
+//    /* USB???? */
 //   if(pdev->dev_state == USBD_STATE_CONFIGURED) 
 //   {       
 //     osSignalSet (mainTaskHandle, EventBit_USBConnect);  
 //   }
-//   /* USB¶Ï¿ª */
+//   /* USB??? */
 //   else if(pdev->dev_state==USBD_STATE_SUSPENDED)
 //   {
 //     osSignalSet (mainTaskHandle, EventBit_USBDisconnect);  

@@ -48,6 +48,7 @@
 					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl"/>
 					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/WaveShare1in54v2"/>
 					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc"/>
+					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages"/>
 					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/WaveShare1in54v2/Fonts"/>
 					<Add directory="e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.1/../../../../arm-none-eabi/include/c++/12.2.1"/>
 					<Add directory="e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.1/../../../../arm-none-eabi/include/c++/12.2.1/arm-none-eabi"/>
@@ -94,6 +95,7 @@
 					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl"/>
 					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/WaveShare1in54v2"/>
 					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc"/>
+					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages"/>
 					<Add directory="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/WaveShare1in54v2/Fonts"/>
 					<Add directory="e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.1/../../../../arm-none-eabi/include/c++/12.2.1"/>
 					<Add directory="e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.1/../../../../arm-none-eabi/include/c++/12.2.1/arm-none-eabi"/>
@@ -1447,6 +1449,12 @@
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/USB_DEVICE/Target/usbd_conf.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/audio.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/broker_app.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_delay.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
@@ -1468,7 +1476,7 @@
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/fops.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
-		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/recorder.h">
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/gui_setup.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/simple_gpio.h">
@@ -1498,6 +1506,12 @@
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/Img/me2.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/audio.c">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/broker_app.c">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_delay.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
@@ -1516,7 +1530,13 @@
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/fops.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
-		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/recorder.c">
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/gui_setup.c">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.c">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/CMakeLists.txt">

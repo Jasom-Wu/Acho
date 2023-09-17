@@ -336,7 +336,7 @@ static void encoder_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
 {
     data->enc_diff = encoder_diff;
     data->state = encoder_state;
-		encoder_diff=0;
+    encoder_diff=0;
 }
 
 /*Call this function in an interrupt to process encoder events (turn, press)*/

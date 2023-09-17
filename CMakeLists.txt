@@ -1,4 +1,4 @@
-#´ËÎÄ¼þ´ÓÄ£°å×Ô¶¯Éú³É! ÇëÎð¸ü¸Ä!
+#ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_VERSION 1)
 cmake_minimum_required(VERSION 3.24)
@@ -55,6 +55,7 @@ include_directories(Core/Inc FATFS/Target FATFS/App USB_DEVICE/App USB_DEVICE/Ta
         Lib/Lvgl
         Lib/WaveShare1in54v2
         User/Inc
+        User/gui_pages
         Lib/WaveShare1in54v2/Fonts
         )
 

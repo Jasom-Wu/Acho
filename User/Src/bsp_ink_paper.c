@@ -32,11 +32,12 @@
 #include "FreeRTOS.h"
 #include "task.h"
 extern SPI_HandleTypeDef hspi1;
+#define IMAGE_SIZE ((EPD_1IN54_V2_WIDTH % 8 == 0)? (EPD_1IN54_V2_WIDTH / 8 ): (EPD_1IN54_V2_WIDTH / 8 + 1)) * EPD_1IN54_V2_HEIGHT
+UBYTE ImageBuff[IMAGE_SIZE] ={0};
 
 int InkPaperInit(void)
 {
     DEV_Module_Init();
-
     EPD_1IN54_V2_Init();
     EPD_1IN54_V2_Clear();
     DEV_Delay_ms(500);
@@ -44,15 +45,15 @@ int InkPaperInit(void)
     //Create a new image cache
     //UBYTE *BlackImage;
     /* you have to edit the startup_stm32fxxx.s file and set a big enough heap size */
-    UWORD Imagesize = ((EPD_1IN54_V2_WIDTH % 8 == 0)? (EPD_1IN54_V2_WIDTH / 8 ): (EPD_1IN54_V2_WIDTH / 8 + 1)) * EPD_1IN54_V2_HEIGHT;
-    if((BlackImage = (UBYTE *)malloc(Imagesize)) == NULL) {
-        printf("Failed to apply for black memory...\r\n");
-        return -1;
-    }
-    
-		Paint_NewImage(BlackImage, EPD_1IN54_V2_WIDTH, EPD_1IN54_V2_HEIGHT, 270, WHITE);
-		Paint_Clear(WHITE);
-		EPD_1IN54_V2_Init_Partial();//默认开启局部刷新模式
+    //    UWORD Imagesize = ((EPD_1IN54_V2_WIDTH % 8 == 0)? (EPD_1IN54_V2_WIDTH / 8 ): (EPD_1IN54_V2_WIDTH / 8 + 1)) * EPD_1IN54_V2_HEIGHT;
+    //    if((BlackImage = (UBYTE *)malloc(Imagesize)) == NULL) {
+    //        printf("Failed to apply for black memory...\r\n");
+    //        return -1;
+    //    }
+    BlackImage = ImageBuff;
+    Paint_NewImage(BlackImage, EPD_1IN54_V2_WIDTH, EPD_1IN54_V2_HEIGHT, 270, WHITE);
+    Paint_Clear(WHITE);
+    EPD_1IN54_V2_Init_Partial();//默认开启局部刷新模式
 //        EPD_1IN54_V2_DisplayPartBaseImage(BlackImage);//一开始需要有图像数据传给墨水屏，以作为参考。
 #if 0
     printf("Clear...\r\n");

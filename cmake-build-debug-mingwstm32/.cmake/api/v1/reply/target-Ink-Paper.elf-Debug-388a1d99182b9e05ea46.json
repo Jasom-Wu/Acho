@@ -28,13 +28,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 71,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 67,
+				"line" : 72,
 				"parent" : 0
 			},
 			{
@@ -47,6 +41,12 @@
 				"command" : 1,
 				"file" : 0,
 				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
@@ -76,7 +76,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 61,
+				"line" : 62,
 				"parent" : 0
 			},
 			{
@@ -235,6 +235,10 @@
 				{
 					"backtrace" : 10,
 					"path" : "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages"
 				},
 				{
 					"backtrace" : 10,
@@ -450,8 +454,6 @@
 				432,
 				434,
 				436,
-				447,
-				448,
 				449,
 				450,
 				451,
@@ -464,7 +466,12 @@
 				458,
 				459,
 				460,
-				461
+				461,
+				462,
+				463,
+				464,
+				465,
+				466
 			]
 		},
 		{
@@ -618,6 +625,10 @@
 				{
 					"backtrace" : 10,
 					"path" : "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages"
 				},
 				{
 					"backtrace" : 10,
@@ -921,7 +932,10 @@
 				443,
 				444,
 				445,
-				446
+				446,
+				447,
+				448,
+				467
 			]
 		},
 		{
@@ -1126,8 +1140,6 @@
 				432,
 				434,
 				436,
-				447,
-				448,
 				449,
 				450,
 				451,
@@ -1140,7 +1152,12 @@
 				458,
 				459,
 				460,
-				461
+				461,
+				462,
+				463,
+				464,
+				465,
+				466
 			]
 		},
 		{
@@ -1164,7 +1181,7 @@
 				271,
 				305,
 				357,
-				462
+				468
 			]
 		}
 	],
@@ -3561,6 +3578,16 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "User/Inc/audio.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "User/Inc/broker_app.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "User/Inc/bsp_delay.h",
 			"sourceGroupIndex" : 0
 		},
@@ -3596,7 +3623,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "User/Inc/recorder.h",
+			"path" : "User/Inc/gui_setup.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -3655,6 +3682,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "User/Src/audio.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "User/Src/broker_app.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "User/Src/bsp_delay.c",
 			"sourceGroupIndex" : 1
 		},
@@ -3691,8 +3730,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "User/Src/recorder.c",
+			"path" : "User/Src/gui_setup.c",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "User/gui_pages/page_test.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "User/gui_pages/page_test.h",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
