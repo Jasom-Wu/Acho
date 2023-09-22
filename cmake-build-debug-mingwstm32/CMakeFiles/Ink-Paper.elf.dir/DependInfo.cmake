@@ -48,6 +48,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/dma.c" "CMakeFiles/Ink-Paper.elf.dir/Core/Src/dma.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Core/Src/dma.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/freertos.c" "CMakeFiles/Ink-Paper.elf.dir/Core/Src/freertos.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Core/Src/freertos.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/gpio.c" "CMakeFiles/Ink-Paper.elf.dir/Core/Src/gpio.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Core/Src/gpio.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/main.c" "CMakeFiles/Ink-Paper.elf.dir/Core/Src/main.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Core/Src/main.c.obj.d"
@@ -237,7 +238,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/list.c" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj.d"
-  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/queue.c" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/tasks.c" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj.d"

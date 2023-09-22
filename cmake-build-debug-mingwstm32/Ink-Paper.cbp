@@ -135,6 +135,9 @@
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/FreeRTOSConfig.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/dma.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/gpio.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
@@ -154,6 +157,9 @@
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/usart.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/dma.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/freertos.c">
@@ -1405,9 +1411,6 @@
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h">
-			<Option target="Ink-Paper.elf"/>
-		</Unit>
-		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/queue.c">

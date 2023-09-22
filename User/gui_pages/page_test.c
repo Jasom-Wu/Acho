@@ -21,13 +21,13 @@ lv_ui ui_test = {
 static void click_event(lv_event_t * e)
 {
     lv_label_t * target = (lv_label_t *)lv_event_get_target(e);
-    if(memcmp(target->text,LV_SYMBOL_PLAY,5)==0){
+    if(memcmp(target->text,LV_SYMBOL_PLAY,3)==0){
 
     }
-    else if(memcmp(target->text,LV_SYMBOL_DRIVE,5)==0){
+    else if(memcmp(target->text,LV_SYMBOL_DRIVE,3)==0){
         downLoadDitherPicBin(2);
     }
-    else{
+    else if(memcmp(target->text,LV_SYMBOL_BELL,3)==0){
         downLoadFileList(IMG);
     }
 }

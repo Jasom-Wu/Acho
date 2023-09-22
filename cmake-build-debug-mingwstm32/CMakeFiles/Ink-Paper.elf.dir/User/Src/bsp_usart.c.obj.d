@@ -1,22 +1,26 @@
 CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj: \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Src\bsp_usart.c \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/bsp_usart.h \
- e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdio.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\string.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\_ansi.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\newlib.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\_newlib_version.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\config.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\ieeefp.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\features.h \
- e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\cdefs.h \
- e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\_default_types.h \
- e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\lib\gcc\arm-none-eabi\12.2.1\include\stddef.h \
- e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\lib\gcc\arm-none-eabi\12.2.1\include\stdarg.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\reent.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\_ansi.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\lib\gcc\arm-none-eabi\12.2.1\include\stddef.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\_types.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\_types.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\_default_types.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\lock.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\cdefs.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\_locale.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\strings.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\string.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/bsp_usart.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdio.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\lib\gcc\arm-none-eabi\12.2.1\include\stdarg.h \
  e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\stdio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/usart.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/main.h \

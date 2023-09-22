@@ -33,6 +33,7 @@
 #include "page_test.h"
 #include "gui_setup.h"
 #include "fops.h"
+#include "bsp_usart.h"
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -66,7 +67,11 @@
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
+uint32_t defaultTaskBuffer[ 1024 ];
+osStaticThreadDef_t defaultTaskControlBlock;
 osThreadId mainTaskHandle;
+uint32_t mainTaskBuffer[ 1024 ];
+osStaticThreadDef_t mainTaskControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -123,11 +128,11 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityAboveNormal, 0, 1024);
+  osThreadStaticDef(defaultTask, StartDefaultTask, osPriorityAboveNormal, 0, 1024, defaultTaskBuffer, &defaultTaskControlBlock);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of mainTask */
-  osThreadDef(mainTask, StartMainTask, osPriorityNormal, 0, 1024);
+  osThreadStaticDef(mainTask, StartMainTask, osPriorityNormal, 0, 1024, mainTaskBuffer, &mainTaskControlBlock);
   mainTaskHandle = osThreadCreate(osThread(mainTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -195,6 +200,7 @@ void StartMainTask(void const * argument)
 //	lv_label_set_text(sym_label,"");
   for(;;)
   {
+      USART1_REC_Handler();
 //		if(osSignalWait(EventBit_USBConnect,1).status==osEventSignal)
 //		{
 //			lv_label_set_text(sym_label, LV_SYMBOL_USB);
@@ -333,11 +339,10 @@ void lv_example3(void)
 void lv_example4(void)
 {
     setup_ui(&ui_test);
-    while(HAL_SD_GetState(&hsd)==HAL_SD_STATE_BUSY);
-    MX_USB_DEVICE_Init();
-    HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_RESET);
-    vTaskDelay(3000);
-    delete_ui(&ui_test);
+//    while(HAL_SD_GetState(&hsd)==HAL_SD_STATE_BUSY);
+//    MX_USB_DEVICE_Init();
+//    HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_RESET);
+//    vTaskDelay(3000);
 
 }
 
@@ -354,7 +359,7 @@ void lv_example4(void)
 //void App_USB_State_IRQHandler(void)
 //{
 // static uint8_t old_state = 0;
-//  /* ???usb?è±¸???????ä»¯ */
+//  /* ???usb?è±????????ä»? */
 //  if(old_state)
 //  {
 //    /* USB???? */

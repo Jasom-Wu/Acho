@@ -7,11 +7,15 @@
 ///////////////////////////////移植映射修改区////////////////////////////////////////////
 static FIL *file = (FIL *) &SDFile;        //为file申请内存
 ////////////////////////////////////////////////////////////////////////////////////////
+
+
 static HAL_StatusTypeDef fileDownload(const char *des_path) {
     uint32_t size = 0;
     HAL_StatusTypeDef state;
     uint8_t res;
-    state = HAL_UART_Receive(&huart1, (uint8_t *) &size, sizeof(uint32_t), 1000);
+    uint8_t temp[4]={0};
+    HAL_UART_Receive(&huart1, (uint8_t *)&size, 1, 2000);
+    state = HAL_UART_Receive(&huart1, (uint8_t *)&size, sizeof(uint32_t), 2000);
     if (state != HAL_OK) {
         return HAL_TIMEOUT;
     }
@@ -20,8 +24,8 @@ static HAL_StatusTypeDef fileDownload(const char *des_path) {
         res = f_open(file, (const TCHAR *) des_path, FA_CREATE_ALWAYS | FA_WRITE);
         if (res)return HAL_ERROR;
         while (1) {
-            if (size % 512 != 0) {
-                state = HAL_UART_Receive(&huart1, global_buff512, size, 1000);
+            if (size <= 512) {
+                state = HAL_UART_Receive(&huart1, global_buff512, size, 2000);
                 if (state == HAL_OK) {
                     if (f_write(file, global_buff512, size, NULL)) {
                         state = HAL_ERROR;
@@ -30,7 +34,7 @@ static HAL_StatusTypeDef fileDownload(const char *des_path) {
                 }
                 break;
             } else {
-                state = HAL_UART_Receive(&huart1, global_buff512, 512, 1000);
+                state = HAL_UART_Receive(&huart1, global_buff512, 512, 2000);
                 if (state != HAL_OK) {
                     if (f_write(file, global_buff512, 512, NULL)) {
                         state = HAL_ERROR;
@@ -47,7 +51,7 @@ static HAL_StatusTypeDef fileDownload(const char *des_path) {
 }
 
 HAL_StatusTypeDef downLoadFileList(File_TypeTypeDef type) {
-    printf("get_file_list:%d", type);
+    Printf("get_file_list:%d", type);
     HAL_StatusTypeDef state = HAL_OK;
     if (type == IMG) {
         state = fileDownload("img_list.txt");
@@ -58,7 +62,7 @@ HAL_StatusTypeDef downLoadFileList(File_TypeTypeDef type) {
 }
 
 HAL_StatusTypeDef downLoadDitherPicBin(uint16_t file_id) {
-    printf("get_dither_bin:%d", file_id);
+    Printf("get_dither_bin:%d", file_id);
     char path_buff[50] = {0};
     snprintf(path_buff, 50, "img_%d.bin", file_id);
     return fileDownload(path_buff);

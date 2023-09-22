@@ -128,6 +128,30 @@ Ink-Paper.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/build
 .PHONY : Ink-Paper.elf/fast
 
+Core/Src/dma.obj: Core/Src/dma.c.obj
+.PHONY : Core/Src/dma.obj
+
+# target to build an object file
+Core/Src/dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Core/Src/dma.c.obj
+.PHONY : Core/Src/dma.c.obj
+
+Core/Src/dma.i: Core/Src/dma.c.i
+.PHONY : Core/Src/dma.i
+
+# target to preprocess a source file
+Core/Src/dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Core/Src/dma.c.i
+.PHONY : Core/Src/dma.c.i
+
+Core/Src/dma.s: Core/Src/dma.c.s
+.PHONY : Core/Src/dma.s
+
+# target to generate assembly for a file
+Core/Src/dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Core/Src/dma.c.s
+.PHONY : Core/Src/dma.c.s
+
 Core/Src/freertos.obj: Core/Src/freertos.c.obj
 .PHONY : Core/Src/freertos.obj
 
@@ -4672,30 +4696,6 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s
 
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
-
 Middlewares/Third_Party/FreeRTOS/Source/queue.obj: Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.obj
 
@@ -5329,6 +5329,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Ink-Paper.elf
+	@echo ... Core/Src/dma.obj
+	@echo ... Core/Src/dma.i
+	@echo ... Core/Src/dma.s
 	@echo ... Core/Src/freertos.obj
 	@echo ... Core/Src/freertos.i
 	@echo ... Core/Src/freertos.s
@@ -5897,9 +5900,6 @@ help:
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.obj
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.i
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.s
-	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj
-	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i
-	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/queue.obj
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/queue.i
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/queue.s

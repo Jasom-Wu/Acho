@@ -201,6 +201,10 @@ CMakeFiles/Ink-Paper.elf.dir/Core/Src/stm32f1xx_it.c.obj: \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\src\core\lv_obj.h \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\src/extra/themes/basic/lv_theme_basic.h \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\src\core\lv_obj.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/bsp_usart.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdio.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\stdio.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/usart.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/main.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Drivers\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/stm32f1xx_hal_conf.h \
@@ -233,4 +237,5 @@ CMakeFiles/Ink-Paper.elf.dir/Core/Src/stm32f1xx_it.c.obj: \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Drivers\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_pcd.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Drivers\STM32F1xx_HAL_Driver\Inc/stm32f1xx_ll_usb.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Drivers\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal_pcd_ex.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/main.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/stm32f1xx_it.h

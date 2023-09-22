@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Ink-Paper.elf.dir/Core/Src/dma.c.obj"
+  "CMakeFiles/Ink-Paper.elf.dir/Core/Src/dma.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/Core/Src/freertos.c.obj"
   "CMakeFiles/Ink-Paper.elf.dir/Core/Src/freertos.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/Core/Src/gpio.c.obj"
@@ -378,8 +380,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj"
   "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj.d"
-  "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj"
-  "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj"
   "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj"
