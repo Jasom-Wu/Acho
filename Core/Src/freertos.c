@@ -128,7 +128,7 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadStaticDef(defaultTask, StartDefaultTask, osPriorityAboveNormal, 0, 1024, defaultTaskBuffer, &defaultTaskControlBlock);
+  osThreadStaticDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 1024, defaultTaskBuffer, &defaultTaskControlBlock);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of mainTask */
@@ -151,7 +151,6 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
-  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN StartDefaultTask */
 	static portTickType PreviousWakeTime;
 	const portTickType TimeIncrement = pdMS_TO_TICKS(5);
@@ -162,10 +161,11 @@ void StartDefaultTask(void const * argument)
 	lv_port_indev_init();
 	lv_port_fs_init();
 	vTaskResume(mainTaskHandle);
+    HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_SET);
   /* Infinite loop */
   for(;;)
   {
-      lv_task_handler();
+      USART1_REC_Handler();
       vTaskDelayUntil( &PreviousWakeTime,TimeIncrement );
   }
   /* USER CODE END StartDefaultTask */
@@ -188,8 +188,8 @@ void StartMainTask(void const * argument)
 	const portTickType TimeIncrement = pdMS_TO_TICKS(5);
 	PreviousWakeTime = xTaskGetTickCount();
 	
-	extern void lv_example4(void);
-	lv_example4();
+	extern void lv_example3(void);
+	lv_example3();
 //	vTaskDelay(3000);
 //	vTaskDelete(NULL);
 	//lv_example1();
@@ -200,7 +200,7 @@ void StartMainTask(void const * argument)
 //	lv_label_set_text(sym_label,"");
   for(;;)
   {
-      USART1_REC_Handler();
+      lv_task_handler();
 //		if(osSignalWait(EventBit_USBConnect,1).status==osEventSignal)
 //		{
 //			lv_label_set_text(sym_label, LV_SYMBOL_USB);
@@ -306,7 +306,6 @@ void lv_example2(void)
 
 void lv_example3(void)
 {
-    taskENTER_CRITICAL();
     lv_obj_t *img = lv_img_create(lv_scr_act());  // don't use lv_obj_create!!!   qwq
     //lv_obj_set_style_text_font(img,&lv_font_montserrat_18,0);
 //    lv_img_set_src(img,"P:me2.bin");
@@ -316,10 +315,10 @@ void lv_example3(void)
 //    vTaskDelay(3000);
 //    taskENTER_CRITICAL();
 //    EPD_1N54_V2_FullClearToPartial();
-    lv_img_set_src(img,"P:haha.bin");
-    taskEXIT_CRITICAL();
-    vTaskDelay(5000);
-    EPD_1N54_V2_FullClearToPartial();
+//    lv_img_set_src(img,"P:Images\\777.bin");
+    lv_img_set_src(img,"P:hhh.bin");
+//    vTaskDelay(5000);
+//    EPD_1N54_V2_FullClearToPartial();
     while(HAL_SD_GetState(&hsd)==HAL_SD_STATE_BUSY);
 //    printf("\n%d",audio_play((uint8_t *)"0:song1.mp3"));
 //    vTaskDelay(10000);
@@ -331,19 +330,14 @@ void lv_example3(void)
 //    }
     MX_USB_DEVICE_Init();
     HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_RESET);
-    vTaskDelay(7000);
+//    vTaskDelay(7000);
 //    while(HAL_SD_GetState(&hsd)!=HAL_SD_STATE_READY);
 //    HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_SET);
 
 }
 void lv_example4(void)
 {
-    setup_ui(&ui_test);
-//    while(HAL_SD_GetState(&hsd)==HAL_SD_STATE_BUSY);
-//    MX_USB_DEVICE_Init();
-//    HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_RESET);
-//    vTaskDelay(3000);
-
+    setup_ui(&ui_test,NULL,NULL);
 }
 
 

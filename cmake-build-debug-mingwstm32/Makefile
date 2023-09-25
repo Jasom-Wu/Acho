@@ -5296,6 +5296,54 @@ User/Src/gui_setup.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.s
 .PHONY : User/Src/gui_setup.c.s
 
+User/gui_pages/page_filelist.obj: User/gui_pages/page_filelist.c.obj
+.PHONY : User/gui_pages/page_filelist.obj
+
+# target to build an object file
+User/gui_pages/page_filelist.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.obj
+.PHONY : User/gui_pages/page_filelist.c.obj
+
+User/gui_pages/page_filelist.i: User/gui_pages/page_filelist.c.i
+.PHONY : User/gui_pages/page_filelist.i
+
+# target to preprocess a source file
+User/gui_pages/page_filelist.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.i
+.PHONY : User/gui_pages/page_filelist.c.i
+
+User/gui_pages/page_filelist.s: User/gui_pages/page_filelist.c.s
+.PHONY : User/gui_pages/page_filelist.s
+
+# target to generate assembly for a file
+User/gui_pages/page_filelist.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.s
+.PHONY : User/gui_pages/page_filelist.c.s
+
+User/gui_pages/page_play.obj: User/gui_pages/page_play.c.obj
+.PHONY : User/gui_pages/page_play.obj
+
+# target to build an object file
+User/gui_pages/page_play.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.obj
+.PHONY : User/gui_pages/page_play.c.obj
+
+User/gui_pages/page_play.i: User/gui_pages/page_play.c.i
+.PHONY : User/gui_pages/page_play.i
+
+# target to preprocess a source file
+User/gui_pages/page_play.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.i
+.PHONY : User/gui_pages/page_play.c.i
+
+User/gui_pages/page_play.s: User/gui_pages/page_play.c.s
+.PHONY : User/gui_pages/page_play.s
+
+# target to generate assembly for a file
+User/gui_pages/page_play.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.s
+.PHONY : User/gui_pages/page_play.c.s
+
 User/gui_pages/page_test.obj: User/gui_pages/page_test.c.obj
 .PHONY : User/gui_pages/page_test.obj
 
@@ -5975,6 +6023,12 @@ help:
 	@echo ... User/Src/gui_setup.obj
 	@echo ... User/Src/gui_setup.i
 	@echo ... User/Src/gui_setup.s
+	@echo ... User/gui_pages/page_filelist.obj
+	@echo ... User/gui_pages/page_filelist.i
+	@echo ... User/gui_pages/page_filelist.s
+	@echo ... User/gui_pages/page_play.obj
+	@echo ... User/gui_pages/page_play.i
+	@echo ... User/gui_pages/page_play.s
 	@echo ... User/gui_pages/page_test.obj
 	@echo ... User/gui_pages/page_test.i
 	@echo ... User/gui_pages/page_test.s

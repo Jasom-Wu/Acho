@@ -71,12 +71,11 @@ uint8_t exf_readdir(DIR *dir) {
     char *fn;
 #if _USE_LFN
     fileinfo.lfsize = _MAX_LFN * 2 + 1;
-    fileinfo.lfname = namebuff;//mymalloc(fileinfo.lfsize);
+    fileinfo.lfname = namebuff;
 #endif
     res = f_readdir(dir, &fileinfo);//读取一个文件的信息
     if (res != FR_OK || fileinfo.fname[0] == 0) {
         printf("error");
-//		myfree(fileinfo.lfname);
         return res;//读完了.
     }
 #if _USE_LFN
@@ -106,34 +105,36 @@ uint8_t exf_readdir(DIR *dir) {
 //遍历文件
 //path:路径
 //返回值:执行结果
-uint8_t exf_scan_files(DIR *dir, uint8_t *path, char **file_name) {
+uint8_t exf_scan_files(DIR *dir, char **file_name,DWORD *file_size) {
+    if (!dir || !file_name)return FR_INVALID_PARAMETER;
     FRESULT res;
     char *fn;   /* This function is assuming non-Unicode cfg. */
 #if _USE_LFN
+    memset(namebuff,0, sizeof(namebuff));
     fileinfo.lfsize = _MAX_LFN * 2 + 1;
     fileinfo.lfname = namebuff;//mymalloc(fileinfo.lfsize);
 #endif
     if (file_name != NULL)
         *file_name = NULL;
-    res = f_opendir(dir, (const TCHAR *) path); //打开一个目录
-    if (res == FR_OK) {
-        while (1) {
-            res = f_readdir(dir, &fileinfo);                   //读取目录下的一个文件
-            if (res != FR_OK || fileinfo.fname[0] == 0) {
-                f_closedir(dir);
-                return FR_NO_FILE;
-            }  //错误了/到末尾了,退出
-            if (fileinfo.fname[0] == '.') continue;             //忽略上级目录
+//    res = f_opendir(dir, (const TCHAR *) path); //打开一个目录
+    while (1) {
+        res = f_readdir(dir, &fileinfo);                   //读取目录下的一个文件
+        if (res != FR_OK || fileinfo.fname[0] == 0) {
+            f_closedir(dir);
+            return FR_NO_FILE;
+        }  //错误了/到末尾了,退出
+        if (fileinfo.fname[0] == '.') continue;             //忽略上级目录
 #if _USE_LFN
-            fn = *fileinfo.lfname ? fileinfo.lfname : fileinfo.fname;
+        fn = *fileinfo.lfname ? fileinfo.lfname : fileinfo.fname;
 #else
-            fn = fileinfo.fname;
+        fn = fileinfo.fname;
 #endif                                                  /* It is a file. */
-            if (file_name != NULL)
-                *file_name = fn;
-        }
-
+        *file_name = fn;
+        if(file_size)
+            *file_size = fileinfo.fsize;
+        break;
     }
+
 //	myfree(fileinfo.lfname);
     return res;
 }

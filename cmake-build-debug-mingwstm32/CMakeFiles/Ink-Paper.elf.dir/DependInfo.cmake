@@ -263,6 +263,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/bsp_vs10xx.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/fops.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/gui_setup.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj.d"
+  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_filelist.c" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.obj.d"
+  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_play.c" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.c" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_test.c.obj.d"
   )
 

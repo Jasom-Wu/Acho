@@ -9,63 +9,43 @@ static FIL *file = (FIL *) &SDFile;        //为file申请内存
 ////////////////////////////////////////////////////////////////////////////////////////
 
 
-static HAL_StatusTypeDef fileDownload(const char *des_path) {
-    uint32_t size = 0;
-    HAL_StatusTypeDef state;
+static void fileDownload(char *payload, uint16_t size, void *des_path) {
     uint8_t res;
-    uint8_t temp[4]={0};
-    HAL_UART_Receive(&huart1, (uint8_t *)&size, 1, 2000);
-    state = HAL_UART_Receive(&huart1, (uint8_t *)&size, sizeof(uint32_t), 2000);
-    if (state != HAL_OK) {
-        return HAL_TIMEOUT;
-    }
+    UINT count=0;
     if (size > 0) {
-        memset(global_buff512, 0, 512);
         res = f_open(file, (const TCHAR *) des_path, FA_CREATE_ALWAYS | FA_WRITE);
-        if (res)return HAL_ERROR;
-        while (1) {
-            if (size <= 512) {
-                state = HAL_UART_Receive(&huart1, global_buff512, size, 2000);
-                if (state == HAL_OK) {
-                    if (f_write(file, global_buff512, size, NULL)) {
-                        state = HAL_ERROR;
-                        break;
-                    }
-                }
-                break;
-            } else {
-                state = HAL_UART_Receive(&huart1, global_buff512, 512, 2000);
-                if (state != HAL_OK) {
-                    if (f_write(file, global_buff512, 512, NULL)) {
-                        state = HAL_ERROR;
-                        break;
-                    }
-                }
-                size -= 512;
-            }
-            if (state != HAL_OK)break;
-        }
+        if (res)return;
+        f_write(file, payload, size, &count);
         f_close(file);
     }
-    return state;
 }
 
-HAL_StatusTypeDef downLoadFileList(File_TypeTypeDef type) {
-    Printf("get_file_list:%d", type);
-    HAL_StatusTypeDef state = HAL_OK;
+void downLoadFileList(File_TypeTypeDef type,UartHandle_FinishCallBackFuncTypedef callback_fun,void *callback_data) {
+    char *path = NULL;
     if (type == IMG) {
-        state = fileDownload("img_list.txt");
+        path = "img_list.txt";
     } else if (type == AUDIO) {
-        state = fileDownload("audio_list.txt");
+        path = "audio_list.txt";
     }
-    return state;
+    Printf("get_file_list:%d", type);
+    HandlerManager.mount(fileDownload,callback_fun,path,callback_data)->run(5000,1);
 }
 
-HAL_StatusTypeDef downLoadDitherPicBin(uint16_t file_id) {
-    Printf("get_dither_bin:%d", file_id);
+void downLoadFile(File_TypeTypeDef type,char * file_id,char * file_name,UartHandle_FinishCallBackFuncTypedef callback_fun,void *callback_data) {
     char path_buff[50] = {0};
-    snprintf(path_buff, 50, "img_%d.bin", file_id);
-    return fileDownload(path_buff);
+    if(type==IMG){
+        char *dot = strrchr(file_name, '.'); // 查找最后一个点的位置
+        if (dot)*dot = '\0';
+        snprintf(path_buff, 50, "Images/%s.bin",file_name);
+        Printf("get_dither_bin:%s", file_id);
+        HandlerManager.mount(fileDownload,callback_fun,path_buff,callback_data)->run(7000,1);
+    }
+    else if(type==AUDIO){
+        snprintf(path_buff, 50, "Audios/%s",file_name);
+//        Printf("get_dither_bin:%s", file_id);
+        HandlerManager.mount(fileDownload,callback_fun,path_buff,callback_data)->run(7000,1);
+    }
+
 }
 
 
@@ -80,22 +60,21 @@ FILE_Info_StateTypedef loadNextFileData(FIL *file_ptr, File_InfoTypedef *file_in
     static uint16_t buff_index=0;
     static uint8_t sector_flag=0;
     static uint8_t last_sector_flag =0;
-
+    UINT br;
     if(file_ptr->fptr == 0){
         memset(global_buff512, 0, 512);
         sector_flag = last_sector_flag = buff_index = file_index = 0;
-        if (f_read(file, global_buff512, sizeof(uint8_t) * 512, NULL))return FILE_INFO_ERROR;
+        if (f_read(file_ptr, global_buff512, sizeof(uint8_t) * 512, &br))return FILE_INFO_ERROR;
     }
-
     while(1){
         if(last_sector_flag!=sector_flag){
             if(sector_flag==1){
                 memset(global_buff512, 0, 256);
-                if (f_read(file, global_buff512, sizeof(uint8_t) * 256, NULL))return FILE_INFO_ERROR;
+                if (f_read(file_ptr, global_buff512, sizeof(uint8_t) * 256, &br))return FILE_INFO_ERROR;
             }
             else{
                 memset(&global_buff512[256], 0, 256);
-                if (f_read(file, &global_buff512[256], sizeof(uint8_t) * 256, NULL))return FILE_INFO_ERROR;
+                if (f_read(file_ptr, &global_buff512[256], sizeof(uint8_t) * 256, &br))return FILE_INFO_ERROR;
             }
             last_sector_flag=sector_flag;
         }
@@ -122,6 +101,7 @@ FILE_Info_StateTypedef loadNextFileData(FIL *file_ptr, File_InfoTypedef *file_in
                 default:
                     break;
             }
+            memset(stack_buff,0, sizeof(stack_buff));
             stack_index = 0;
             buff_index++;
             if(info_flag==3){
