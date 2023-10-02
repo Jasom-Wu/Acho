@@ -10,6 +10,7 @@
     <file url="file://$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/User/Inc/audio.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/User/Inc/bsp_ink_paper.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/User/Inc/bsp_vs10xx.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/User/Src/audio.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/User/Src/bsp_usart.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/User/Src/bsp_vs10xx.c" charset="GBK" />

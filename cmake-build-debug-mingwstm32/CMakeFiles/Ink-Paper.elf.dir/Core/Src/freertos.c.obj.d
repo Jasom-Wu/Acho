@@ -280,7 +280,7 @@ CMakeFiles/Ink-Paper.elf.dir/Core/Src/freertos.c.obj: \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/audio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/bsp_vs10xx.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/spi.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages/page_test.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages/page_main.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/gui_setup.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/fops.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FatFs\src/integer.h \

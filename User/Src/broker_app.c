@@ -13,10 +13,24 @@ static void fileDownload(char *payload, uint16_t size, void *des_path) {
     uint8_t res;
     UINT count=0;
     if (size > 0) {
-        res = f_open(file, (const TCHAR *) des_path, FA_CREATE_ALWAYS | FA_WRITE);
-        if (res)return;
+        if(HandlerManager.need_reset==0){
+            if(file->fs==0){
+                res = f_open(file, (const TCHAR *) des_path, FA_CREATE_ALWAYS | FA_WRITE);
+                if (res)return;
+            }
+        } else{
+            res = f_open(file, (const TCHAR *) des_path, FA_CREATE_ALWAYS | FA_WRITE);
+            if (res)return;
+        }
         f_write(file, payload, size, &count);
-        f_close(file);
+        if(HandlerManager.need_reset==0){
+            if(size<RXBUFFERSIZE)
+                f_close(file);
+            else
+                HandlerManager.run(HandlerManager.timeout_ms,1); // proceed to receive the un-ending data
+        } else{
+            f_close(file);
+        }
     }
 }
 
@@ -32,20 +46,19 @@ void downLoadFileList(File_TypeTypeDef type,UartHandle_FinishCallBackFuncTypedef
 }
 
 void downLoadFile(File_TypeTypeDef type,char * file_id,char * file_name,UartHandle_FinishCallBackFuncTypedef callback_fun,void *callback_data) {
-    char path_buff[50] = {0};
+    char * path_buff = (char*)global_buff512;
     if(type==IMG){
         char *dot = strrchr(file_name, '.'); // 查找最后一个点的位置
         if (dot)*dot = '\0';
-        snprintf(path_buff, 50, "Images/%s.bin",file_name);
+        snprintf(path_buff, 50, "Images\\%s.bin",file_name);
         Printf("get_dither_bin:%s", file_id);
         HandlerManager.mount(fileDownload,callback_fun,path_buff,callback_data)->run(7000,1);
     }
     else if(type==AUDIO){
-        snprintf(path_buff, 50, "Audios/%s",file_name);
-//        Printf("get_dither_bin:%s", file_id);
-        HandlerManager.mount(fileDownload,callback_fun,path_buff,callback_data)->run(7000,1);
+        snprintf(path_buff, 50, "Audios\\%s",file_name);
+        Printf("get_audio_file:%s", file_id);
+        HandlerManager.mount(fileDownload,callback_fun,path_buff,callback_data)->run(7000,0);
     }
-
 }
 
 

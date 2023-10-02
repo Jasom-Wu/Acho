@@ -23,7 +23,7 @@ uint8_t VS_SPI_ReadWriteByte(uint8_t txdata)
 	while((VS_SPI.Instance->SR&1<<1)==0)//等待发送区空	
 	{
 		retry++;
-		if(retry>0XFFFE)return 0;
+		if(retry>0XFFF)return 0;
 	}			  
 	VS_SPI.Instance->DR = txdata;
 	retry=0;
@@ -31,7 +31,7 @@ uint8_t VS_SPI_ReadWriteByte(uint8_t txdata)
 	{
 		retry++;
 		t = retry;
-		if(retry>0XFFFE)return 0;
+		if(retry>0XFFF)return 0;
 	}	  						    
 	return VS_SPI.Instance->DR;          //返回收到的数据  
 	
@@ -47,7 +47,7 @@ void VS_SPI_SpeedLow(void)
 void VS_SPI_SpeedHigh(void)
 {				
 	VS_SPI.Instance->CR1&=0XFFC7; 
-	VS_SPI.Instance->CR1|=SPI_BAUDRATEPRESCALER_8 ;	//设置SPI1速度  
+	VS_SPI.Instance->CR1|=SPI_BAUDRATEPRESCALER_8 ;	//设置SPI1速度
 	VS_SPI.Instance->CR1|=1<<6; 		//SPI设备使能
 }  
 ////////////////////////////////////////////////////////////////////////////////	 	  

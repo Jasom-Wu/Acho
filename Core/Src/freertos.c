@@ -30,7 +30,7 @@
 #include "fatfs.h"
 #include "audio.h"
 #include "bsp_vs10xx.h"
-#include "page_test.h"
+#include "page_main.h"
 #include "gui_setup.h"
 #include "fops.h"
 #include "bsp_usart.h"
@@ -151,6 +151,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
+    MX_USB_DEVICE_Init();
   /* USER CODE BEGIN StartDefaultTask */
 	static portTickType PreviousWakeTime;
 	const portTickType TimeIncrement = pdMS_TO_TICKS(5);
@@ -160,6 +161,7 @@ void StartDefaultTask(void const * argument)
 	lv_port_disp_init();
 	lv_port_indev_init();
 	lv_port_fs_init();
+    GUIInit();
 	vTaskResume(mainTaskHandle);
     HAL_GPIO_WritePin(USB_EN_GPIO_Port,USB_EN_Pin,GPIO_PIN_SET);
   /* Infinite loop */
@@ -188,8 +190,8 @@ void StartMainTask(void const * argument)
 	const portTickType TimeIncrement = pdMS_TO_TICKS(5);
 	PreviousWakeTime = xTaskGetTickCount();
 	
-	extern void lv_example3(void);
-	lv_example3();
+	extern void lv_example4(void);
+	lv_example4();
 //	vTaskDelay(3000);
 //	vTaskDelete(NULL);
 	//lv_example1();
@@ -315,8 +317,8 @@ void lv_example3(void)
 //    vTaskDelay(3000);
 //    taskENTER_CRITICAL();
 //    EPD_1N54_V2_FullClearToPartial();
-//    lv_img_set_src(img,"P:Images\\777.bin");
-    lv_img_set_src(img,"P:hhh.bin");
+    lv_img_set_src(img,"P:Images\\777.bin");
+//    lv_img_set_src(img,"P:hhh.bin");
 //    vTaskDelay(5000);
 //    EPD_1N54_V2_FullClearToPartial();
     while(HAL_SD_GetState(&hsd)==HAL_SD_STATE_BUSY);
@@ -337,7 +339,14 @@ void lv_example3(void)
 }
 void lv_example4(void)
 {
-    setup_ui(&ui_test,NULL,NULL);
+    setup_ui(&ui_main,&ui_ROOT,NULL);
+//    uint8_t path[] = "0:heaven.mp3";
+//    uint8_t path[] = "0:song.flac";
+//    audio_play(path);
+//    uint8_t path2[] = "0:heaven.mp3";
+//    audio_play(path2);
+//    uint8_t path1[] = "0:travel.mp3";
+//    audio_play(path1);
 }
 
 

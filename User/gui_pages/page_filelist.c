@@ -6,19 +6,19 @@
 #include "broker_app.h"
 #include "sdio.h"
 
-static void setup_scr_screen(void *user_data);
+static void setup_screen(void *user_data);
 
-static void delete_scr_screen(void *user_data);
+static void delete_screen(void *user_data);
 
+static void resume_screen(void *user_data);
 lv_ui ui_filelist = {
         .screen=NULL,
         .last_ui=NULL,
         .is_init = false,
-        .gui_setup_func = setup_scr_screen,
-        .gui_delete_func = delete_scr_screen
+        .gui_setup_func = setup_screen,
+        .gui_resume_func = resume_screen,
+        .gui_delete_func = delete_screen
 };
-static uint8_t *data_heap = NULL;
-static uint32_t data_heap_index = 0;
 
 static void waitingTimerCallBack(lv_timer_t *t) {
     static uint8_t flag = 0;
@@ -69,14 +69,14 @@ static void finishCallBackFunc(HAL_StatusTypeDef state,void *data){
     }
 }
 static void click_event(lv_event_t *e) {
-    char *id;
-    char *name;
+    uint8_t *id;
+    uint8_t *name;
     lv_obj_t *target = (lv_obj_t *)lv_event_get_target(e);
     if (e->code == LV_EVENT_LONG_PRESSED) {
         delete_ui(&ui_filelist, NULL);
     } else if (e->code == LV_EVENT_SHORT_CLICKED) {
-        id = (char *) target->user_data;
-        name = id + strlen(id) + 1;
+        id = (uint8_t *) target->user_data;
+        name = id + strlen((char*)id) + 1;
         lv_group_focus_freeze(ui_filelist.group, true);
         lv_obj_t *wait_hint = lv_label_create(ui_filelist.screen);
         lv_obj_set_size(wait_hint, LV_PCT(90), LV_SIZE_CONTENT);
@@ -107,7 +107,9 @@ static void click_event(lv_event_t *e) {
     }
 }
 
-static void setup_scr_screen(void *user_data) {
+
+
+static void setup_screen(void *user_data) {
     ui_filelist.screen = lv_obj_create(NULL);
     lv_obj_set_user_data(ui_filelist.screen,user_data);
     lv_obj_t *div = lv_obj_create(ui_filelist.screen);
@@ -146,36 +148,7 @@ static void setup_scr_screen(void *user_data) {
     lv_obj_set_style_bg_color(screen_list, lv_color_make(0x00, 0x00, 0x00), LV_PART_SCROLLBAR);
     lv_obj_set_style_bg_opa(screen_list, LV_OPA_100, LV_PART_SCROLLBAR);
 
-    //Set style state: LV_STATE_DEFAULT for style_screen_list_extra_btns_main_default
-    static lv_style_t style_screen_list_extra_btns_main_default;
-    ui_init_style(&style_screen_list_extra_btns_main_default);
-    lv_style_set_radius(&style_screen_list_extra_btns_main_default, 3);
-    lv_style_set_bg_color(&style_screen_list_extra_btns_main_default, lv_color_make(0xff, 0xff, 0xff));
-    lv_style_set_bg_opa(&style_screen_list_extra_btns_main_default, 255);
-    lv_style_set_text_color(&style_screen_list_extra_btns_main_default, lv_color_make(0x00, 0x00, 0x00));
-    lv_style_set_text_font(&style_screen_list_extra_btns_main_default, &lv_font_montserrat_14);
-
-    //Set style state: LV_STATE_PRESSED for style_screen_list_extra_btns_main_pressed
-    static lv_style_t style_screen_list_extra_btns_main_pressed;
-    ui_init_style(&style_screen_list_extra_btns_main_pressed);
-    lv_style_set_radius(&style_screen_list_extra_btns_main_pressed, 3);
-    lv_style_set_bg_color(&style_screen_list_extra_btns_main_pressed, lv_color_make(0x00, 0x00, 0x00));
-    lv_style_set_bg_opa(&style_screen_list_extra_btns_main_pressed, 255);
-    lv_style_set_text_color(&style_screen_list_extra_btns_main_pressed, lv_color_make(0xff, 0xff, 0xff));
-    lv_style_set_text_font(&style_screen_list_extra_btns_main_pressed, &lv_font_montserrat_14);
-
-    //Set style state: LV_STATE_FOCUSED for style_screen_list_extra_btns_main_focused
-    static lv_style_t style_screen_list_extra_btns_main_focused;
-    ui_init_style(&style_screen_list_extra_btns_main_focused);
-    lv_style_set_radius(&style_screen_list_extra_btns_main_focused, 3);
-    lv_style_set_bg_color(&style_screen_list_extra_btns_main_focused, lv_color_make(0xff, 0xff, 0xff));
-    lv_style_set_bg_opa(&style_screen_list_extra_btns_main_focused, 255);
-    lv_style_set_text_color(&style_screen_list_extra_btns_main_focused, lv_color_make(0x00, 0x00, 0x00));
-    lv_style_set_outline_color(&style_screen_list_extra_btns_main_focused, lv_color_make(0x00, 0x00, 0x00));
-    lv_style_set_outline_opa(&style_screen_list_extra_btns_main_focused, 255);
-    lv_style_set_outline_width(&style_screen_list_extra_btns_main_focused, 1);
-    lv_style_set_text_font(&style_screen_list_extra_btns_main_focused, &lv_font_montserrat_14);
-    lv_style_set_outline_pad(&style_screen_list_extra_btns_main_focused, 2);
+    resume_screen(NULL);
     File_InfoTypedef file_info;
     FILE_Info_StateTypedef state;
     char buff[FILE_INFO_TOTAL_SIZE] = {0};
@@ -185,6 +158,7 @@ static void setup_scr_screen(void *user_data) {
     else if(memcmp(user_data,"AUDIO",3)==0)
         f_open(file, "audio_list.txt", FA_OPEN_ALWAYS | FA_READ);
     uint16_t file_count = 0;
+    HeapManager.init(64);
     if (file) {
         while (true) {
             state = loadNextFileData(file, &file_info);
@@ -193,18 +167,9 @@ static void setup_scr_screen(void *user_data) {
                 memset(buff, 0, sizeof(buff));
                 snprintf(buff, 50, "%s %s", file_info.name, file_info.description);
                 lv_label_set_text(label, buff);
-                size_t size_id = strlen(file_info.id) + 1;
-                size_t size_name = strlen(file_info.name) + 1;
-                size_t size = strlen(file_info.id) + strlen(file_info.name);
-                uint8_t *pt;
-                data_heap = lv_mem_realloc(data_heap, data_heap_index + size);
-                pt = data_heap + data_heap_index;
-                lv_memcpy_small(pt, file_info.id, size_id);
-                lv_memcpy_small(pt + size_id, file_info.name, size_name);
-                data_heap_index += size;
-                lv_obj_set_user_data(label, pt);
+                label->user_data = HeapManager.push(file_info.id, strlen(file_info.id)+1);
+                HeapManager.push(file_info.name, strlen(file_info.name)+1);
                 lv_obj_set_size(label, LV_PCT(95), LV_SIZE_CONTENT);
-
                 lv_obj_add_style(label, &style_screen_list_extra_btns_main_default, LV_PART_MAIN | LV_STATE_DEFAULT);
                 lv_obj_add_style(label, &style_screen_list_extra_btns_main_pressed, LV_PART_MAIN | LV_STATE_PRESSED);
                 lv_obj_add_style(label, &style_screen_list_extra_btns_main_focused, LV_PART_MAIN | LV_STATE_FOCUSED);
@@ -227,11 +192,12 @@ static void setup_scr_screen(void *user_data) {
         lv_group_add_obj(lv_group_get_default(), div);
     }
 }
-
-static void delete_scr_screen(void *user_data) {
-    if (data_heap != NULL) {
-        lv_mem_free(data_heap);
-        data_heap = NULL;
-        data_heap_index = 0;
-    }
+static void resume_screen(void *user_data){
+    lv_style_set_text_font(&style_screen_list_extra_btns_main_default, &lv_font_montserrat_14);
+    lv_style_set_text_font(&style_screen_list_extra_btns_main_pressed, &lv_font_montserrat_14);
+    lv_style_set_text_font(&style_screen_list_extra_btns_main_focused, &lv_font_montserrat_14);
 }
+static void delete_screen(void *user_data) {
+    HeapManager.reset();
+}
+

@@ -84,17 +84,18 @@ uint16_t decode_time = 0;
 uint8_t audio_play(uint8_t *pname) {
     FIL *fmp3 = file;
     uint8_t res, rval = 0;
-    uint16_t i = 0;
+    uint16_t i;
     UINT count;
     VS_Restart_Play();                    //重启播放
     VS_Set_All();                            //设置音量等信息
     VS_Set_Vol(190);        //设置音量
     VS_Reset_DecodeTime();    //复位解码时间
     res = f_typetell(pname);                    //得到文件后缀
-//    if (res == 0x4c)//如果是flac,加载patch
-//    {
-//        VS_Load_Patch((uint16_t *) vs1053b_patch, VS1053B_PATCHLEN);
-//    }
+    if (res == 0x4c)//如果是flac,加载patch
+    {
+        VS_Load_Patch((uint16_t *) vs1053b_patch, VS1053B_PATCHLEN);
+    }
+
     res = f_open(fmp3, (const TCHAR *) pname, FA_READ);//打开文件
     printf("%d", res);
     if (res == 0)//打开成功.
@@ -111,9 +112,9 @@ uint8_t audio_play(uint8_t *pname) {
                     decode_time = VS_Get_DecodeTime();
                     printf("%d\n", decode_time);//显示播放时间
                 }
+                if(count!=4096 && i>=count)break;
             } while (i < 4096);//循环发送4096个字节
             if (count != 4096 || res != 0) {
-                rval = 0;
                 break;//读完了.
             }
         }

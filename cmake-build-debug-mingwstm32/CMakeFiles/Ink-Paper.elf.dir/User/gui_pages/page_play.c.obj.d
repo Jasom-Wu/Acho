@@ -254,12 +254,6 @@ CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.obj: \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FatFs\src\drivers/sd_diskio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/audio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/simple_gpio.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/FreeRTOS.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/FreeRTOSConfig.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/projdefs.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/portable.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/deprecated_definitions.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM3/portmacro.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/mpu_wrappers.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/list.h
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Lib\WaveShare1in54v2/EPD_1in54_V2.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Lib\WaveShare1in54v2/DEV_Config.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_audio.h

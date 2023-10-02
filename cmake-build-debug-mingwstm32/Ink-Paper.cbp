@@ -1536,22 +1536,34 @@
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/gui_setup.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_audio.c">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_audio.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_filelist.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_filelist.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_main.c">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_main.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_main_select.c">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_main_select.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_play.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_play.h">
-			<Option target="Ink-Paper.elf"/>
-		</Unit>
-		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.c">
-			<Option target="Ink-Paper.elf"/>
-		</Unit>
-		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_test.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/CMakeLists.txt">

@@ -2,20 +2,21 @@
 // Created by Mr.WU on 2023/9/17.
 //
 
-#include "page_test.h"
-#include "page_filelist.h"
-#include "page_play.h"
+#include "page_main.h"
+#include "page_main_select.h"
 #include <stdio.h>
 #include "broker_app.h"
+#include "sdio.h"
 
-static void setup_scr_screen(void *user_data);
-
-lv_ui ui_test = {
+static void setup_screen(void *user_data);
+static void resume_screen(void *user_data);
+lv_ui ui_main = {
         .screen=NULL,
         .last_ui=NULL,
         .group=NULL,
         .is_init = false,
-        .gui_setup_func = setup_scr_screen,
+        .gui_setup_func = setup_screen,
+        .gui_resume_func = resume_screen,
         .gui_delete_func = NULL
 };
 
@@ -24,24 +25,25 @@ static void click_event(lv_event_t *e) {
     lv_label_t *target = (lv_label_t *) lv_event_get_target(e);
     if (e->code == LV_EVENT_SHORT_CLICKED) {
         if (memcmp(target->text, LV_SYMBOL_PLAY, 3) == 0) {
-            setup_ui(&ui_play, &ui_test, "IMG");
+            setup_ui(&ui_main_select, &ui_main, "PLAY");
         } else if (memcmp(target->text, LV_SYMBOL_DOWNLOAD, 3) == 0) {
-            setup_ui(&ui_filelist, &ui_test, "IMG");
+            setup_ui(&ui_main_select, &ui_main, "DOWNLOAD");
         } else if (memcmp(target->text, LV_SYMBOL_BELL, 3) == 0) {
             downLoadFileList(IMG,NULL,NULL);
         } else if (memcmp(target->text, LV_SYMBOL_USB, 3) == 0) {
+            while(HAL_SD_GetState(&hsd)==HAL_SD_STATE_BUSY);
             HAL_GPIO_WritePin(USB_EN_GPIO_Port, USB_EN_Pin, GPIO_PIN_SET);
             HAL_Delay(50);
             HAL_GPIO_WritePin(USB_EN_GPIO_Port, USB_EN_Pin, GPIO_PIN_RESET);
         } else if (memcmp(target->text, "["LV_SYMBOL_CLOSE"]", 3) == 0) {
-            delete_ui(&ui_test, NULL);
+            delete_ui(&ui_main, NULL);
         }
     }
 }
 
-static void setup_scr_screen(void *user_data) {
-    ui_test.screen = lv_obj_create(NULL);
-    lv_obj_t *screen_list = lv_obj_create(ui_test.screen);
+static void setup_screen(void *user_data) {
+    ui_main.screen = lv_obj_create(NULL);
+    lv_obj_t *screen_list = lv_obj_create(ui_main.screen);
     lv_obj_set_flex_flow(screen_list, LV_FLEX_FLOW_COLUMN);
     lv_obj_set_style_pad_all(screen_list, 15, LV_PART_MAIN);
     lv_obj_set_size(screen_list, 158, 150);
@@ -53,38 +55,7 @@ static void setup_scr_screen(void *user_data) {
     lv_obj_set_style_border_width(screen_list, 2, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_opa(screen_list, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-
-    //Set style state: LV_STATE_DEFAULT for style_screen_list_extra_btns_main_default
-    static lv_style_t style_screen_list_extra_btns_main_default;
-    ui_init_style(&style_screen_list_extra_btns_main_default);
-    lv_style_set_radius(&style_screen_list_extra_btns_main_default, 3);
-    lv_style_set_bg_color(&style_screen_list_extra_btns_main_default, lv_color_make(0xff, 0xff, 0xff));
-    lv_style_set_bg_opa(&style_screen_list_extra_btns_main_default, 255);
-    lv_style_set_text_color(&style_screen_list_extra_btns_main_default, lv_color_make(0x00, 0x00, 0x00));
-    lv_style_set_text_font(&style_screen_list_extra_btns_main_default, &lv_font_montserrat_18);
-
-    //Set style state: LV_STATE_PRESSED for style_screen_list_extra_btns_main_pressed
-    static lv_style_t style_screen_list_extra_btns_main_pressed;
-    ui_init_style(&style_screen_list_extra_btns_main_pressed);
-    lv_style_set_radius(&style_screen_list_extra_btns_main_pressed, 3);
-    lv_style_set_bg_color(&style_screen_list_extra_btns_main_pressed, lv_color_make(0x00, 0x00, 0x00));
-    lv_style_set_bg_opa(&style_screen_list_extra_btns_main_pressed, 255);
-    lv_style_set_text_color(&style_screen_list_extra_btns_main_pressed, lv_color_make(0xff, 0xff, 0xff));
-    lv_style_set_text_font(&style_screen_list_extra_btns_main_pressed, &lv_font_montserrat_18);
-
-    //Set style state: LV_STATE_FOCUSED for style_screen_list_extra_btns_main_focused
-    static lv_style_t style_screen_list_extra_btns_main_focused;
-    ui_init_style(&style_screen_list_extra_btns_main_focused);
-    lv_style_set_radius(&style_screen_list_extra_btns_main_focused, 3);
-    lv_style_set_bg_color(&style_screen_list_extra_btns_main_focused, lv_color_make(0xff, 0xff, 0xff));
-    lv_style_set_bg_opa(&style_screen_list_extra_btns_main_focused, 255);
-    lv_style_set_text_color(&style_screen_list_extra_btns_main_focused, lv_color_make(0x00, 0x00, 0x00));
-    lv_style_set_outline_color(&style_screen_list_extra_btns_main_focused, lv_color_make(0x00, 0x00, 0x00));
-    lv_style_set_outline_opa(&style_screen_list_extra_btns_main_focused, 255);
-    lv_style_set_outline_width(&style_screen_list_extra_btns_main_focused, 1);
-    lv_style_set_text_font(&style_screen_list_extra_btns_main_focused, &lv_font_montserrat_18);
-    lv_style_set_outline_pad(&style_screen_list_extra_btns_main_focused, 2);
-
+    resume_screen(NULL);
     const char *label_text[] = {LV_SYMBOL_PLAY " Play", LV_SYMBOL_DOWNLOAD "Download", LV_SYMBOL_BELL " GET-LIST",
                                 LV_SYMBOL_USB "OPEN-USB"};
     for (int i = 0; i < 4; i++) {
@@ -99,7 +70,7 @@ static void setup_scr_screen(void *user_data) {
         lv_obj_add_flag(label, LV_OBJ_FLAG_CLICKABLE);
         lv_group_add_obj(lv_group_get_default(), label);
     }
-    lv_obj_t *label = lv_label_create(ui_test.screen);
+    lv_obj_t *label = lv_label_create(ui_main.screen);
     lv_obj_set_pos(label, 150, 30);
     lv_label_set_text(label, "[" LV_SYMBOL_CLOSE"]");
     lv_obj_set_size(label, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
@@ -110,4 +81,10 @@ static void setup_scr_screen(void *user_data) {
     lv_obj_add_flag(label, LV_OBJ_FLAG_CLICKABLE);
 
     lv_group_add_obj(lv_group_get_default(), label);
+}
+
+static void resume_screen(void *user_data){
+    lv_style_set_text_font(&style_screen_list_extra_btns_main_default, &lv_font_montserrat_18);
+    lv_style_set_text_font(&style_screen_list_extra_btns_main_pressed, &lv_font_montserrat_18);
+    lv_style_set_text_font(&style_screen_list_extra_btns_main_focused, &lv_font_montserrat_18);
 }

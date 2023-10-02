@@ -105,10 +105,11 @@ uint8_t exf_readdir(DIR *dir) {
 //遍历文件
 //path:路径
 //返回值:执行结果
-uint8_t exf_scan_files(DIR *dir, char **file_name,DWORD *file_size) {
-    if (!dir || !file_name)return FR_INVALID_PARAMETER;
+uint8_t exf_scan_files(DIR *dir, char **file_name,DWORD *file_size,uint8_t offset) {
+    if (!dir)return FR_INVALID_PARAMETER;
     FRESULT res;
     char *fn;   /* This function is assuming non-Unicode cfg. */
+    uint8_t index = 0;
 #if _USE_LFN
     memset(namebuff,0, sizeof(namebuff));
     fileinfo.lfsize = _MAX_LFN * 2 + 1;
@@ -124,12 +125,17 @@ uint8_t exf_scan_files(DIR *dir, char **file_name,DWORD *file_size) {
             return FR_NO_FILE;
         }  //错误了/到末尾了,退出
         if (fileinfo.fname[0] == '.') continue;             //忽略上级目录
+        else if(index!=offset){
+            index++;
+            continue;
+        }
 #if _USE_LFN
         fn = *fileinfo.lfname ? fileinfo.lfname : fileinfo.fname;
 #else
         fn = fileinfo.fname;
 #endif                                                  /* It is a file. */
-        *file_name = fn;
+        if(file_name)
+            *file_name = fn;
         if(file_size)
             *file_size = fileinfo.fsize;
         break;
