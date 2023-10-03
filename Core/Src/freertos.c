@@ -34,6 +34,7 @@
 #include "gui_setup.h"
 #include "fops.h"
 #include "bsp_usart.h"
+#include "page_audio.h"
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -167,6 +168,10 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
+      if(audio_play_state!=0){
+          audio_play((uint8_t *)namebuff);
+          audio_play_state=0;
+      }
       USART1_REC_Handler();
       vTaskDelayUntil( &PreviousWakeTime,TimeIncrement );
   }

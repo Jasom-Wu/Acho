@@ -61,7 +61,7 @@ static void click_event(lv_event_t *e) {
                     lv_obj_center(img);
                 } else if (memcmp(type, "AUDIO", 5) == 0){
                     snprintf(path,50,"P:Audios\\%s",name);
-                    if(target->user_data && ui_audio.user_data){
+                    if(target->user_data && ui_audio.user_data==NULL){
                         ui_audio.user_data = lv_mem_alloc(2);
                         memcpy(ui_audio.user_data,target->user_data,2);
                         delete_ui(&ui_play, NULL);

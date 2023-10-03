@@ -333,6 +333,7 @@ CMakeFiles/Ink-Paper.elf.dir/Core/Src/freertos.c.obj
  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/integer.h
  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/bsp_usart.h
  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/usart.h
+ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_audio.h
  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/task.h

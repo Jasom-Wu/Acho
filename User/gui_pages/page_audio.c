@@ -16,6 +16,7 @@ static void delete_screen(void *user_data);
 
 static uint16_t file_index = 0;
 static uint16_t max_file_count = 0;
+uint8_t audio_play_state=0;
 lv_ui ui_audio = {
         .screen=NULL,
         .last_ui=NULL,
@@ -80,7 +81,7 @@ static void animation_end_callback(struct _lv_anim_t *anim) {
     if (img) {
         if (img->user_data) {
             if (memcmp(img->user_data, "W", 1) == 0) {
-                lv_anim_set_time(anim, 1000);
+                lv_anim_set_time(anim, 3000);
                 lv_anim_set_delay(anim, 200);
                 lv_anim_set_values(anim, 1, 9);
                 lv_anim_start(anim);
@@ -143,7 +144,6 @@ static void click_event(lv_event_t *e) {
                 lv_anim_set_values(&anim_box, 1, 7);
                 lv_anim_start(&anim_box);
             } else if (memcmp(lv_label_get_text(btn), LV_SYMBOL_PREV, 3) == 0) {
-                char buff[50] = {0};
                 DIR *dir = &SDDir;
                 char *file_name;
                 FRESULT state;
@@ -154,11 +154,10 @@ static void click_event(lv_event_t *e) {
                 state = exf_scan_files(dir, &file_name, NULL, file_index);
                 if (state == FR_OK) {
                     lv_label_set_text(title, file_name);
-                    snprintf(buff, 50, "P:Audios\\%s", file_name);
-                    audio_play((uint8_t *) buff);
+                    snprintf(namebuff, 50, "0:Audios\\%s", file_name);
+                    audio_play((uint8_t *) namebuff);
                 }
             } else if (memcmp(lv_label_get_text(btn), LV_SYMBOL_NEXT, 3) == 0) {
-                char buff[50] = {0};
                 DIR *dir = &SDDir;
                 char *file_name;
                 FRESULT state;
@@ -166,8 +165,8 @@ static void click_event(lv_event_t *e) {
                 state = exf_scan_files(dir, &file_name, NULL, file_index);
                 if (state == FR_OK) {
                     lv_label_set_text(title, file_name);
-                    snprintf(buff, 50, "P:Audios\\%s", file_name);
-                    audio_play((uint8_t *) buff);
+                    snprintf(namebuff, 50, "0:Audios\\%s", file_name);
+                    audio_play((uint8_t *) namebuff);
                 } else
                     file_index = 0;
             } else if (memcmp(lv_label_get_text(btn), LV_SYMBOL_LIST, 3) == 0) {
@@ -184,6 +183,7 @@ static void click_event(lv_event_t *e) {
 }
 
 static void setup_screen(void *user_data) {
+    audio_play_state = 0;
     ui_audio.screen = lv_obj_create(NULL);
     lv_obj_set_scrollbar_mode(ui_audio.screen, LV_SCROLLBAR_MODE_OFF);
     lv_obj_t *div = lv_obj_create(ui_audio.screen);
@@ -199,11 +199,11 @@ static void setup_screen(void *user_data) {
     resume_screen(NULL);
 
     lv_obj_t *title = lv_label_create(div);
-    lv_obj_set_size(title, LV_PCT(100), LV_SIZE_CONTENT);
+    lv_obj_set_size(title, LV_PCT(100), 22);
     lv_obj_set_pos(title, LV_PCT(0), LV_PCT(0));
     lv_label_set_text(title, "Whatever You Want-[Jasom-wu]");
     lv_label_set_long_mode(title, LV_LABEL_LONG_SCROLL);
-    lv_obj_set_content_height(title, 22);
+    lv_obj_set_content_height(title, 25);
     lv_obj_set_style_border_side(title, LV_BORDER_SIDE_BOTTOM, LV_PART_MAIN);
     lv_obj_set_style_border_width(title, 1, LV_PART_MAIN);
     lv_obj_set_style_text_font(title, &lv_font_montserrat_18, LV_PART_MAIN);
@@ -273,7 +273,7 @@ static void setup_screen(void *user_data) {
     lv_anim_set_ready_cb(&anim_box, animation_end_callback);
     lv_anim_set_exec_cb(&anim_box, (lv_anim_exec_xcb_t) custom_anim_callback);
     lv_anim_set_var(&anim_box, img_front);
-    lv_anim_set_time(&anim_box, 800);
+    lv_anim_set_time(&anim_box, 1500);
     lv_anim_set_delay(&anim_box, 500);
     lv_anim_set_values(&anim_box, 1, 16);
     lv_anim_start(&anim_box);
@@ -306,19 +306,25 @@ static void resume_screen(void *user_data) {
         uint16_t index = *(uint16_t *) user_data;
         lv_obj_t *title = lv_obj_get_child(lv_obj_get_child(ui_audio.screen, 0), 0);
         if (title) {
-            char buff[50] = {0};
+            lv_obj_t *img_front, *img_pre = NULL;
+            lv_obj_t *img_div = lv_obj_get_child(lv_obj_get_child(ui_audio.screen, 0), 1);
+            img_front = lv_obj_get_child(img_div, 0);
+            img_pre = lv_obj_get_child(img_div, 1);
+            img_pre->user_data = NULL;
             DIR *dir = &SDDir;
             char *file_name;
             FRESULT state;
+            f_opendir(dir, (const TCHAR *) "Audios");
             state = exf_scan_files(dir, &file_name, NULL, index);
             if (state == FR_OK || state == FR_NO_FILE) {
                 file_index = index;
                 lv_label_set_text(title, file_name);
-                snprintf(buff, 50, "P:Audios\\%s", file_name);
-                audio_play((uint8_t *) buff);
+                snprintf(namebuff, 50, "0:Audios\\%s", file_name);
+                audio_play_state = 1;
             }
         }
         lv_mem_free(user_data);
+        ui_audio.user_data = NULL;
     }
     lv_style_set_text_font(&style_screen_list_extra_btns_main_default, &lv_font_montserrat_18);
     lv_style_set_text_font(&style_screen_list_extra_btns_main_pressed, &lv_font_montserrat_18);

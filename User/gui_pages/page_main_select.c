@@ -78,7 +78,7 @@ static void click_event(lv_event_t *e) {
         } else {
             lv_anim_init(&anim_mode_text);
             lv_anim_set_var(&anim_mode_text, label_div);
-            lv_anim_set_time(&anim_mode_text, 300);
+            lv_anim_set_time(&anim_mode_text, 1000);
             lv_anim_set_delay(&anim_mode_text, 0);
             lv_anim_set_exec_cb(&anim_mode_text, (lv_anim_exec_xcb_t) lv_obj_set_x);
             lv_obj_t * img_front,*img_pre=NULL;
@@ -92,7 +92,7 @@ static void click_event(lv_event_t *e) {
                     img_front->user_data = mode_str;
                     lv_anim_set_var(&anim_icon, img_front);
                     lv_anim_set_exec_cb(&anim_icon, (lv_anim_exec_xcb_t) custom_anim_callback);
-                    lv_anim_set_time(&anim_icon, 400);
+                    lv_anim_set_time(&anim_icon, 2000);
                     lv_anim_set_delay(&anim_icon, 300);
                 }
                 if (memcmp(mode_str, "Audio", 6) == 0) {
@@ -114,7 +114,7 @@ static void click_event(lv_event_t *e) {
                     lv_anim_set_var(&anim_icon, img_pre);
                     lv_anim_set_exec_cb(&anim_icon, (lv_anim_exec_xcb_t) custom_anim_callback);
                     lv_anim_set_ready_cb(&anim_icon, animation_end_callback);
-                    lv_anim_set_time(&anim_icon, 200);
+                    lv_anim_set_time(&anim_icon, 2000);
                     lv_anim_set_delay(&anim_icon, 0);
                 }
                 if (memcmp(mode_str, "Audio", 6) == 0) {

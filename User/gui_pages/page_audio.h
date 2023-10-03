@@ -8,4 +8,5 @@
 #include "gui_setup.h"
 
 extern lv_ui ui_audio;
+extern uint8_t audio_play_state;
 #endif //LVGL_PAGE_AUDIO_H
