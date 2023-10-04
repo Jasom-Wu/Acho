@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "usart.h"
 #define TX_DATA_SIZE  128
-#define RXBUFFERSIZE  7168     //最大接收字节数
+#define RXBUFFERSIZE  6000     //最大接收字节数
 typedef void (*UartHandle_FuncTypedef)(char *payload, uint16_t size,void*handler_userdata);
 typedef void (*UartHandle_FinishCallBackFuncTypedef)(HAL_StatusTypeDef state,void *callback_userdata);
 typedef struct UartHandler_DriverStruct{

@@ -51,7 +51,7 @@ extern uint8_t global_buff512[512];
 
 void recoder_enter_rec_mode(uint16_t agc);
 void recoder_wav_init(__WaveHeader* wavhead);//≥ı ºªØWAVÕ∑	
-uint8_t audio_play(uint8_t *pname);
+uint8_t audio_play(uint8_t *pname,uint8_t*play_state);
 uint8_t audio_recorde(float agc,uint32_t recsec);
 #endif
 

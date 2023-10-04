@@ -7,6 +7,11 @@
 #include "page_play.h"
 #include "fops.h"
 #include "audio.h"
+#include "FreeRTOS.h"
+#include "task.h"
+
+
+extern uint8_t audio_play_current_state;
 
 static void setup_screen(void *user_data);
 
@@ -16,7 +21,7 @@ static void delete_screen(void *user_data);
 
 static uint16_t file_index = 0;
 static uint16_t max_file_count = 0;
-uint8_t audio_play_state=0;
+uint8_t audio_play_state = 0;
 lv_ui ui_audio = {
         .screen=NULL,
         .last_ui=NULL,
@@ -27,13 +32,20 @@ lv_ui ui_audio = {
         .gui_delete_func = delete_screen
 };
 
+
 static void custom_anim_callback(void *obj, int32_t value) {
     char buff[60] = {0};
     lv_obj_t *target = obj;
     if (target->user_data) {
         if (memcmp(target->user_data, "W", 1) == 0 || memcmp(target->user_data, "WE", 2) == 0) {
-            snprintf(buff, 60, "P:Static\\Animation\\audio\\work\\%ld.bin", value);
-            lv_img_set_src(target, buff);
+            if (((audio_play_current_state == AUDIO_HALT && audio_play_state == AUDIO_RESUME) ||
+                 (audio_play_current_state == AUDIO_NONE && audio_play_state == AUDIO_PRE_PLAY)) && value > 8) {
+                audio_play_state = AUDIO_PLAY;
+                target->user_data = NULL;
+            } else {
+                snprintf(buff, 60, "P:Static\\Animation\\audio\\work\\%ld.bin", value);
+                lv_img_set_src(target, buff);
+            }
         } else if (memcmp(target->user_data, "D-O", 3) == 0) {
             if (value <= 9) {
                 snprintf(buff, 60, "P:Static\\Animation\\audio\\drop\\%ld.bin", value);
@@ -53,6 +65,9 @@ static void custom_anim_callback(void *obj, int32_t value) {
         } else if (memcmp(target->user_data, "C", 1) == 0) {
             snprintf(buff, 60, "P:Static\\Animation\\audio\\close\\%ld.bin", value);
             lv_img_set_src(target, buff);
+        } else if (memcmp(target->user_data, "D", 1) == 0) {
+            snprintf(buff, 60, "P:Static\\Animation\\audio\\drop\\%ld.bin", value);
+            lv_img_set_src(target, buff);
         }
     }
 }
@@ -66,7 +81,8 @@ static void animation_start_callback(struct _lv_anim_t *anim) {
     if (memcmp(img->user_data, "W", 1) == 0 || memcmp(img->user_data, "O-W", 3) == 0) {
         lv_obj_set_style_img_opa(img_front, LV_OPA_0, LV_PART_MAIN);
         lv_obj_set_style_img_opa(img_pre, LV_OPA_100, LV_PART_MAIN);
-    } else if (memcmp(img->user_data, "D-O", 3) == 0 || memcmp(img->user_data, "C", 1) == 0) {
+    } else if (memcmp(img->user_data, "D", 1) == 0 || memcmp(img->user_data, "D-O", 3) == 0 ||
+               memcmp(img->user_data, "C", 1) == 0) {
         lv_obj_set_style_img_opa(img_front, LV_OPA_100, LV_PART_MAIN);
         lv_obj_set_style_img_opa(img_pre, LV_OPA_0, LV_PART_MAIN);
     }
@@ -85,12 +101,6 @@ static void animation_end_callback(struct _lv_anim_t *anim) {
                 lv_anim_set_delay(anim, 200);
                 lv_anim_set_values(anim, 1, 9);
                 lv_anim_start(anim);
-            } else if (memcmp(img->user_data, "WE", 2) == 0) {
-                lv_obj_set_style_img_opa(img_front, LV_OPA_100, LV_PART_MAIN);
-                lv_obj_set_style_img_opa(img_pre, LV_OPA_0, LV_PART_MAIN);
-            } else if (memcmp(img->user_data, "D-O", 3) == 0) {
-                lv_obj_set_style_img_opa(img_front, LV_OPA_0, LV_PART_MAIN);
-                lv_obj_set_style_img_opa(img_pre, LV_OPA_100, LV_PART_MAIN);
             } else if (memcmp(img->user_data, "O-W", 3) == 0) {
                 img_pre->user_data = "W";
                 lv_anim_set_time(anim, 1000);
@@ -102,10 +112,28 @@ static void animation_end_callback(struct _lv_anim_t *anim) {
     }
 }
 
+static void startAnim(lv_obj_t *tar, char *mode, uint32_t duration, uint32_t delay, int32_t start, int32_t end) {
+    lv_anim_del(tar, custom_anim_callback);
+    lv_anim_t anim_box;
+    lv_anim_init(&anim_box);
+    anim_box.user_data = tar;
+    tar->user_data = mode;
+    lv_anim_set_start_cb(&anim_box, animation_start_callback);
+    lv_anim_set_ready_cb(&anim_box, animation_end_callback);
+    lv_anim_set_exec_cb(&anim_box, (lv_anim_exec_xcb_t) custom_anim_callback);
+    lv_anim_set_var(&anim_box, tar);
+    lv_anim_set_time(&anim_box, duration);
+    lv_anim_set_delay(&anim_box, delay);
+    lv_anim_set_values(&anim_box, start, end);
+    lv_anim_start(&anim_box);
+}
+
 static void click_event(lv_event_t *e) {
     lv_obj_t *btn = (lv_obj_t *) lv_event_get_target(e);
     if (btn) {
         if (e->code == LV_EVENT_LONG_PRESSED) {
+            audio_play_state = AUDIO_CANCEL;
+            while (audio_play_current_state != AUDIO_NONE);
             delete_ui(&ui_audio, NULL);
 
         } else if (e->code == LV_EVENT_SHORT_CLICKED) {
@@ -116,33 +144,32 @@ static void click_event(lv_event_t *e) {
             lv_obj_t *title = lv_obj_get_child(lv_obj_get_child(ui_audio.screen, 0), 0);
             if (memcmp(lv_label_get_text(btn), LV_SYMBOL_PAUSE, 3) == 0) {
                 lv_label_set_text(btn, LV_SYMBOL_PLAY);
+                audio_play_state = AUDIO_HALT;
+                while (audio_play_current_state != AUDIO_HALT) {
+                    vTaskDelay(100);
+                }
                 img_pre->user_data = "WE";
-                lv_anim_t anim_box;
-                lv_anim_init(&anim_box);
-                anim_box.user_data = img_front;
-                img_front->user_data = "C";
-                lv_anim_set_start_cb(&anim_box, animation_start_callback);
-                lv_anim_set_ready_cb(&anim_box, animation_end_callback);
-                lv_anim_set_exec_cb(&anim_box, (lv_anim_exec_xcb_t) custom_anim_callback);
-                lv_anim_set_var(&anim_box, img_front);
-                lv_anim_set_time(&anim_box, 500);
-                lv_anim_set_delay(&anim_box, 500);
-                lv_anim_set_values(&anim_box, 1, 7);
-                lv_anim_start(&anim_box);
+                startAnim(img_front, "C", 500, 500, 1, 7);
             } else if (memcmp(lv_label_get_text(btn), LV_SYMBOL_PLAY, 3) == 0) {
                 lv_label_set_text(btn, LV_SYMBOL_PAUSE);
-                lv_anim_t anim_box;
-                lv_anim_init(&anim_box);
-                anim_box.user_data = img_pre;
-                img_pre->user_data = "O-W";
-                lv_anim_set_start_cb(&anim_box, animation_start_callback);
-                lv_anim_set_ready_cb(&anim_box, animation_end_callback);
-                lv_anim_set_exec_cb(&anim_box, (lv_anim_exec_xcb_t) custom_anim_callback);
-                lv_anim_set_var(&anim_box, img_pre);
-                lv_anim_set_time(&anim_box, 500);
-                lv_anim_set_delay(&anim_box, 1000);
-                lv_anim_set_values(&anim_box, 1, 7);
-                lv_anim_start(&anim_box);
+                DIR *dir = &SDDir;
+                char *file_name;
+                FRESULT state;
+                if (audio_play_state == AUDIO_NONE) {
+                    f_opendir(dir, (const TCHAR *) "Audios");
+                    state = exf_scan_files(dir, &file_name, NULL, file_index);
+                    f_closedir(dir);
+                    if (state == FR_OK) {
+                        lv_label_set_text(title, file_name);
+                        snprintf(namebuff, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
+                        startAnim(img_pre, "O-W", 1500, 100, 1, 7);
+                        audio_play_state = AUDIO_PRE_PLAY;
+                    }
+                }else{
+                    audio_play_state = AUDIO_RESUME;
+                    startAnim(img_pre, "O-W", 1500, 100, 1, 7);
+                }
+
             } else if (memcmp(lv_label_get_text(btn), LV_SYMBOL_PREV, 3) == 0) {
                 DIR *dir = &SDDir;
                 char *file_name;
@@ -151,24 +178,44 @@ static void click_event(lv_event_t *e) {
                     file_index = max_file_count;
                 }
                 file_index--;
+                f_opendir(dir, (const TCHAR *) "Audios");
                 state = exf_scan_files(dir, &file_name, NULL, file_index);
+                f_closedir(dir);
                 if (state == FR_OK) {
                     lv_label_set_text(title, file_name);
-                    snprintf(namebuff, 50, "0:Audios\\%s", file_name);
-                    audio_play((uint8_t *) namebuff);
+                    snprintf(namebuff, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
+                    audio_play_state = AUDIO_CANCEL;
+                    while (audio_play_current_state != AUDIO_NONE);
+                    if (memcmp(img_pre->user_data, "W", 1) != 0) {
+                        startAnim(img_pre, "O-W", 1500, 100, 1, 7);
+                    } else {
+                        startAnim(img_pre, "C", 500, 100, 1, 7);
+                        startAnim(img_pre, "O-W", 1500, 400, 1, 7);
+                    }
+                    audio_play_state = AUDIO_PRE_PLAY;
                 }
             } else if (memcmp(lv_label_get_text(btn), LV_SYMBOL_NEXT, 3) == 0) {
                 DIR *dir = &SDDir;
                 char *file_name;
                 FRESULT state;
-                file_index--;
+                file_index++;
+                if (file_index >= max_file_count)file_index = 0;
+                f_opendir(dir, (const TCHAR *) "Audios");
                 state = exf_scan_files(dir, &file_name, NULL, file_index);
+                f_closedir(dir);
                 if (state == FR_OK) {
                     lv_label_set_text(title, file_name);
-                    snprintf(namebuff, 50, "0:Audios\\%s", file_name);
-                    audio_play((uint8_t *) namebuff);
-                } else
-                    file_index = 0;
+                    snprintf(namebuff, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
+                    audio_play_state = AUDIO_CANCEL;
+                    while (audio_play_current_state != AUDIO_NONE);
+                    if (memcmp(img_pre->user_data, "W", 1) != 0) {
+                        startAnim(img_pre, "O-W", 1500, 100, 1, 7);
+                    } else {
+                        startAnim(img_pre, "C", 500, 100, 1, 7);
+                        startAnim(img_pre, "O-W", 1500, 400, 1, 7);
+                    }
+                    audio_play_state = AUDIO_PRE_PLAY;
+                }
             } else if (memcmp(lv_label_get_text(btn), LV_SYMBOL_LIST, 3) == 0) {
                 setup_ui(&ui_play, &ui_audio, "AUDIO");
             }
@@ -201,7 +248,7 @@ static void setup_screen(void *user_data) {
     lv_obj_t *title = lv_label_create(div);
     lv_obj_set_size(title, LV_PCT(100), 22);
     lv_obj_set_pos(title, LV_PCT(0), LV_PCT(0));
-    lv_label_set_text(title, "Whatever You Want-[Jasom-wu]");
+    lv_label_set_text(title, "Hey!Music~");
     lv_label_set_long_mode(title, LV_LABEL_LONG_SCROLL);
     lv_obj_set_content_height(title, 25);
     lv_obj_set_style_border_side(title, LV_BORDER_SIDE_BOTTOM, LV_PART_MAIN);
@@ -243,7 +290,7 @@ static void setup_screen(void *user_data) {
     lv_obj_set_scrollbar_mode(button_array, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_pad_all(button_array, 3, LV_PART_MAIN);
     lv_obj_t *btn;
-    const char *mode_text[] = {LV_SYMBOL_PREV, LV_SYMBOL_PAUSE, LV_SYMBOL_NEXT, "", LV_SYMBOL_LIST};
+    const char *mode_text[] = {LV_SYMBOL_PREV, LV_SYMBOL_PLAY, LV_SYMBOL_NEXT, "", LV_SYMBOL_LIST};
     for (int i = 0; i < 5; i++) {
         btn = lv_label_create(button_array);
         if (i == 3)
@@ -265,29 +312,7 @@ static void setup_screen(void *user_data) {
         if (i != 3)
             lv_group_add_obj(lv_group_get_default(), btn);
     }
-    lv_anim_t anim_box;
-    lv_anim_init(&anim_box);
-    anim_box.user_data = img_front;
-    img_front->user_data = "D-O";
-    lv_anim_set_start_cb(&anim_box, animation_start_callback);
-    lv_anim_set_ready_cb(&anim_box, animation_end_callback);
-    lv_anim_set_exec_cb(&anim_box, (lv_anim_exec_xcb_t) custom_anim_callback);
-    lv_anim_set_var(&anim_box, img_front);
-    lv_anim_set_time(&anim_box, 1500);
-    lv_anim_set_delay(&anim_box, 500);
-    lv_anim_set_values(&anim_box, 1, 16);
-    lv_anim_start(&anim_box);
-
-    anim_box.user_data = img_pre;
-    img_pre->user_data = "W";
-    lv_anim_set_start_cb(&anim_box, animation_start_callback);
-    lv_anim_set_ready_cb(&anim_box, animation_end_callback);
-    lv_anim_set_exec_cb(&anim_box, (lv_anim_exec_xcb_t) custom_anim_callback);
-    lv_anim_set_var(&anim_box, img_pre);
-    lv_anim_set_time(&anim_box, 1000);
-    lv_anim_set_delay(&anim_box, 2000);
-    lv_anim_set_values(&anim_box, 1, 10);
-    lv_anim_start(&anim_box);
+    startAnim(img_front, "D", 1500, 500, 1, 9);
 
     lv_obj_set_style_img_opa(img_front, LV_OPA_100, LV_PART_MAIN);
     lv_obj_set_style_img_opa(img_pre, LV_OPA_0, LV_PART_MAIN);
@@ -298,6 +323,7 @@ static void setup_screen(void *user_data) {
     while (exf_scan_files(dir, NULL, NULL, 0) != FR_NO_FILE) {
         counts++;
     }
+    f_closedir(dir);
     max_file_count = counts;
 }
 
@@ -306,21 +332,28 @@ static void resume_screen(void *user_data) {
         uint16_t index = *(uint16_t *) user_data;
         lv_obj_t *title = lv_obj_get_child(lv_obj_get_child(ui_audio.screen, 0), 0);
         if (title) {
-            lv_obj_t *img_front, *img_pre = NULL;
+            lv_obj_t *img_pre = NULL;
             lv_obj_t *img_div = lv_obj_get_child(lv_obj_get_child(ui_audio.screen, 0), 1);
-            img_front = lv_obj_get_child(img_div, 0);
             img_pre = lv_obj_get_child(img_div, 1);
-            img_pre->user_data = NULL;
             DIR *dir = &SDDir;
             char *file_name;
             FRESULT state;
             f_opendir(dir, (const TCHAR *) "Audios");
             state = exf_scan_files(dir, &file_name, NULL, index);
+            f_closedir(dir);
             if (state == FR_OK || state == FR_NO_FILE) {
                 file_index = index;
                 lv_label_set_text(title, file_name);
-                snprintf(namebuff, 50, "0:Audios\\%s", file_name);
-                audio_play_state = 1;
+                snprintf(namebuff, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
+                audio_play_state = AUDIO_CANCEL;
+                while (audio_play_current_state != AUDIO_NONE);
+                if (memcmp(img_pre->user_data, "W", 1) != 0) {
+                    startAnim(img_pre, "O-W", 1500, 100, 1, 7);
+                } else {
+                    startAnim(img_pre, "C", 500, 100, 1, 7);
+                    startAnim(img_pre, "O-W", 1500, 400, 1, 7);
+                }
+                audio_play_state = AUDIO_PRE_PLAY;
             }
         }
         lv_mem_free(user_data);

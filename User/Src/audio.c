@@ -6,6 +6,9 @@
 #include "fops.h"
 #include "flac.h"
 #include "fatfs.h"
+#include "sdio.h"
+#include "page_audio.h"
+
 __WaveHeader global_wavheader;//很显然是函数栈空间不足。要定义在函数外面
 uint8_t global_buff512[512] = {0};
 ///////////////////////////////移植映射修改区////////////////////////////////////////////
@@ -79,9 +82,15 @@ void recoder_new_pathname(uint8_t *pname) {
 
 static uint8_t data_buff[4096];//开辟4096字节的内存区域//这个一定要大一点，不然播放不了！！！！！！！！
 uint16_t decode_time = 0;
+uint8_t audio_play_current_state = AUDIO_NONE;
 
 //播放pname这个wav文件（也可以是MP3等）
-uint8_t audio_play(uint8_t *pname) {
+uint8_t audio_play(uint8_t *pname, uint8_t *play_state) {
+    if (*play_state != AUDIO_PLAY){
+        audio_play_current_state = AUDIO_NONE;
+        return 0xff;
+    }
+    audio_play_current_state = AUDIO_PLAY;
     FIL *fmp3 = file;
     uint8_t res, rval = 0;
     uint16_t i;
@@ -95,31 +104,37 @@ uint8_t audio_play(uint8_t *pname) {
     {
         VS_Load_Patch((uint16_t *) vs1053b_patch, VS1053B_PATCHLEN);
     }
-
     res = f_open(fmp3, (const TCHAR *) pname, FA_READ);//打开文件
-    printf("%d", res);
     if (res == 0)//打开成功.
     {
         VS_SPI_SpeedHigh();    //高速
         decode_time = 0;
-        while (rval == 0) {
-            res = f_read(fmp3, data_buff, 4096, (UINT *) &count);//读出4096个字节
-            i = 0;
-            do//主播放循环
-            {
-                if (VS_Send_MusicData(data_buff + i) == 0) { i += 32; }//给VS10XX发送音频数据
-                else {
-                    decode_time = VS_Get_DecodeTime();
-                    printf("%d\n", decode_time);//显示播放时间
+        while (*play_state != AUDIO_CANCEL) {
+            if (*play_state == AUDIO_PLAY) {
+                if(audio_play_current_state==AUDIO_HALT){
+                    audio_play_current_state = AUDIO_PLAY;
                 }
-                if(count!=4096 && i>=count)break;
-            } while (i < 4096);//循环发送4096个字节
-            if (count != 4096 || res != 0) {
-                break;//读完了.
-            }
+                while (HAL_SD_GetState(&hsd) != HAL_SD_STATE_READY);
+                res = f_read(fmp3, data_buff, 4096, (UINT *) &count);//读出4096个字节
+                i = 0;
+                do//主播放循环
+                {
+                    if (VS_Send_MusicData(data_buff + i) == 0) { i += 32; }//给VS10XX发送音频数据
+                    else {
+                        decode_time = VS_Get_DecodeTime();
+//                        printf("%d\n", decode_time);//显示播放时间
+                    }
+                    if (count != 4096 && i >= count)break;
+                } while (i < 4096);//循环发送4096个字节
+                if (count != 4096 || res != 0) {
+                    break;//读完了.
+                }
+            } else if (*play_state == AUDIO_HALT && audio_play_current_state != AUDIO_HALT)
+                audio_play_current_state = AUDIO_HALT;
         }
         f_close(fmp3);
     } else rval = 0XFF;//出现错误
+    *play_state = audio_play_current_state = AUDIO_NONE;
     return rval;
 }
 
@@ -184,9 +199,9 @@ uint8_t audio_recorde(float agc, uint32_t sec) {
             f_close(f_rec);
         }
         uint16_t temp;
-        temp=VS_RD_Reg(SPI_MODE);	//读取SPI_MODE的内容
-        temp &= ~(1<<12);
-        VS_WR_Cmd(SPI_MODE,temp);
+        temp = VS_RD_Reg(SPI_MODE);    //读取SPI_MODE的内容
+        temp &= ~(1 << 12);
+        VS_WR_Cmd(SPI_MODE, temp);
     }
     return rval;
 }
