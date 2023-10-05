@@ -71,6 +71,4 @@ CMakeFiles/Ink-Paper.elf.dir/USB_DEVICE/App/usbd_storage_if.c.obj: \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ctlreq.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\ST\STM32_USB_Device_Library\Class\MSC\Inc/usbd_msc_scsi.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_def.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ioreq.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/sdio.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/main.h
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ioreq.h

@@ -9,6 +9,7 @@
 #include "audio.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "sdio.h"
 
 
 extern uint8_t audio_play_current_state;
@@ -326,7 +327,10 @@ static void setup_screen(void *user_data) {
     f_closedir(dir);
     max_file_count = counts;
 }
+void my_refresh_cb(lv_disp_drv_t * disp_drv, const lv_area_t *ptr, lv_color_t *ptr1) {
+    // 在这里执行屏幕刷新完成后的操作
 
+}
 static void resume_screen(void *user_data) {
     if (user_data) {
         uint16_t index = *(uint16_t *) user_data;
@@ -358,6 +362,11 @@ static void resume_screen(void *user_data) {
         }
         lv_mem_free(user_data);
         ui_audio.user_data = NULL;
+    }
+    else if(audio_play_state==AUDIO_PLAY){
+        audio_play_state = AUDIO_HALT;
+        while(audio_play_current_state!=AUDIO_HALT);
+        audio_play_state = AUDIO_PLAY;
     }
     lv_style_set_text_font(&style_screen_list_extra_btns_main_default, &lv_font_montserrat_18);
     lv_style_set_text_font(&style_screen_list_extra_btns_main_pressed, &lv_font_montserrat_18);

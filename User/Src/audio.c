@@ -8,7 +8,8 @@
 #include "fatfs.h"
 #include "sdio.h"
 #include "page_audio.h"
-
+#include "FreeRTOS.h"
+#include "task.h"
 __WaveHeader global_wavheader;//很显然是函数栈空间不足。要定义在函数外面
 uint8_t global_buff512[512] = {0};
 ///////////////////////////////移植映射修改区////////////////////////////////////////////
@@ -112,6 +113,7 @@ uint8_t audio_play(uint8_t *pname, uint8_t *play_state) {
         while (*play_state != AUDIO_CANCEL) {
             if (*play_state == AUDIO_PLAY) {
                 if(audio_play_current_state==AUDIO_HALT){
+                    vTaskDelay(200);
                     audio_play_current_state = AUDIO_PLAY;
                 }
                 while (HAL_SD_GetState(&hsd) != HAL_SD_STATE_READY);

@@ -666,6 +666,7 @@ CMakeFiles/Ink-Paper.elf.dir/Core/Src/main.c.obj: E:/WorkSpace/MyCodes/TI/STM32/
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/ff.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/sdio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/tim.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/usart.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/USB_DEVICE/App/usb_device.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
@@ -1169,6 +1170,49 @@ CMakeFiles/Ink-Paper.elf.dir/Core/Src/system_stm32f1xx.c.obj: E:/WorkSpace/MyCod
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/stm32f1xx_hal_conf.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stddef.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_sdmmc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+
+CMakeFiles/Ink-Paper.elf.dir/Core/Src/tim.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/tim.c \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/tim.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/stm32f1xx_hal_conf.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/core_cm3.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/stdint.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_version.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_compiler.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Include/cmsis_gcc.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
   E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/lib/gcc/arm-none-eabi/12.2.1/include/stddef.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
@@ -19779,9 +19823,7 @@ CMakeFiles/Ink-Paper.elf.dir/USB_DEVICE/App/usbd_storage_if.c.obj: E:/WorkSpace/
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_scsi.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/sdio.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 
 CMakeFiles/Ink-Paper.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/USB_DEVICE/Target/usbd_conf.c \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
@@ -21738,7 +21780,16 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj: E:/WorkSpace/MyCodes/TI/STM32
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/extra/themes/basic/lv_theme_basic.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/core/lv_obj.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/gui_setup.h
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/gui_setup.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/FreeRTOSConfig.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 
 CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/broker_app.c \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/broker_app.h \
@@ -22820,7 +22871,9 @@ CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.obj: E:/WorkSpace/MyCod
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/sdio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/main.h
 
 CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.obj: E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_filelist.c \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_filelist.h \
@@ -23847,7 +23900,8 @@ CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.obj: E:/WorkSpace/MyCode
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Inc/simple_gpio.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/WaveShare1in54v2/EPD_1in54_V2.h \
   E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/WaveShare1in54v2/DEV_Config.h \
-  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_audio.h
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_audio.h \
+  E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/sdio.h
 
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/USB_DEVICE/App/usb_device.c:
@@ -24470,6 +24524,8 @@ E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Lib/Lvgl/src/widgets/lv_tab
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/main.c:
 
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/tim.h:
+
 E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/sys/sched.h:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/USB_DEVICE/App/usb_device.h:
@@ -24513,6 +24569,8 @@ E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-no
 E:/_tool/arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/signal.h:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/system_stm32f1xx.c:
+
+E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/tim.c:
 
 E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:
 

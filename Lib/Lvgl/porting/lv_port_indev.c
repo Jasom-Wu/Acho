@@ -335,36 +335,42 @@ static void encoder_init(void)
 /*Will be called by the library to read the encoder*/
 static void encoder_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
 {
-    data->enc_diff = encoder_diff;
-    data->state = encoder_state;
-    encoder_diff=0;
+    int16_t encode;
+    encode = TIM4->CNT;TIM4->CNT=0;
+    if(encode>2)encode=-1;
+    else if(encode<-2)encode=1;
+    else encode=0;
+    data->enc_diff = encode;
+    data->state = HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_4)==GPIO_PIN_RESET?LV_INDEV_STATE_PR:LV_INDEV_STATE_REL;
+//    encoder_diff=0;
 }
 
 /*Call this function in an interrupt to process encoder events (turn, press)*/
 static void encoder_handler(void)
 {
     /*Your code comes here*/
-		if(KEY2READ)
-		{
-			//act_key = LV_KEY_ENTER		//_lv_indev_read函数里已经帮我们默认写好了
-			encoder_state = LV_INDEV_STATE_PR;
-			PBout(5)=0;
-			return;
-		}
-		else
-		{
-			PBout(5)=1;
-			encoder_state = LV_INDEV_STATE_REL;
-		}
-		if(KEY1READ)
-		{
-			PBout(5)=0;
-			encoder_diff+=1;
-		}
-		else
-		{
-			PBout(5)=1;
-		}
+//    encoder_state = LV_INDEV_STATE_PR;
+//		if(KEY2READ)
+//		{
+//			//act_key = LV_KEY_ENTER		//_lv_indev_read函数里已经帮我们默认写好了
+//			encoder_state = LV_INDEV_STATE_PR;
+//			PBout(5)=0;
+//			return;
+//		}
+//		else
+//		{
+//			PBout(5)=1;
+//			encoder_state = LV_INDEV_STATE_REL;
+//		}
+//		if(KEY1READ)
+//		{
+//			PBout(5)=0;
+//			encoder_diff+=1;
+//		}
+//		else
+//		{
+//			PBout(5)=1;
+//		}
     //encoder_diff += 0;
     //encoder_state = LV_INDEV_STATE_REL;//LV_INDEV_STATE_PR
 }

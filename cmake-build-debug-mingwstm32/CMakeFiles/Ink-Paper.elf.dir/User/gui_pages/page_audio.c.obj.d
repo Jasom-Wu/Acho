@@ -259,4 +259,6 @@ CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.obj: \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM3/portmacro.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/mpu_wrappers.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/list.h
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/list.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/sdio.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/main.h

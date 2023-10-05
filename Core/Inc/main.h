@@ -59,7 +59,6 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define KEY2_Pin GPIO_PIN_13
 #define KEY2_GPIO_Port GPIOC
-#define KEY2_EXTI_IRQn EXTI15_10_IRQn
 #define KEY1_Pin GPIO_PIN_0
 #define KEY1_GPIO_Port GPIOA
 #define KEY1_EXTI_IRQn EXTI0_IRQn
@@ -69,6 +68,8 @@ void Error_Handler(void);
 #define BUSY_GPIO_Port GPIOA
 #define SPI_CS_Pin GPIO_PIN_4
 #define SPI_CS_GPIO_Port GPIOA
+#define ENCODER_ENTER_Pin GPIO_PIN_4
+#define ENCODER_ENTER_GPIO_Port GPIOC
 #define VS_RST_Pin GPIO_PIN_12
 #define VS_RST_GPIO_Port GPIOB
 #define RST_Pin GPIO_PIN_6

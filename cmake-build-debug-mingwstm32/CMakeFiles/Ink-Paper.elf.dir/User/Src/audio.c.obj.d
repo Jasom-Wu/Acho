@@ -257,4 +257,13 @@ CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj: \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\src\core\lv_obj.h \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\src/extra/themes/basic/lv_theme_basic.h \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\src\core\lv_obj.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/gui_setup.h
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/gui_setup.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/FreeRTOS.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/FreeRTOSConfig.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/projdefs.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/portable.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/deprecated_definitions.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM3/portmacro.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/mpu_wrappers.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FreeRTOS\Source\include/list.h

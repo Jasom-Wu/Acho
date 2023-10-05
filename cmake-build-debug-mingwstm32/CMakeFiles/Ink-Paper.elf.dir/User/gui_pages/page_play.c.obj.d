@@ -256,4 +256,5 @@ CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.obj: \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/simple_gpio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Lib\WaveShare1in54v2/EPD_1in54_V2.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Lib\WaveShare1in54v2/DEV_Config.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_audio.h
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_audio.h \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/sdio.h

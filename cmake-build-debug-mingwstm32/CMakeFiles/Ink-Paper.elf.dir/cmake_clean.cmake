@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ink-Paper.elf.dir/Core/Src/sysmem.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/Core/Src/system_stm32f1xx.c.obj"
   "CMakeFiles/Ink-Paper.elf.dir/Core/Src/system_stm32f1xx.c.obj.d"
+  "CMakeFiles/Ink-Paper.elf.dir/Core/Src/tim.c.obj"
+  "CMakeFiles/Ink-Paper.elf.dir/Core/Src/tim.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/Core/Src/usart.c.obj"
   "CMakeFiles/Ink-Paper.elf.dir/Core/Src/usart.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/Core/Startup/startup_stm32f103vetx.s.obj"

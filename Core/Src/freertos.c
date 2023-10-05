@@ -50,7 +50,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+extern TIM_HandleTypeDef htim4;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -68,10 +68,10 @@
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
-uint32_t defaultTaskBuffer[1024];
+uint32_t defaultTaskBuffer[ 1024 ];
 osStaticThreadDef_t defaultTaskControlBlock;
 osThreadId mainTaskHandle;
-uint32_t mainTaskBuffer[1024];
+uint32_t mainTaskBuffer[ 1024 ];
 osStaticThreadDef_t mainTaskControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
@@ -79,17 +79,14 @@ osStaticThreadDef_t mainTaskControlBlock;
 
 /* USER CODE END FunctionPrototypes */
 
-void StartDefaultTask(void const *argument);
-
-void StartMainTask(void const *argument);
+void StartDefaultTask(void const * argument);
+void StartMainTask(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
-
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* GetIdleTaskMemory prototype (linked to static allocation support) */
-void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer,
-                                   uint32_t *pulIdleTaskStackSize);
+void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
 
 /* USER CODE BEGIN GET_IDLE_TASK_MEMORY */
 static StaticTask_t xIdleTaskTCBBuffer;
@@ -110,39 +107,38 @@ void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer, StackTyp
   * @retval None
   */
 void MX_FREERTOS_Init(void) {
-    /* USER CODE BEGIN Init */
+  /* USER CODE BEGIN Init */
 
-    /* USER CODE END Init */
+  /* USER CODE END Init */
 
-    /* USER CODE BEGIN RTOS_MUTEX */
+  /* USER CODE BEGIN RTOS_MUTEX */
     /* add mutexes, ... */
-    /* USER CODE END RTOS_MUTEX */
+  /* USER CODE END RTOS_MUTEX */
 
-    /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
     /* add semaphores, ... */
-    /* USER CODE END RTOS_SEMAPHORES */
+  /* USER CODE END RTOS_SEMAPHORES */
 
-    /* USER CODE BEGIN RTOS_TIMERS */
+  /* USER CODE BEGIN RTOS_TIMERS */
     /* start timers, add new ones, ... */
-    /* USER CODE END RTOS_TIMERS */
+  /* USER CODE END RTOS_TIMERS */
 
-    /* USER CODE BEGIN RTOS_QUEUES */
+  /* USER CODE BEGIN RTOS_QUEUES */
     /* add queues, ... */
-    /* USER CODE END RTOS_QUEUES */
+  /* USER CODE END RTOS_QUEUES */
 
-    /* Create the thread(s) */
-    /* definition and creation of defaultTask */
-    osThreadStaticDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 1024, defaultTaskBuffer,
-                      &defaultTaskControlBlock);
-    defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+  /* Create the thread(s) */
+  /* definition and creation of defaultTask */
+  osThreadStaticDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 1024, defaultTaskBuffer, &defaultTaskControlBlock);
+  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
-    /* definition and creation of mainTask */
-    osThreadStaticDef(mainTask, StartMainTask, osPriorityNormal, 0, 1024, mainTaskBuffer, &mainTaskControlBlock);
-    mainTaskHandle = osThreadCreate(osThread(mainTask), NULL);
+  /* definition and creation of mainTask */
+  osThreadStaticDef(mainTask, StartMainTask, osPriorityNormal, 0, 1024, mainTaskBuffer, &mainTaskControlBlock);
+  mainTaskHandle = osThreadCreate(osThread(mainTask), NULL);
 
-    /* USER CODE BEGIN RTOS_THREADS */
+  /* USER CODE BEGIN RTOS_THREADS */
     vTaskSuspend(mainTaskHandle);
-    /* USER CODE END RTOS_THREADS */
+  /* USER CODE END RTOS_THREADS */
 
 }
 
@@ -153,10 +149,11 @@ void MX_FREERTOS_Init(void) {
   * @retval None
   */
 /* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const *argument) {
-    /* init code for USB_DEVICE */
-    MX_USB_DEVICE_Init();
-    /* USER CODE BEGIN StartDefaultTask */
+void StartDefaultTask(void const * argument)
+{
+  /* init code for USB_DEVICE */
+  MX_USB_DEVICE_Init();
+  /* USER CODE BEGIN StartDefaultTask */
     static portTickType PreviousWakeTime;
     const portTickType TimeIncrement = pdMS_TO_TICKS(5);
     PreviousWakeTime = xTaskGetTickCount();
@@ -166,6 +163,7 @@ void StartDefaultTask(void const *argument) {
     lv_port_indev_init();
     lv_port_fs_init();
     GUIInit();
+    HAL_TIM_Encoder_Start(&htim4,TIM_CHANNEL_ALL);
     vTaskResume(mainTaskHandle);
     HAL_GPIO_WritePin(USB_EN_GPIO_Port, USB_EN_Pin, GPIO_PIN_SET);
     /* Infinite loop */
@@ -177,7 +175,7 @@ void StartDefaultTask(void const *argument) {
         USART1_REC_Handler();
         vTaskDelayUntil(&PreviousWakeTime, TimeIncrement);
     }
-    /* USER CODE END StartDefaultTask */
+  /* USER CODE END StartDefaultTask */
 }
 
 /* USER CODE BEGIN Header_StartMainTask */
@@ -191,8 +189,9 @@ void StartDefaultTask(void const *argument) {
 #define EventBit_USBDisconnect 0x02
 
 /* USER CODE END Header_StartMainTask */
-void StartMainTask(void const *argument) {
-    /* USER CODE BEGIN StartMainTask */
+void StartMainTask(void const * argument)
+{
+  /* USER CODE BEGIN StartMainTask */
     static portTickType PreviousWakeTime;
     const portTickType TimeIncrement = pdMS_TO_TICKS(5);
     PreviousWakeTime = xTaskGetTickCount();
@@ -219,7 +218,7 @@ void StartMainTask(void const *argument) {
 //		}
         vTaskDelayUntil(&PreviousWakeTime, TimeIncrement);
     }
-    /* USER CODE END StartMainTask */
+  /* USER CODE END StartMainTask */
 }
 
 /* Private application code --------------------------------------------------*/

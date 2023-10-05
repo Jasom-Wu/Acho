@@ -156,6 +156,9 @@
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/stm32f1xx_it.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/tim.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Inc/usart.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
@@ -193,6 +196,9 @@
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/system_stm32f1xx.c">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/tim.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Core/Src/usart.c">
@@ -370,6 +376,9 @@
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h">

@@ -6,6 +6,7 @@
 #include "broker_app.h"
 #include "EPD_1in54_V2.h"
 #include "page_audio.h"
+#include "sdio.h"
 
 static void setup_screen(void *user_data);
 
@@ -121,11 +122,14 @@ static void setup_screen(void *user_data) {
     FRESULT state = FR_INT_ERR;
     bool is_audio = false;
     DIR *dir = &SDDir;
-    if (memcmp(user_data, "IMG", 3) == 0)
+    if (memcmp(user_data, "IMG", 3) == 0){
+        while (HAL_SD_GetState(&hsd) != HAL_SD_STATE_READY);
         state = f_opendir(dir, (const TCHAR *) "Images");
+    }
     else if (memcmp(user_data, "AUDIO", 5) == 0){
         HeapManager.init(20);
         is_audio = true;
+        while (HAL_SD_GetState(&hsd) != HAL_SD_STATE_READY);
         state = f_opendir(dir, (const TCHAR *) "Audios");
     }
     char *file_name;
@@ -133,6 +137,7 @@ static void setup_screen(void *user_data) {
     uint16_t file_count = 0;
     if (state == FR_OK) {
         while (true) {
+            while (HAL_SD_GetState(&hsd) != HAL_SD_STATE_READY);
             state = exf_scan_files(dir, &file_name, &file_size,0);
             if (state == FR_OK) {
                 lv_obj_t *file_div = lv_obj_create(screen_list);
