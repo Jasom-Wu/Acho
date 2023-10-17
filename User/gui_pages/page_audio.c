@@ -13,7 +13,7 @@
 
 
 extern uint8_t audio_play_current_state;
-
+extern bool audio_play_is_finish;
 static void setup_screen(void *user_data);
 
 static void resume_screen(void *user_data);
@@ -128,7 +128,32 @@ static void startAnim(lv_obj_t *tar, char *mode, uint32_t duration, uint32_t del
     lv_anim_set_values(&anim_box, start, end);
     lv_anim_start(&anim_box);
 }
-
+static void TimerCallBack(lv_timer_t *timer){
+    lv_obj_t *btn = timer->user_data;
+    static uint8_t status=0;
+    switch (status) {
+        case 0:{
+            if(audio_play_current_state==AUDIO_PLAY){
+                lv_label_set_text(btn, LV_SYMBOL_PAUSE);
+                status=1;
+            }
+            break;
+        }
+        case 1:{
+            if(audio_play_current_state==AUDIO_NONE && audio_play_is_finish==true){
+                lv_obj_t *img_pre = NULL;
+                lv_obj_t *img_div = lv_obj_get_child(lv_obj_get_child(ui_audio.screen, 0), 1);
+                img_pre = lv_obj_get_child(img_div, 1);
+                startAnim(img_pre, "C", 500, 100, 1, 7);
+                lv_label_set_text(btn, LV_SYMBOL_PLAY);
+                status=0;
+            }
+            break;
+        }
+        default:
+            break;
+    }
+}
 static void click_event(lv_event_t *e) {
     lv_obj_t *btn = (lv_obj_t *) lv_event_get_target(e);
     if (btn) {
@@ -162,7 +187,7 @@ static void click_event(lv_event_t *e) {
                     f_closedir(dir);
                     if (state == FR_OK) {
                         lv_label_set_text(title, file_name);
-                        snprintf(namebuff, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
+                        snprintf(global_BUFF, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
                         startAnim(img_pre, "O-W", 1500, 100, 1, 7);
                         audio_play_state = AUDIO_PRE_PLAY;
                     }
@@ -184,7 +209,7 @@ static void click_event(lv_event_t *e) {
                 f_closedir(dir);
                 if (state == FR_OK) {
                     lv_label_set_text(title, file_name);
-                    snprintf(namebuff, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
+                    snprintf(global_BUFF, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
                     audio_play_state = AUDIO_CANCEL;
                     while (audio_play_current_state != AUDIO_NONE);
                     if (memcmp(img_pre->user_data, "W", 1) != 0) {
@@ -206,7 +231,7 @@ static void click_event(lv_event_t *e) {
                 f_closedir(dir);
                 if (state == FR_OK) {
                     lv_label_set_text(title, file_name);
-                    snprintf(namebuff, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
+                    snprintf(global_BUFF, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
                     audio_play_state = AUDIO_CANCEL;
                     while (audio_play_current_state != AUDIO_NONE);
                     if (memcmp(img_pre->user_data, "W", 1) != 0) {
@@ -326,11 +351,13 @@ static void setup_screen(void *user_data) {
     }
     f_closedir(dir);
     max_file_count = counts;
-}
-void my_refresh_cb(lv_disp_drv_t * disp_drv, const lv_area_t *ptr, lv_color_t *ptr1) {
-    // 在这里执行屏幕刷新完成后的操作
 
+    lv_obj_t *play_btn = lv_obj_get_child(button_array,1);
+    lv_timer_t *timer = lv_timer_create(TimerCallBack, 500, play_btn);
+    lv_timer_set_repeat_count(timer,-1);
+    ui_audio.screen->user_data = timer;
 }
+
 static void resume_screen(void *user_data) {
     if (user_data) {
         uint16_t index = *(uint16_t *) user_data;
@@ -338,6 +365,7 @@ static void resume_screen(void *user_data) {
         if (title) {
             lv_obj_t *img_pre = NULL;
             lv_obj_t *img_div = lv_obj_get_child(lv_obj_get_child(ui_audio.screen, 0), 1);
+            lv_obj_t *play_btn = lv_obj_get_child(lv_obj_get_child(lv_obj_get_child(ui_audio.screen,0),3),1);
             img_pre = lv_obj_get_child(img_div, 1);
             DIR *dir = &SDDir;
             char *file_name;
@@ -348,7 +376,7 @@ static void resume_screen(void *user_data) {
             if (state == FR_OK || state == FR_NO_FILE) {
                 file_index = index;
                 lv_label_set_text(title, file_name);
-                snprintf(namebuff, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
+                snprintf(global_BUFF, _MAX_LFN * 2 + 1, "0:Audios\\%s", file_name);
                 audio_play_state = AUDIO_CANCEL;
                 while (audio_play_current_state != AUDIO_NONE);
                 if (memcmp(img_pre->user_data, "W", 1) != 0) {
@@ -358,6 +386,7 @@ static void resume_screen(void *user_data) {
                     startAnim(img_pre, "O-W", 1500, 400, 1, 7);
                 }
                 audio_play_state = AUDIO_PRE_PLAY;
+                lv_label_set_text(play_btn, LV_SYMBOL_PAUSE);
             }
         }
         lv_mem_free(user_data);
@@ -374,6 +403,8 @@ static void resume_screen(void *user_data) {
 }
 
 static void delete_screen(void *user_data) {
+    if(ui_audio.screen->user_data)
+        lv_timer_del(ui_audio.screen->user_data);
     file_index = 0;
     max_file_count = 0;
     HeapManager.reset();

@@ -31,7 +31,7 @@ static void click_event(lv_event_t *e) {
         }
     }
 }
-void TimerCallBack(lv_timer_t *timer){
+static void TimerCallBack(lv_timer_t *timer){
     lv_obj_t *img = timer->user_data;
     if(img){
         if(img->user_data){

@@ -84,13 +84,14 @@ void recoder_new_pathname(uint8_t *pname) {
 static uint8_t data_buff[4096];//开辟4096字节的内存区域//这个一定要大一点，不然播放不了！！！！！！！！
 uint16_t decode_time = 0;
 uint8_t audio_play_current_state = AUDIO_NONE;
-
+bool audio_play_is_finish = false;
 //播放pname这个wav文件（也可以是MP3等）
 uint8_t audio_play(uint8_t *pname, uint8_t *play_state) {
     if (*play_state != AUDIO_PLAY){
         audio_play_current_state = AUDIO_NONE;
         return 0xff;
     }
+    audio_play_is_finish = false;
     audio_play_current_state = AUDIO_PLAY;
     FIL *fmp3 = file;
     uint8_t res, rval = 0;
@@ -135,6 +136,7 @@ uint8_t audio_play(uint8_t *pname, uint8_t *play_state) {
                 audio_play_current_state = AUDIO_HALT;
         }
         f_close(fmp3);
+        if(*play_state!=AUDIO_CANCEL)audio_play_is_finish = true;
     } else rval = 0XFF;//出现错误
     *play_state = audio_play_current_state = AUDIO_NONE;
     return rval;

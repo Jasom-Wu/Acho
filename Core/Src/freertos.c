@@ -170,7 +170,7 @@ void StartDefaultTask(void const * argument)
     for (;;) {
         if(audio_play_state==AUDIO_PLAY){
             vTaskDelay(100);
-            audio_play((uint8_t *) namebuff, &audio_play_state);
+            audio_play((uint8_t *) global_BUFF, &audio_play_state);
         }
         USART1_REC_Handler();
         vTaskDelayUntil(&PreviousWakeTime, TimeIncrement);

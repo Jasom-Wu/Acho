@@ -156,21 +156,21 @@ static void setup_screen(void *user_data) {
 
                 lv_obj_t *label_name = lv_label_create(file_div);
                 lv_obj_t *label_size = lv_label_create(file_div);
-                lv_obj_set_flex_grow(label_name,1);
-                lv_obj_set_flex_grow(label_size,1);
+                lv_obj_set_flex_grow(label_name,5);
+                lv_obj_set_flex_grow(label_size,4);
                 lv_obj_set_height(label_name,LV_SIZE_CONTENT);
                 lv_obj_set_height(label_size,LV_SIZE_CONTENT);
 
-                char file_size_str[10] = {0};
+                char size_buff[10]={0};
                 if (file_size >= 0 && file_size < 1024) {
-                    snprintf(file_size_str, 10, "%ldB", file_size);
+                    snprintf(size_buff, 10, "%ldB", file_size);
                 } else if (file_size >= 1024 && file_size < 1048576) {
-                    snprintf(file_size_str, 10, "%.2fKB", (double) file_size / 1024);
+                    snprintf(size_buff, 10, "%.2fKB", (double) file_size / 1024);
                 } else {
-                    snprintf(file_size_str, 10, "%.2fMB", (double) file_size / 1048576);
+                    snprintf(size_buff, 10, "%.2fMB", (double) file_size / 1048576);
                 }
                 lv_label_set_text(label_name, file_name);
-                lv_label_set_text(label_size, file_size_str);
+                lv_label_set_text(label_size, size_buff);
                 lv_label_set_long_mode(label_name,LV_LABEL_LONG_DOT);
                 lv_label_set_long_mode(label_size,LV_LABEL_LONG_DOT);
                 if(is_audio)

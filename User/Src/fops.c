@@ -16,7 +16,7 @@
 
 FILINFO fileinfo;    //文件信息
 #if _USE_LFN
-char namebuff[_MAX_LFN * 2 + 1];
+char global_BUFF[_MAX_LFN * 2 + 1];
 #endif
 const uint8_t *FILE_TYPE_TBL[6][13] =
         {
@@ -71,7 +71,7 @@ uint8_t exf_readdir(DIR *dir) {
     char *fn;
 #if _USE_LFN
     fileinfo.lfsize = _MAX_LFN * 2 + 1;
-    fileinfo.lfname = namebuff;
+    fileinfo.lfname = global_BUFF;
 #endif
     res = f_readdir(dir, &fileinfo);//读取一个文件的信息
     if (res != FR_OK || fileinfo.fname[0] == 0) {
@@ -111,9 +111,9 @@ uint8_t exf_scan_files(DIR *dir, char **file_name,DWORD *file_size,uint8_t offse
     char *fn;   /* This function is assuming non-Unicode cfg. */
     uint8_t index = 0;
 #if _USE_LFN
-    memset(namebuff,0, sizeof(namebuff));
+    memset(global_BUFF,0, sizeof(global_BUFF));
     fileinfo.lfsize = _MAX_LFN * 2 + 1;
-    fileinfo.lfname = namebuff;//mymalloc(fileinfo.lfsize);
+    fileinfo.lfname = global_BUFF;//mymalloc(fileinfo.lfsize);
 #endif
     if (file_name != NULL)
         *file_name = NULL;
