@@ -265,6 +265,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/fops.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/Src/gui_setup.c" "CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_audio.c" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.obj.d"
+  "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_bind.c" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_filelist.c" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_main.c" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main.c.obj.d"
   "E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_main_select.c" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main_select.c.obj" "gcc" "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main_select.c.obj.d"

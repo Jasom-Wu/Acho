@@ -1,6 +1,6 @@
-CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main.c.obj: \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_main.c \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_main.h \
+CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.obj: \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_bind.c \
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_bind.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Lib\Lvgl\src/lvgl.h \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\lvgl.h \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\src/misc/lv_log.h \
@@ -203,11 +203,10 @@ CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main.c.obj: \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\src/extra/themes/basic/lv_theme_basic.h \
  e:\workspace\mycodes\ti\stm32\hal\f103vet6\ink-paper\lib\lvgl\src\core\lv_obj.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/gui_setup.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_main_select.h \
- e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdio.h \
- e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\stdio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/broker_app.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/bsp_usart.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdio.h \
+ e:\_tool\arm-gnu-toolchain-12.2.mpacbti-rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\stdio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/usart.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/main.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Drivers\STM32F1xx_HAL_Driver\Inc/stm32f1xx_hal.h \
@@ -252,6 +251,4 @@ CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main.c.obj: \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FatFs\src/ff.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Middlewares\Third_Party\FatFs\src\drivers/sd_diskio.h \
  E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/audio.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/simple_gpio.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Core\Inc/sdio.h \
- E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\gui_pages\page_bind.h
+ E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\User\Inc/simple_gpio.h

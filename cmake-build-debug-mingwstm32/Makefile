@@ -5344,6 +5344,30 @@ User/gui_pages/page_audio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.s
 .PHONY : User/gui_pages/page_audio.c.s
 
+User/gui_pages/page_bind.obj: User/gui_pages/page_bind.c.obj
+.PHONY : User/gui_pages/page_bind.obj
+
+# target to build an object file
+User/gui_pages/page_bind.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.obj
+.PHONY : User/gui_pages/page_bind.c.obj
+
+User/gui_pages/page_bind.i: User/gui_pages/page_bind.c.i
+.PHONY : User/gui_pages/page_bind.i
+
+# target to preprocess a source file
+User/gui_pages/page_bind.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.i
+.PHONY : User/gui_pages/page_bind.c.i
+
+User/gui_pages/page_bind.s: User/gui_pages/page_bind.c.s
+.PHONY : User/gui_pages/page_bind.s
+
+# target to generate assembly for a file
+User/gui_pages/page_bind.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.s
+.PHONY : User/gui_pages/page_bind.c.s
+
 User/gui_pages/page_filelist.obj: User/gui_pages/page_filelist.c.obj
 .PHONY : User/gui_pages/page_filelist.obj
 
@@ -6101,6 +6125,9 @@ help:
 	@echo ... User/gui_pages/page_audio.obj
 	@echo ... User/gui_pages/page_audio.i
 	@echo ... User/gui_pages/page_audio.s
+	@echo ... User/gui_pages/page_bind.obj
+	@echo ... User/gui_pages/page_bind.i
+	@echo ... User/gui_pages/page_bind.s
 	@echo ... User/gui_pages/page_filelist.obj
 	@echo ... User/gui_pages/page_filelist.i
 	@echo ... User/gui_pages/page_filelist.s

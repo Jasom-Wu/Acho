@@ -1551,6 +1551,12 @@
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_audio.h">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_bind.c">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
+		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_bind.h">
+			<Option target="Ink-Paper.elf"/>
+		</Unit>
 		<Unit filename="E:/WorkSpace/MyCodes/TI/STM32/HAL/F103VET6/Ink-Paper/User/gui_pages/page_filelist.c">
 			<Option target="Ink-Paper.elf"/>
 		</Unit>

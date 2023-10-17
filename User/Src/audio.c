@@ -98,7 +98,7 @@ uint8_t audio_play(uint8_t *pname, uint8_t *play_state) {
     UINT count;
     VS_Restart_Play();                    //重启播放
     VS_Set_All();                            //设置音量等信息
-    VS_Set_Vol(190);        //设置音量
+    VS_Set_Vol(254);        //设置音量
     VS_Reset_DecodeTime();    //复位解码时间
     res = f_typetell(pname);                    //得到文件后缀
     if (res == 0x4c)//如果是flac,加载patch

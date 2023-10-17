@@ -30,7 +30,8 @@ typedef struct {
 typedef enum {
     OTHERS=0,
     IMG,
-    AUDIO
+    AUDIO,
+    QR,
 }File_TypeTypeDef;
 
 typedef enum {

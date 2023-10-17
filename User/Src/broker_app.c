@@ -58,6 +58,12 @@ void downLoadFile(File_TypeTypeDef type,char * file_id,char * file_name,UartHand
         snprintf(path_buff, 50, "Audios\\%s",file_name);
         Printf("get_audio_file:%s", file_id);
         HandlerManager.mount(fileDownload,callback_fun,path_buff,callback_data)->run(7000,0);
+    } else if(type==QR){
+        char *dot = strrchr(file_name, '.'); // 查找最后一个点的位置
+        if (dot)*dot = '\0';
+        snprintf(path_buff, 50, "Setting\\%s.bin",file_name);
+        Printf("get_bind_QR");
+        HandlerManager.mount(fileDownload,callback_fun,path_buff,callback_data)->run(7000,1);
     }
 }
 

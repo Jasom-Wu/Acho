@@ -434,6 +434,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.obj"
   "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.obj.d"
+  "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.obj"
+  "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.obj"
   "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.obj.d"
   "CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main.c.obj"
