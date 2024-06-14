@@ -1,0 +1,6 @@
+E:/WorkSpace/MyCodes/C/ImgTransfer/cmake-build-debug-visual-studio/CMakeFiles/edit_cache.dir
+E:/WorkSpace/MyCodes/C/ImgTransfer/cmake-build-debug-visual-studio/CMakeFiles/rebuild_cache.dir
+E:/WorkSpace/MyCodes/C/ImgTransfer/cmake-build-debug-visual-studio/src/CMakeFiles/img_transfer.dir
+E:/WorkSpace/MyCodes/C/ImgTransfer/cmake-build-debug-visual-studio/src/CMakeFiles/ImgTransfer.dir
+E:/WorkSpace/MyCodes/C/ImgTransfer/cmake-build-debug-visual-studio/src/CMakeFiles/edit_cache.dir
+E:/WorkSpace/MyCodes/C/ImgTransfer/cmake-build-debug-visual-studio/src/CMakeFiles/rebuild_cache.dir

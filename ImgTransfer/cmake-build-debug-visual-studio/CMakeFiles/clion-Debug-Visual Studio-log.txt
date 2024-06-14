@@ -1,0 +1,9 @@
+"E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=E:/CLion 2022.3.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S E:\WorkSpace\MyCodes\C\ImgTransfer -B E:\WorkSpace\MyCodes\C\ImgTransfer\cmake-build-debug-visual-studio
+-- OpenCV ARCH: x64
+-- OpenCV RUNTIME: vc15
+-- OpenCV STATIC: OFF
+-- Found OpenCV 4.6.0 in E:/opencv4_6/opencv/build/x64/vc15/lib
+-- You might need to add E:\opencv4_6\opencv\build\x64\vc15\bin to your PATH to be able to run your applications.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/WorkSpace/MyCodes/C/ImgTransfer/cmake-build-debug-visual-studio

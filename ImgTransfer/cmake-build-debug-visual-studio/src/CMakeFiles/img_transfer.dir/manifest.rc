@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+2 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "E:/WorkSpace/MyCodes/C/ImgTransfer/cmake-build-debug-visual-studio/src/CMakeFiles/img_transfer.dir/embed.manifest"
