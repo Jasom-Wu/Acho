@@ -1,0 +1,330 @@
+{% extends 'home/device-panels/acho/acho_main.html' %}
+{% block acho_main_board_style %}
+    <style>
+
+        #inner_mid_container {
+            width: 100%;
+            height: 800px;
+            background: whitesmoke;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: gray 0 0 5px 1px;
+            overflow: hidden;
+            transition: height ease-in-out 1s;
+            position: relative;
+        }
+
+        #inner_bottom_container {
+            width: 100%;
+            height: 40px;
+            background: white;
+            margin-top: 5px;
+            padding: 5px;
+            transition: height ease-in-out 1s;
+        }
+
+        #inner_bottom_container #append-file-btn {
+            transition: all ease-in-out 0.2s;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-weight: bolder;
+            font-size: x-large;
+            line-height: 25px;
+            color: grey;
+            border-radius: 10px;
+            border: 2px dashed grey
+        }
+
+        #inner_bottom_container #append-file-btn:hover {
+            cursor: pointer;
+            background: whitesmoke;
+            font-size: xx-large;
+            color: black;
+            border-color: black;
+            transition: all ease-in-out 0.4s;
+            transform: scale(102%);
+        }
+
+        #inner_bottom_container #file-upload-panel {
+            height: fit-content;
+            margin-top: 50px;
+            width: 100%;
+            display: none;
+            opacity: 0;
+            transition: all ease-in-out 1s;
+        }
+
+        .btn_edit {
+            width: fit-content;
+            border: 1px dashed #444;
+            padding: 2px 5px;
+            border-radius: 10px;
+            font-family: 幼圆, serif;
+            font-weight: bolder;
+            transition: all ease-in-out 0.2s;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .btn_edit:hover {
+            background: #3fceff;
+            color: black;
+            transition: all ease-in-out 0.2s;
+        }
+
+        .btn_delete {
+            width: fit-content;
+            border: 1px dashed #444;
+            padding: 2px 5px;
+            border-radius: 10px;
+            font-family: 幼圆, serif;
+            font-weight: bolder;
+            transition: all ease-in-out 0.2s;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .btn_delete:hover {
+            background: #a74a47;
+            color: black;
+            transition: all ease-in-out 0.2s;
+        }
+
+        #table_container {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            overflow-y: auto;
+        }
+
+        #table_container::-webkit-scrollbar {
+            width: 8px; /* 设置滚动条宽度 */
+        }
+
+        #table_container::-webkit-scrollbar-thumb {
+            border-radius: 6px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        #table_container::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 水平滚动条 */
+        #table_container::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        #file-list thead {
+            position: sticky;
+            top: 0;
+            z-index: 1; /* 确保标题在表格内容上方 */
+            background-color: rgb(245, 245, 245);
+        }
+
+        #file-list td {
+            margin: 0;
+        }
+
+        #file-list .file_disc {
+            max-width: 10em;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #find_no_files {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.3);
+            font-weight: bolder;
+            font-size: xx-large;
+            position: absolute;
+            z-index: 1;
+            top: 45%;
+            left: 46%;
+            transition: opacity ease-in-out 1s;
+            opacity: 0;
+        }
+    </style>
+
+{% endblock %}
+
+{% block acho-main-board %}
+    <div id="outer_container"
+         style="width: 100%;height: 100%;padding: 10px;display: flex;flex-direction: column;transition: opacity ease-in-out 0.5s;">
+        <div id="inner_top_container" style="width: 100%; height: 100px;background: whitesmoke;">
+
+        </div>
+        <div id="inner_mid_container">
+            <div id="find_no_files" class="user-select-none"><p>¯\_(ツ)_/¯</p>
+                <p style="font-size: x-large;font-family: 幼圆,serif">什么也没找着</p></div>
+            <div id="table_container">
+                <table id="file-list" class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>音频名称</th>
+                        <th>描述</th>
+                        <th>大小</th>
+                        <th>上传时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for obj in img_file_queryset %}
+                        <tr>
+                            {% load mytags %}
+                            <td>{{ obj.file.name|base_path }}</td>
+
+                            {% if obj.description == "" %}
+                                <td class="file_disc">{{ 无描述信息 }}</td>
+                            {% else %}
+                                <td class="file_disc" title="{{ obj.description }}">{{ obj.description }}</td>
+                            {% endif %}
+
+                            <td>{{ obj.file.size|size_swap }}</td>
+                            <td>{{ obj.uploaded_at|date:"Y m.d" }}</td>
+                            <td style="height: 100%;width:100%;display: flex;flex-direction: row;justify-content: space-evenly">
+                                <div class="btn_edit" file_id="{{ obj.id }}">编辑</div>
+                                <div class="btn_delete" file_id="{{ obj.id }}">删除</div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+        <div id="inner_bottom_container">
+            <div id="append-file-btn" class="non-selectable">
+                +
+            </div>
+            <div id="file-upload-panel">
+                <div class="row">
+                    <input type="file" name="file" id="file-input" style="width: 400px; margin: auto"
+                           class="form-control ">
+                    <label for="description"></label>
+                    <textarea name="description" class="form-text" id="description"
+                              style="margin: auto;width: 400px;height: 100px;resize: none; overflow: auto;"
+                              placeholder="输入文件描述信息"></textarea>
+                </div>
+                <div style="width: 400px; margin: auto; padding-top: 10px" class="row">
+                    <button type="button" id="upload-button"
+                            style="margin-left: 20%;width: 29%;margin-right: 1%;border-radius: 10px"
+                            class="button btn-success text-center">Upload
+                    </button>
+                    <button type="button" id="cancel-button"
+                            style="margin-right: 20%;width: 29%;margin-left: 1%;border-radius: 10px;"
+                            class="button btn-dark text-center">Cancel
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block main_board_js %}
+    {#    用以取消主界面渐出效果#}
+
+    {% block acho_main_board_js %}
+        <script>
+            if (sessionStorage.getItem("acho_app_homeaudio_left_forbid_refresh") === null) {
+                $('#outer_container')[0].style.opacity = '0';
+                window.onload = function () {
+                    $('#outer_container')[0].style.opacity = '1';
+                }
+                sessionStorage.setItem('acho_app_homeaudio_left_forbid_refresh', '1');
+            }
+            let append_file_btn = $('#append-file-btn');
+
+            let find_no_files_hint = $('#find_no_files')[0];
+            if ("{{ counts }}" === '0') {
+                find_no_files_hint.style.display = 'inline'
+                setTimeout(v => {
+                    find_no_files_hint.style.opacity = '1';
+                }, 10)
+            }
+
+            function appendPanelOpen() {
+                append_file_btn[0].style.opacity = '0';
+                setTimeout(v => {
+                    append_file_btn[0].style.display = 'none'
+                    $('#inner_bottom_container')[0].style.height = '280px';
+                    $('#inner_mid_container')[0].style.height = '560px';
+                    $('#file-upload-panel')[0].style.display = 'block';
+                }, 500);
+                setTimeout(v => {
+                    $('#file-upload-panel')[0].style.opacity = '1.0';
+                }, 1500)
+            }
+
+            function appendPanelClose(flag=1) {
+                $('#description')[0].value = null;
+                $("#file-input")[0].value = null;
+                $('#file-upload-panel')[0].style.opacity = '0';
+                $('#inner_bottom_container')[0].style.height = '40px';
+                $('#inner_mid_container')[0].style.height = '800px';
+                setTimeout(v => {
+                    $('#append-file-btn')[0].style.display = 'block';
+                }, 1000);
+                setTimeout(v => {
+                    $('#file-upload-panel')[0].style.display = 'none';
+                    $('#append-file-btn')[0].style.opacity = '1';
+                }, 1500)
+                if(flag)
+                setTimeout(v => {
+                    window.location.reload();
+                }, 1600)
+            }
+
+            append_file_btn.click(appendPanelOpen);
+            $('#cancel-button').click(v=>{appendPanelClose(0)})
+
+
+            $('#upload-button').click(function () {
+                const formData = new FormData();
+                formData.append("file", $('#file-input')[0].files[0]);
+                formData.append("description", $('#description').val());
+                formData.append("type", '2');
+                formData.append("device_id", '{{ device.id }}');
+                formData.append("tok", `${sessionStorage.getItem('token_key')}`);
+                $.ajax({
+                    url: '{% url 'uploadFile' %}',
+                    type: 'POST',
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    onprogress: function (event) {
+                        if (event.lengthComputable) {
+                            const percentComplete = (event.loaded / event.total) * 100;
+                            $('#upload-status')[0].innerHTML = `Uploading: ${percentComplete.toFixed(2)}%`;
+                        }
+                    },
+                    success: function (args) {
+                        checkToken(args['token']);
+                        appendPanelClose();
+                    }
+
+                })
+            })
+
+            $('.btn_delete').click(e => {
+                let tar = e.target;
+                console.log(tar);
+                console.log(tar.getAttribute('file_id'));
+                $.ajax({
+                    url: `{% url 'deleteFile'%}?tok={{ tok }}&dev_id={{ dev_id }}&file_id=${tar.getAttribute('file_id')}`,
+                    type: 'GET',
+                    success: function (args) {
+                        checkToken(args['token']);
+                        window.location.reload();
+                    }
+                })
+            })
+        </script>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,1 @@
+cmd /c "cd /d .&&pip install -r requirements.txt"

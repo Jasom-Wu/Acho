@@ -1,0 +1,183 @@
+.user-profile-head {
+    height: 200px;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-profile-head-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    box-shadow: 0 0 5px 1px #D6D6D6;
+    position: relative;
+}
+
+.user-profile-head-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.user-profile-head-avatar-hover {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    overflow: hidden; /* 防止图片溢出盒子 */
+}
+
+.user-profile-head-avatar-hover:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.user-profile-head-avatar-hover img {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.user-profile-head-avatar-hover:hover img {
+    opacity: 1;
+}
+
+.user-profile-head-info {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
+    margin-left: 30px;
+}
+
+.user-profile-head-info p {
+    font-family: "Arial Black", serif;
+}
+
+.user-profile-head-info p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 0;
+}
+
+.user-profile-head-info p:nth-of-type(3) {
+    font-size: small;
+    margin-bottom: 0;
+}
+
+.user-avatar-upload-modal {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    margin: 0;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+}
+
+.user-avatar-upload-modal .modal-inner {
+    position: relative;
+    background: white;
+    margin: 150px auto;
+    padding: 20px;
+    width: 700px;
+    height: 380px;
+    border-radius: 4px;
+}
+
+.user-avatar-upload-modal .modal-inner h3 {
+    font-size: large;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.user-avatar-upload-modal .modal-inner .modal-inner-close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 25px;
+    color: #51585e;
+    transition: all ease-in-out 300ms;
+}
+
+.user-avatar-upload-modal .modal-inner .modal-inner-close-btn:hover {
+    cursor: pointer;
+    color: gray;
+    transform: scale(110%);
+    text-shadow: 0 0 1px black;
+}
+
+#modal-inner-upload-box {
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+    background: #f7f7f7;
+    border: 2px dashed gray;
+    border-radius: 6px;
+}
+
+#modal-inner-upload-box:hover {
+    background: rgba(0, 0, 0, 0.07);
+}
+
+#modal-inner-upload-box img {
+    display: block;
+    margin: 50px auto 20px;
+}
+
+#modal-inner-upload-box p {
+    margin: 10px auto;
+    text-align: center;
+    color: #999999;
+}
+
+.modal-inner-highlight {
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #ffffff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#avatar-default-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 100px
+}

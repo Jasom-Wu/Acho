@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'font/iconfont.css' %}">
+    <script src="{% static 'bootstrap5/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+</head>
+
+<style>
+    #submit-btn:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    html, body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .error_shake_ani {
+        margin: auto;
+        width: 100%;
+        animation: error_shake 0.75s;
+    }
+
+    @keyframes error_shake {
+        0%,
+        65% {
+        rotate(0 deg);
+            transform: rotate(0deg);
+        }
+        70% {
+        rotate(6 deg);
+            transform: rotate(6deg);
+        }
+        75% {
+        rotate(- 6 deg);
+            transform: rotate(-6deg);
+        }
+        80% {
+        rotate(6 deg);
+            transform: rotate(6deg);
+        }
+        85% {
+        rotate(- 6 deg);
+            transform: rotate(-6deg);
+        }
+        90% {
+        rotate(6 deg);
+            transform: rotate(6deg);
+        }
+        95% {
+        rotate(- 6 deg);
+            transform: rotate(-6deg);
+        }
+        100% {
+        rotate(0 deg);
+            transform: rotate(0deg);
+        }
+    }
+
+    #regis:hover {
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+<body>
+<div style="background-color: rgb(42,43,43);height: 100%;padding: 0;margin: 0;overflow:hidden;">
+    <div class="container-fluid mt-md-5 text-nowrap p-md-4 "
+         style="width:500px;height: fit-content;border: 1px solid whitesmoke ;border-radius: 30px; background-color: whitesmoke;">
+        <h1 class="text-center" style="text-shadow: #FC0 1px 0 10px;font-weight: bolder">登录</h1>
+        <hr>
+        <form action="" method="post" class="mt-md-3 text-md-end col-md-8 offset-md-2" style="line-height: 35px">
+            <div class="row mb-md-1 ">
+                <label class="iconfont col-md-2" for="username" style="font-size: larger">&#xe607;</label>
+                <div class="container col p-md-0 d-inline-block">
+                    <input id="username" placeholder="请输入用户名" name="username" type="text" class="form-control "
+                           onblur="is_user_exist()">
+                    <p id="usr_hint_text" style="font-size: small;color: red;height:12px;text-align: center"></p>
+                </div>
+            </div>
+            <div class="row mb-md-1">
+                <label class="iconfont col-md-2" for="password" style="font-size: larger">&#xe620;</label>
+                <div class="container col p-md-0">
+                    <input id="password" placeholder="请输入密码" name="password" type="password" class="form-control  col"
+                           onblur="passwordOnblurReset()">
+                    <p id="password_hint_text" style="font-size: small;color: red;height:12px;text-align: center"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-11">
+                    <input value="确定" id="submit-btn" type="button" class="btn btn-success mt-md-2 "
+                           onclick="login_check()"
+                           style="width:100%;">
+                </div>
+                <div class="col-md-1">
+                    <a href="/welcome/register/" class="text-decoration-none text-md-center"
+                       style="border: 2px dotted lightslategrey;border-radius: 10px;cursor: pointer; font-weight: bold;color: black;padding: 5px;"
+                       id="regis">注册</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+
+<script>
+    function is_user_exist() {
+        let xmlHttp = new XMLHttpRequest();  //创建一个异步请求对象
+        let param = document.getElementById("username").value;
+        if (param !== '') {
+            $.ajax({
+                url: "/welcome/user/check?username=" + param,
+                method: 'GET',
+                success: function (data) {
+                    userExistCallBack(data['status']);
+                }
+            })
+        }
+        document.getElementById("username").style.boxShadow = '';
+        document.getElementById("usr_hint_text").innerText = "";
+        document.getElementById("username").classList.remove("error_shake_ani");
+    }
+
+    //局部刷新函数
+    function userExistCallBack(param) {
+        if (param === 'Found') {
+            document.getElementById("usr_hint_text").innerText = "";
+            document.getElementById("usr_hint_text").style.color = "#096";
+            document.getElementById("username").style.boxShadow = '0px 0px 17px 5px #096';
+        } else {
+            document.getElementById("password").value = '';
+            document.getElementById("usr_hint_text").innerText = "用户不存在！";
+            document.getElementById("usr_hint_text").style.color = "red";
+            document.getElementById("username").classList.add("error_shake_ani");
+            document.getElementById("username").style.boxShadow = '0px 0px 17px 5px #EFA5B7';
+        }
+    }
+
+    function is_password_correct() {
+        let param1 = document.getElementById("username").value;
+        let param2 = document.getElementById("password").value;
+        if (param1 === '' && param2 === '') {
+            document.getElementById("username").style.boxShadow = '';
+            document.getElementById("usr_hint_text").innerText = "";
+            return
+        }
+        $.ajax({
+            url: "/welcome/password/check?username=" + param1 + '&password=' + param2,
+            method: 'GET',
+            success: function (data) {
+                passwordCorrectCallBack(data);
+            }
+        })
+    }
+
+    function passwordCorrectCallBack(param) {
+        console.log(param)
+        if (param['status'] === 'corrected') {
+            document.getElementById("password").style.boxShadow = '0px 0px 0px 0px #EFA57B';
+            if (!!window.sessionStorage === true)
+                window.sessionStorage.setItem('token_key', param["token"]);
+            window.location.replace('/home/user-home?tok=' + param["token"]);
+        } else if (param['status'] === 'uncorrected') {
+            document.getElementById("password_hint_text").innerText = "密码或用户名输入有误，请重新输入！";
+            document.getElementById("password").style.boxShadow = '0px 0px 17px 5px #EFA5B7';
+        } else if (param['status'] === 'failed') {
+            window.location.replace('/home/err/?type=500');
+        }
+    }
+
+    function passwordOnblurReset() {
+        document.getElementById("password_hint_text").innerText = "";
+        document.getElementById("password").style.boxShadow = "";
+    }
+
+    function login_check() { //登陆判断
+        let username = document.getElementById('username').value;
+        let passwd = document.getElementById('password').value;
+
+        if (username === '') {
+            document.getElementById("usr_hint_text").innerText = "请输入用户名！";
+            document.getElementById("usr_hint_text").style.color = "red";
+            document.getElementById("username").style.boxShadow = '0px 0px 17px 5px #EFA5B7';
+            return;
+        } else {
+            is_user_exist();
+        }
+        if (passwd === '') {
+            document.getElementById("password_hint_text").innerText = "请输入密码！";
+            document.getElementById("password").style.boxShadow = '0px 0px 17px 5px #EFA5B7';
+        } else {
+            is_password_correct();
+        }
+    }
+</script>
+</html>

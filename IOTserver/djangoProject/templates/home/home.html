@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/font/iconfont.css' %}">
+    <link rel="stylesheet" href="{% static 'home/home.css' %}">
+    <script src="{% static 'bootstrap5/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'home/home.js' %}"></script>
+    {% block main_board_head %}
+    {% endblock %}
+</head>
+{% block main_board_style %}
+{% endblock %}
+<body>
+<div id="body-main">
+    <ul id="bar_above">
+        <li><a href="#">Home</a></li>
+        <li><a href="#" onclick="showDevices()">MyDevices</a></li>
+        <li>
+            <div id="user_circ_panel" onclick="avatarClick()"><img src="/{{ user.profile_pic.name }}" alt="profile_img"
+                                                                   class="non-selectable">
+            </div>
+        </li>
+        <li style="float:right"><a href="#" class="active">About</a></li>
+        <div style="clear:both"></div>
+    </ul>
+    <div class="row mt-md-4">
+        <div class="col-md-8 offset-md-2" id="main_board">
+            {% block main_board %}
+
+            {% endblock %}
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+
+<script>
+    window.onload = function (ev) {
+        if (checkStorageSupport() !== true) {
+            return;
+        }
+        if ("{{ tok }}" !== "")
+            sessionStorage.setItem('token_key', '{{ tok }}');
+    }
+</script>
+{% block main_board_js %}
+{% endblock %}
+</html>

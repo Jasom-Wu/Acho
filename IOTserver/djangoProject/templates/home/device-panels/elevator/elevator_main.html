@@ -1,0 +1,316 @@
+{% extends 'home/home.html' %}
+{% block main_board_style %}
+    <style>
+        #elevator_nav {
+            height: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+        }
+
+        #arrowAnim {
+            width: 200px;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arrowUp {
+            width: 90px;
+            height: 90px;
+            border: 30px solid;
+            border-color: #9a6e3a transparent transparent #9a6e3a;
+            transform: rotate(45deg);
+        }
+
+        .arrowSlidingUp {
+            position: absolute;
+            -webkit-animation: slideUp 2s linear infinite;
+            animation: slideUp 2s linear infinite;
+        }
+
+        @-webkit-keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(170%);
+            }
+            20% {
+                opacity: 1;
+                transform: translateY(100%);
+            }
+            80% {
+                opacity: 1;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-170%);
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(170%);
+            }
+            20% {
+                opacity: 1;
+                transform: translateY(100%);
+            }
+            80% {
+                opacity: 1;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-170%);
+            }
+        }
+
+        .arrowDown {
+            width: 90px;
+            height: 90px;
+            border: 30px solid;
+            border-color: #9a6e3a transparent transparent #9a6e3a;
+            transform: rotate(-135deg);
+        }
+
+        .arrowSlidingDown {
+            position: absolute;
+            -webkit-animation: slideDown 2s linear infinite;
+            animation: slideDown 2s linear infinite;
+        }
+
+        @-webkit-keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-170%);
+            }
+            20% {
+                opacity: 1;
+                transform: translateY(-100%);
+            }
+            80% {
+                opacity: 1;
+                transform: translateY(100%);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(170%);
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-170%);
+            }
+            20% {
+                opacity: 1;
+                transform: translateY(-100%);
+            }
+            80% {
+                opacity: 1;
+                transform: translateY(100%);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(170%);
+            }
+        }
+
+        .delay1 {
+            -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+        }
+
+        .delay2 {
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        .delay3 {
+            -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+
+        #floor_label {
+            height: fit-content;
+            width: 100%;
+            margin: 50px auto auto;
+            text-align: center;
+            color: black;
+            font-family: "Arial Black", serif;
+            font-size: 230px;
+            /*font-weight: lighter;*/
+        }
+
+        #floor_label span {
+            color: darkred;
+            font-size: 240px;
+            font-weight: bolder;
+        }
+
+        #hint_text {
+            height: fit-content;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            color: gray;
+            font-size: 70px;
+        }
+    </style>
+{% endblock %}
+
+{% block main_board %}
+    <div id="elevator_nav">
+        <button type="button" class="btn-close btn-lg" style="float: right;margin: 10px"
+                onclick="showDevices()"></button>
+        <div class="row">
+            <div class="col-md-2" style="padding: 0;background: #d3d3d4;border-radius: 10px;height: 800px;"
+                 id="arrow_div">
+                {#                <div id="arrowAnim">#}
+                {#                    <div class="arrowSlidingUp">#}
+                {#                        <div class="arrowUp"></div>#}
+                {#                    </div>#}
+                {#                    <div class="arrowSlidingUp delay1">#}
+                {#                        <div class="arrowUp"></div>#}
+                {#                    </div>#}
+                {#                    <div class="arrowSlidingUp delay2">#}
+                {#                        <div class="arrowUp"></div>#}
+                {#                    </div>#}
+                {#                    <div class="arrowSlidingUp delay3">#}
+                {#                        <div class="arrowUp"></div>#}
+                {#                    </div>#}
+                {#                </div>#}
+            </div>
+            <div class="col">
+                <p id="floor_label" class="non-selectable">1<span>层</span></p>
+                <p id="hint_text" class="non-selectable">当前楼层在</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block main_board_js %}
+    <script>
+        startSocket(`test_id_{{dev.id}}`, 'only_device', sessionStorage.getItem('token_key'))
+
+        function isJSON(str) {
+            try {
+                JSON.parse(str);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function startSocket(topic, mode, token) {
+// 解析 URL 获取主机部分（即服务器部分）
+            let parsedUrl = new URL(window.location.href);
+            let websock_url = `ws:/${parsedUrl.hostname}:${parsedUrl.port}/broker/ws/subscribe/${topic}/${mode}/${token}`;
+            let socket = new WebSocket(websock_url);
+
+            socket.onopen = function (event) {
+                console.log("WebSocket连接已建立");
+            };
+            socket.onmessage = function (event) {
+                const data = event.data;
+                console.log("接收到服务器的消息:", data);
+                let dic;
+                if (isJSON(data)) {
+                    dic = JSON.parse(data);
+                } else {
+                    alert("Not a JSON data!");
+                    return;
+                }
+                if (typeof dic.message === 'string') {
+                    let elevator_floor_p = document.getElementById('floor_label');
+                    let elevator_arrow_div = document.getElementById('arrow_div')
+                    let list = dic.message.split(",");
+                    elevator_floor_p.innerText = list[0];
+                    while (elevator_arrow_div.firstChild) {
+                        elevator_arrow_div.removeChild(elevator_arrow_div.firstChild);
+                    }
+                    if (list[1] === '0') {
+                        console.log("add down arrow.");
+                        elevator_arrow_div.appendChild(createDownArrow());
+                    } else if (list[1] === '1') {
+                        console.log("remove arrow.");
+                    } else if (list[1] === '2') {
+                        console.log("add up arrow.");
+                        elevator_arrow_div.appendChild(createUpArrow());
+                    }
+                }
+            };
+            socket.onclose = function (event) {
+                console.log("WebSocket连接已关闭");
+            };
+            socket.onerror = function (error) {
+                console.error("WebSocket连接发生错误:", error);
+            };
+        }
+
+        function createDownArrow() {
+            let e_0 = document.createElement("div");
+            e_0.setAttribute("id", "arrowAnim");
+            let e_1 = document.createElement("div");
+            e_1.setAttribute("class", "arrowSlidingDown");
+            let e_2 = document.createElement("div");
+            e_2.setAttribute("class", "arrowDown");
+            e_1.appendChild(e_2);
+            e_0.appendChild(e_1);
+            let e_3 = document.createElement("div");
+            e_3.setAttribute("class", "arrowSlidingDown delay1");
+            let e_4 = document.createElement("div");
+            e_4.setAttribute("class", "arrowDown");
+            e_3.appendChild(e_4);
+            e_0.appendChild(e_3);
+            let e_5 = document.createElement("div");
+            e_5.setAttribute("class", "arrowSlidingDown delay2");
+            let e_6 = document.createElement("div");
+            e_6.setAttribute("class", "arrowDown");
+            e_5.appendChild(e_6);
+            e_0.appendChild(e_5);
+            let e_7 = document.createElement("div");
+            e_7.setAttribute("class", "arrowSlidingDown delay3");
+            let e_8 = document.createElement("div");
+            e_8.setAttribute("class", "arrowDown");
+            e_7.appendChild(e_8);
+            e_0.appendChild(e_7);
+            return e_0;
+        }
+
+        function createUpArrow() {
+            let e_0 = document.createElement("div");
+            e_0.setAttribute("id", "arrowAnim");
+            let e_1 = document.createElement("div");
+            e_1.setAttribute("class", "arrowSlidingUp");
+            let e_2 = document.createElement("div");
+            e_2.setAttribute("class", "arrowUp");
+            e_1.appendChild(e_2);
+            e_0.appendChild(e_1);
+            let e_3 = document.createElement("div");
+            e_3.setAttribute("class", "arrowSlidingUp delay1");
+            let e_4 = document.createElement("div");
+            e_4.setAttribute("class", "arrowUp");
+            e_3.appendChild(e_4);
+            e_0.appendChild(e_3);
+            let e_5 = document.createElement("div");
+            e_5.setAttribute("class", "arrowSlidingUp delay2");
+            let e_6 = document.createElement("div");
+            e_6.setAttribute("class", "arrowUp");
+            e_5.appendChild(e_6);
+            e_0.appendChild(e_5);
+            let e_7 = document.createElement("div");
+            e_7.setAttribute("class", "arrowSlidingUp delay3");
+            let e_8 = document.createElement("div");
+            e_8.setAttribute("class", "arrowUp");
+            e_7.appendChild(e_8);
+            e_0.appendChild(e_7);
+            return e_0;
+        }
+    </script>
+{% endblock %}

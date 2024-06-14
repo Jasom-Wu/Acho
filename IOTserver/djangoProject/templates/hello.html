@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>First-Page</title>
+    <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap5/bootstrap.bundle.min.js' %}"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-1">
+        <div class="container p-5 my-3 border">
+            <h1>我的第一张 Bootstrap 页面</h1>
+            <p>这个容器有边框和额外的内边距和外边距。</p>
+        </div>
+    </div>
+    <div class="col-1">
+        <div class="container p-2 my-1 bg-warning text-dark">
+            <h1>我的第一张 Bootstrap 页面</h1>
+            <p>这个容器有深色背景色和白色文本，以及额外的内边距和外边距。</p>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="col">
+            <div class="alert alert-info">重要信息提示！</div>
+            <button type="button" class="btn btn-outline-primary w-100 ">全宽按钮</button>
+            <button class="btn btn-success">
+                <span class="spinner-grow-sm spinner-grow text-white-50 "></span>
+            </button>
+        </div>
+    </div>
+    <!-- 打开模态的按钮 -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+  Open modal
+</button>
+
+<!-- 模态 -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content border-top border-5 border-dark border-bottom-0 bo">
+
+      <!-- 模态标题 -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- 模态主体 -->
+      <div class="modal-body">
+        模态主体 ..
+      </div>
+
+      <!-- 模态页脚 -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

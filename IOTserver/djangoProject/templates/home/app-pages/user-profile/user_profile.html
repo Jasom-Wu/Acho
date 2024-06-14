@@ -1,0 +1,57 @@
+{% extends 'home/home.html' %}
+
+{% block main_board_head %}
+    <link rel="stylesheet" href="{% static 'home/app-pages/user-profile/user_profile.css' %}">
+{% endblock %}
+{% block main_board_style %}
+    <style>
+
+    </style>
+{% endblock %}
+
+{% block main_board %}
+    <div class="user-profile-head-div row">
+        <div class="user-profile-head">
+            <div class="user-profile-head-avatar">
+                <img src="/{{ user.profile_pic.name }}" alt="profile_img" class="non-selectable">
+                <div class="user-profile-head-avatar-hover">
+                    <img src="{% static "app/user-profile/avatar_upload.png" %}" alt="profile_img"
+                         class="non-selectable">
+                </div>
+            </div>
+            <div class="user-profile-head-info">
+                <p class="non-selectable">{{ user.user_name }}</p>
+                <p class="non-selectable">注册时间： {{ user.register_date|date:"Y年m月d日" }}</p>
+                <p class="non-selectable">拥有设备：{{ user.devices.count }}</p>
+            </div>
+
+        </div>
+        <div class="user-avatar-upload-modal">
+            <div class="modal-inner">
+                <h3 class="non-selectable">上传图像以更新</h3>
+                <div class="non-selectable modal-inner-close-btn">&times;</div>
+                <hr>
+                <div id="modal-inner-upload-box">
+                    <img alt="upload" src="{% static "app/user-profile/upload-icon.png" %}">
+                    <p class="non-selectable">拖入图片文件至此处</p>
+                </div>
+                <div id="avatar-default-btn" class="btn btn-secondary">恢复默认</div>
+                <div class="modal-overlay" id="loadingModal">
+                    <div class="loader"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+{% endblock %}
+
+{% block main_board_js %}
+    <script src="{% static 'home/app-pages/user-profile/user_profile.js' %}"></script>
+    <script>
+
+    </script>
+{% endblock %}

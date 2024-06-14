@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ERROR</title>
+    <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'font/iconfont.css' %}">
+    <script src="{% static 'bootstrap5/bootstrap.bundle.min.js' %}"></script>
+</head>
+<script>
+
+    window.onload =
+        function () {
+            for (let i=1; i < 5; i++) {
+                setTimeout(function () {
+                    let time = `${4-i}`;
+                    document.getElementById("sec").innerText = time;
+                    if (i === 4) {
+                        window.location.replace('/welcome/login/');
+                    }
+                }, 1000 * i);
+            }
+        }
+
+
+</script>
+<body>
+<br>
+<div class="container-md">
+    <h1 class="text-md-center">用户登录信息已过期，正在跳转登录界面...</h1>
+    <p class="text-md-center">即将跳转<a id="login_force" class="text-decoration-none"
+                                     style="font-size: large;cursor: pointer"
+                                     onclick="window.location.replace('/welcome/login/');">登录界面</a>,还剩<span
+            id="sec" class="text-danger">4</span>秒</p>
+</div>
+</body>
+</html>

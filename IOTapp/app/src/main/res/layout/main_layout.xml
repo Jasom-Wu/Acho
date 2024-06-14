@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="未登录"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="50dp"
+            android:hint="No Respond"
+            android:maxLines="10"
+            android:inputType="textMultiLine"
+            android:textAlignment="center"
+            android:textColor="#3592c4"
+            android:textColorHint="#666" />
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:stretchColumns="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/button_slight_grey"
+                android:singleLine="true"
+                android:text="Click Me To Take Photo"
+                android:textColor="#004891" />
+            <Button
+                android:id="@+id/button0"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/button_slight_grey"
+                android:singleLine="true"
+                android:text="Click Me To Scan"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/button1"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/button_slight_grey"
+                android:singleLine="true"
+                android:text="Click Me To Login"
+                android:textColor="@color/black" />
+
+<!--            <Button-->
+<!--                android:id="@+id/button2"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:background="@drawable/button_slight_grey"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="Click Me To Get Token"-->
+<!--                android:textColor="@color/black" />-->
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/sock_msg_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="something"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#666" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/button_slight_grey"
+                    android:paddingHorizontal="5dp"
+                    android:singleLine="true"
+                    android:text="Send Sock Msg"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

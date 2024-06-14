@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap5/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+</head>
+<style>
+    #submit-btn:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    html, body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .error_shake_ani {
+        margin: auto;
+        width: 100%;
+        animation: error_shake 0.75s;
+    }
+
+    @keyframes error_shake {
+        0%,
+        65% {
+        rotate(0 deg);
+            transform: rotate(0deg);
+        }
+        70% {
+        rotate(6 deg);
+            transform: rotate(6deg);
+        }
+        75% {
+        rotate(- 6 deg);
+            transform: rotate(-6deg);
+        }
+        80% {
+        rotate(6 deg);
+            transform: rotate(6deg);
+        }
+        85% {
+        rotate(- 6 deg);
+            transform: rotate(-6deg);
+        }
+        90% {
+        rotate(6 deg);
+            transform: rotate(6deg);
+        }
+        95% {
+        rotate(- 6 deg);
+            transform: rotate(-6deg);
+        }
+        100% {
+        rotate(0 deg);
+            transform: rotate(0deg);
+        }
+    }
+</style>
+<body>
+<div style="background-color: rgb(42,43,43);height: 100%;padding: 0;margin: 0;overflow:hidden;">
+    <div class="container-fluid mt-md-5 text-nowrap p-md-4 "
+         style="width:500px;height: fit-content;border: 1px solid whitesmoke ;border-radius: 30px; background-color: whitesmoke;">
+        <h1 class="text-center" style="text-shadow: #FC0 1px 0 10px;font-weight: bolder">注册</h1>
+        <hr>
+        <form action="#" method="post" class="mt-md-3 text-md-end" style="line-height: 35px">
+            <div class="row mb-md-1">
+                <label class="col-md-4" for="username">用户名</label>
+                <div class="container col p-md-0">
+                    <input id="username" placeholder="请输入用户名" name="username" type="text" class="form-control "
+                           onblur="is_user_exist()">
+                    <p id="usr_hint_text" style="font-size: small;color: red;height:12px;text-align: center"></p>
+                </div>
+            </div>
+            <div class="row mb-md-4">
+                <label class="col-md-4" for="password">密码</label>
+                <input id="password" placeholder="请输入密码" name="password" type="password" class="form-control  col"
+                       onblur="is_password_same()">
+            </div>
+            <div class="row mb-md-3">
+                <label class="col-md-4" for="password_again">重新输入密码</label>
+                <div class="container col p-md-0">
+                    <input id="password_again" placeholder="再次输入密码以确认" name="password-again" type="password"
+                           class="form-control col" onblur="is_password_same()">
+                    <p id="password_hint_text" style="font-size: small;color: red;height:12px;text-align: center"></p>
+                </div>
+            </div>
+            <input disabled value="确定" id="submit-btn" type="submit" class="btn btn-success mt-md-2"
+                   style="width:100%;">
+        </form>
+    </div>
+</div>
+</body>
+
+<script>
+    let submit_btn_flag = 0;
+
+    function is_user_exist() {
+        submit_btn_flag = 0;
+        document.getElementById("submit-btn").disabled = true;
+        document.getElementById("submit-btn").opacity = 0.6;
+        let param = document.getElementById("username").value;
+        if (param !== '') {
+            $.ajax({
+                url: "/welcome/user/check?username=" + param,
+                method: 'GET',
+                success: function (data) {
+                    userExistCallBack(data['status']);
+                }
+            })
+        } else {
+            document.getElementById("username").style.boxShadow = '';
+            document.getElementById("usr_hint_text").innerText = "";
+        }
+
+    }
+
+    //局部刷新函数
+    function userExistCallBack(param) {
+        console.log(param)
+        if (param === 'NoFound') {
+            document.getElementById("usr_hint_text").innerText = "ID is available!";
+            document.getElementById("usr_hint_text").style.color = "#096"
+            document.getElementById("username").style.boxShadow = '0px 0px 17px 5px #096';
+            document.getElementById("username").classList.remove("error_shake_ani");
+            submit_btn_flag = 1;
+        } else {
+            document.getElementById("password").value = '';
+            document.getElementById("password_again").value = '';
+            document.getElementById("usr_hint_text").innerText = "ID is invalid, please select another!";
+            document.getElementById("usr_hint_text").style.color = "red"
+            document.getElementById("username").classList.add("error_shake_ani")
+            document.getElementById("username").style.boxShadow = '0px 0px 17px 5px #EFA5B7';
+            submit_btn_flag = 0;
+        }
+    }
+
+    function is_password_same() {
+        let value1 = document.getElementById("password").value;
+        let value2 = document.getElementById("password_again").value;
+        document.getElementById("submit-btn").disabled = true;
+        document.getElementById("submit-btn").opacity = 0.6;
+        if (value1 !== value2 && value1 !== "") {
+            document.getElementById("password_again").style.boxShadow = '0px 0px 17px 5px #EFA5B7';
+            document.getElementById("password_hint_text").innerText = "两次密码输入不一致！try again！";
+        } else if (value1 !== "" && value2 !== "") {
+            document.getElementById("password_hint_text").innerText = "";
+            document.getElementById("password_again").style.boxShadow = '0px 0px 0px 0px #EFA57B';
+            is_user_exist()
+            setTimeout(function () {
+                if (submit_btn_flag === 1) {
+                    document.getElementById("submit-btn").disabled = false;
+                    document.getElementById("submit-btn").opacity = 1;
+                    document.getElementById("password_again").style.boxShadow = '0px 0px 0px 0px #EFA57B';
+                }
+            }, 500)
+        }
+        if (value2 === '') {
+            document.getElementById("password_hint_text").innerText = "";
+            document.getElementById("password_again").style.boxShadow = '0px 0px 0px 0px #EFA57B';
+        }
+
+    }
+</script>
+</html>
