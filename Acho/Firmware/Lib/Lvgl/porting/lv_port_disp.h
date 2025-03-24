@@ -21,7 +21,7 @@ extern "C" {
 /*********************
  *      DEFINES
  *********************/
-#define SINGLE_BUFF_ROWS  25
+#define SINGLE_BUFF_ROWS  15
 /**********************
  *      TYPEDEFS
  **********************/

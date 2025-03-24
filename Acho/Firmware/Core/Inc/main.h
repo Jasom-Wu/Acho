@@ -57,33 +57,25 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define MLCD_MODE_Pin GPIO_PIN_5
+#define MLCD_MODE_GPIO_Port GPIOE
+#define MLCD_DISP_Pin GPIO_PIN_6
+#define MLCD_DISP_GPIO_Port GPIOE
 #define KEY2_Pin GPIO_PIN_13
 #define KEY2_GPIO_Port GPIOC
 #define KEY1_Pin GPIO_PIN_0
 #define KEY1_GPIO_Port GPIOA
 #define KEY1_EXTI_IRQn EXTI0_IRQn
-#define DC_Pin GPIO_PIN_2
-#define DC_GPIO_Port GPIOA
-#define BUSY_Pin GPIO_PIN_3
-#define BUSY_GPIO_Port GPIOA
-#define SPI_CS_Pin GPIO_PIN_4
-#define SPI_CS_GPIO_Port GPIOA
+#define MLCD_EXTCOMIN_Pin GPIO_PIN_4
+#define MLCD_EXTCOMIN_GPIO_Port GPIOA
+#define MLCD_CS_Pin GPIO_PIN_6
+#define MLCD_CS_GPIO_Port GPIOA
 #define ENCODER_ENTER_Pin GPIO_PIN_4
 #define ENCODER_ENTER_GPIO_Port GPIOC
-#define VS_RST_Pin GPIO_PIN_12
-#define VS_RST_GPIO_Port GPIOB
-#define RST_Pin GPIO_PIN_6
-#define RST_GPIO_Port GPIOC
-#define VS_XDCS_Pin GPIO_PIN_7
-#define VS_XDCS_GPIO_Port GPIOC
 #define USB_EN_Pin GPIO_PIN_6
 #define USB_EN_GPIO_Port GPIOD
 #define LED_BLUE_Pin GPIO_PIN_5
 #define LED_BLUE_GPIO_Port GPIOB
-#define VS_DREQ_Pin GPIO_PIN_8
-#define VS_DREQ_GPIO_Port GPIOB
-#define VS_XCS_Pin GPIO_PIN_9
-#define VS_XCS_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

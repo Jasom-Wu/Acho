@@ -56,10 +56,10 @@ RM = "E:\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho
+CMAKE_SOURCE_DIR = E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho\Firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho\cmake-build-debug-mingwstm32
+CMAKE_BINARY_DIR = E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho\Firmware\cmake-build-debug-mingwstm32
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho\cmake-build-debug-mingwstm32\CMakeFiles E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho\cmake-build-debug-mingwstm32\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho\Firmware\cmake-build-debug-mingwstm32\CMakeFiles E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho\Firmware\cmake-build-debug-mingwstm32\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho\cmake-build-debug-mingwstm32\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\WorkSpace\MyCodes\TI\STM32\HAL\F103VET6\Ink-Paper\Acho\Firmware\cmake-build-debug-mingwstm32\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -199,6 +199,30 @@ Core/Src/gpio.s: Core/Src/gpio.c.s
 Core/Src/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Core/Src/gpio.c.s
 .PHONY : Core/Src/gpio.c.s
+
+Core/Src/i2s.obj: Core/Src/i2s.c.obj
+.PHONY : Core/Src/i2s.obj
+
+# target to build an object file
+Core/Src/i2s.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Core/Src/i2s.c.obj
+.PHONY : Core/Src/i2s.c.obj
+
+Core/Src/i2s.i: Core/Src/i2s.c.i
+.PHONY : Core/Src/i2s.i
+
+# target to preprocess a source file
+Core/Src/i2s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Core/Src/i2s.c.i
+.PHONY : Core/Src/i2s.c.i
+
+Core/Src/i2s.s: Core/Src/i2s.c.s
+.PHONY : Core/Src/i2s.s
+
+# target to generate assembly for a file
+Core/Src/i2s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Core/Src/i2s.c.s
+.PHONY : Core/Src/i2s.c.s
 
 Core/Src/main.obj: Core/Src/main.c.obj
 .PHONY : Core/Src/main.obj
@@ -663,6 +687,30 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.s: Drivers/STM32F1xx_HAL_
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.s
 .PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.s
+
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.obj: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.obj
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.obj
+
+# target to build an object file
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.obj
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.obj
+
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.i: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.i
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.i
+
+# target to preprocess a source file
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.i
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.i
+
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.s: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.s
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.s
+
+# target to generate assembly for a file
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.s
+.PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c.s
 
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.obj: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c.obj
 .PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.obj
@@ -4024,269 +4072,53 @@ Lib/Lvgl/src/widgets/lv_textarea.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/Lvgl/src/widgets/lv_textarea.c.s
 .PHONY : Lib/Lvgl/src/widgets/lv_textarea.c.s
 
-Lib/WaveShare1in54v2/DEV_Config.obj: Lib/WaveShare1in54v2/DEV_Config.c.obj
-.PHONY : Lib/WaveShare1in54v2/DEV_Config.obj
+Lib/mlcd/mlcd.obj: Lib/mlcd/mlcd.c.obj
+.PHONY : Lib/mlcd/mlcd.obj
 
 # target to build an object file
-Lib/WaveShare1in54v2/DEV_Config.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/DEV_Config.c.obj
-.PHONY : Lib/WaveShare1in54v2/DEV_Config.c.obj
+Lib/mlcd/mlcd.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/mlcd/mlcd.c.obj
+.PHONY : Lib/mlcd/mlcd.c.obj
 
-Lib/WaveShare1in54v2/DEV_Config.i: Lib/WaveShare1in54v2/DEV_Config.c.i
-.PHONY : Lib/WaveShare1in54v2/DEV_Config.i
+Lib/mlcd/mlcd.i: Lib/mlcd/mlcd.c.i
+.PHONY : Lib/mlcd/mlcd.i
 
 # target to preprocess a source file
-Lib/WaveShare1in54v2/DEV_Config.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/DEV_Config.c.i
-.PHONY : Lib/WaveShare1in54v2/DEV_Config.c.i
+Lib/mlcd/mlcd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/mlcd/mlcd.c.i
+.PHONY : Lib/mlcd/mlcd.c.i
 
-Lib/WaveShare1in54v2/DEV_Config.s: Lib/WaveShare1in54v2/DEV_Config.c.s
-.PHONY : Lib/WaveShare1in54v2/DEV_Config.s
+Lib/mlcd/mlcd.s: Lib/mlcd/mlcd.c.s
+.PHONY : Lib/mlcd/mlcd.s
 
 # target to generate assembly for a file
-Lib/WaveShare1in54v2/DEV_Config.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/DEV_Config.c.s
-.PHONY : Lib/WaveShare1in54v2/DEV_Config.c.s
+Lib/mlcd/mlcd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/mlcd/mlcd.c.s
+.PHONY : Lib/mlcd/mlcd.c.s
 
-Lib/WaveShare1in54v2/EPD_1in54_V2.obj: Lib/WaveShare1in54v2/EPD_1in54_V2.c.obj
-.PHONY : Lib/WaveShare1in54v2/EPD_1in54_V2.obj
+Lib/wm8960/WM8960.obj: Lib/wm8960/WM8960.c.obj
+.PHONY : Lib/wm8960/WM8960.obj
 
 # target to build an object file
-Lib/WaveShare1in54v2/EPD_1in54_V2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/EPD_1in54_V2.c.obj
-.PHONY : Lib/WaveShare1in54v2/EPD_1in54_V2.c.obj
+Lib/wm8960/WM8960.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/wm8960/WM8960.c.obj
+.PHONY : Lib/wm8960/WM8960.c.obj
 
-Lib/WaveShare1in54v2/EPD_1in54_V2.i: Lib/WaveShare1in54v2/EPD_1in54_V2.c.i
-.PHONY : Lib/WaveShare1in54v2/EPD_1in54_V2.i
-
-# target to preprocess a source file
-Lib/WaveShare1in54v2/EPD_1in54_V2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/EPD_1in54_V2.c.i
-.PHONY : Lib/WaveShare1in54v2/EPD_1in54_V2.c.i
-
-Lib/WaveShare1in54v2/EPD_1in54_V2.s: Lib/WaveShare1in54v2/EPD_1in54_V2.c.s
-.PHONY : Lib/WaveShare1in54v2/EPD_1in54_V2.s
-
-# target to generate assembly for a file
-Lib/WaveShare1in54v2/EPD_1in54_V2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/EPD_1in54_V2.c.s
-.PHONY : Lib/WaveShare1in54v2/EPD_1in54_V2.c.s
-
-Lib/WaveShare1in54v2/Fonts/font12.obj: Lib/WaveShare1in54v2/Fonts/font12.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12.obj
-
-# target to build an object file
-Lib/WaveShare1in54v2/Fonts/font12.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font12.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12.c.obj
-
-Lib/WaveShare1in54v2/Fonts/font12.i: Lib/WaveShare1in54v2/Fonts/font12.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12.i
+Lib/wm8960/WM8960.i: Lib/wm8960/WM8960.c.i
+.PHONY : Lib/wm8960/WM8960.i
 
 # target to preprocess a source file
-Lib/WaveShare1in54v2/Fonts/font12.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font12.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12.c.i
+Lib/wm8960/WM8960.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/wm8960/WM8960.c.i
+.PHONY : Lib/wm8960/WM8960.c.i
 
-Lib/WaveShare1in54v2/Fonts/font12.s: Lib/WaveShare1in54v2/Fonts/font12.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12.s
-
-# target to generate assembly for a file
-Lib/WaveShare1in54v2/Fonts/font12.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font12.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12.c.s
-
-Lib/WaveShare1in54v2/Fonts/font12CN.obj: Lib/WaveShare1in54v2/Fonts/font12CN.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12CN.obj
-
-# target to build an object file
-Lib/WaveShare1in54v2/Fonts/font12CN.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font12CN.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12CN.c.obj
-
-Lib/WaveShare1in54v2/Fonts/font12CN.i: Lib/WaveShare1in54v2/Fonts/font12CN.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12CN.i
-
-# target to preprocess a source file
-Lib/WaveShare1in54v2/Fonts/font12CN.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font12CN.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12CN.c.i
-
-Lib/WaveShare1in54v2/Fonts/font12CN.s: Lib/WaveShare1in54v2/Fonts/font12CN.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12CN.s
+Lib/wm8960/WM8960.s: Lib/wm8960/WM8960.c.s
+.PHONY : Lib/wm8960/WM8960.s
 
 # target to generate assembly for a file
-Lib/WaveShare1in54v2/Fonts/font12CN.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font12CN.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font12CN.c.s
-
-Lib/WaveShare1in54v2/Fonts/font16.obj: Lib/WaveShare1in54v2/Fonts/font16.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font16.obj
-
-# target to build an object file
-Lib/WaveShare1in54v2/Fonts/font16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font16.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font16.c.obj
-
-Lib/WaveShare1in54v2/Fonts/font16.i: Lib/WaveShare1in54v2/Fonts/font16.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font16.i
-
-# target to preprocess a source file
-Lib/WaveShare1in54v2/Fonts/font16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font16.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font16.c.i
-
-Lib/WaveShare1in54v2/Fonts/font16.s: Lib/WaveShare1in54v2/Fonts/font16.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font16.s
-
-# target to generate assembly for a file
-Lib/WaveShare1in54v2/Fonts/font16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font16.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font16.c.s
-
-Lib/WaveShare1in54v2/Fonts/font20.obj: Lib/WaveShare1in54v2/Fonts/font20.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font20.obj
-
-# target to build an object file
-Lib/WaveShare1in54v2/Fonts/font20.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font20.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font20.c.obj
-
-Lib/WaveShare1in54v2/Fonts/font20.i: Lib/WaveShare1in54v2/Fonts/font20.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font20.i
-
-# target to preprocess a source file
-Lib/WaveShare1in54v2/Fonts/font20.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font20.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font20.c.i
-
-Lib/WaveShare1in54v2/Fonts/font20.s: Lib/WaveShare1in54v2/Fonts/font20.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font20.s
-
-# target to generate assembly for a file
-Lib/WaveShare1in54v2/Fonts/font20.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font20.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font20.c.s
-
-Lib/WaveShare1in54v2/Fonts/font24.obj: Lib/WaveShare1in54v2/Fonts/font24.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24.obj
-
-# target to build an object file
-Lib/WaveShare1in54v2/Fonts/font24.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font24.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24.c.obj
-
-Lib/WaveShare1in54v2/Fonts/font24.i: Lib/WaveShare1in54v2/Fonts/font24.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24.i
-
-# target to preprocess a source file
-Lib/WaveShare1in54v2/Fonts/font24.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font24.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24.c.i
-
-Lib/WaveShare1in54v2/Fonts/font24.s: Lib/WaveShare1in54v2/Fonts/font24.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24.s
-
-# target to generate assembly for a file
-Lib/WaveShare1in54v2/Fonts/font24.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font24.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24.c.s
-
-Lib/WaveShare1in54v2/Fonts/font24CN.obj: Lib/WaveShare1in54v2/Fonts/font24CN.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24CN.obj
-
-# target to build an object file
-Lib/WaveShare1in54v2/Fonts/font24CN.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font24CN.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24CN.c.obj
-
-Lib/WaveShare1in54v2/Fonts/font24CN.i: Lib/WaveShare1in54v2/Fonts/font24CN.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24CN.i
-
-# target to preprocess a source file
-Lib/WaveShare1in54v2/Fonts/font24CN.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font24CN.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24CN.c.i
-
-Lib/WaveShare1in54v2/Fonts/font24CN.s: Lib/WaveShare1in54v2/Fonts/font24CN.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24CN.s
-
-# target to generate assembly for a file
-Lib/WaveShare1in54v2/Fonts/font24CN.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font24CN.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font24CN.c.s
-
-Lib/WaveShare1in54v2/Fonts/font8.obj: Lib/WaveShare1in54v2/Fonts/font8.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font8.obj
-
-# target to build an object file
-Lib/WaveShare1in54v2/Fonts/font8.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font8.c.obj
-.PHONY : Lib/WaveShare1in54v2/Fonts/font8.c.obj
-
-Lib/WaveShare1in54v2/Fonts/font8.i: Lib/WaveShare1in54v2/Fonts/font8.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font8.i
-
-# target to preprocess a source file
-Lib/WaveShare1in54v2/Fonts/font8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font8.c.i
-.PHONY : Lib/WaveShare1in54v2/Fonts/font8.c.i
-
-Lib/WaveShare1in54v2/Fonts/font8.s: Lib/WaveShare1in54v2/Fonts/font8.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font8.s
-
-# target to generate assembly for a file
-Lib/WaveShare1in54v2/Fonts/font8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Fonts/font8.c.s
-.PHONY : Lib/WaveShare1in54v2/Fonts/font8.c.s
-
-Lib/WaveShare1in54v2/GUI_Paint.obj: Lib/WaveShare1in54v2/GUI_Paint.c.obj
-.PHONY : Lib/WaveShare1in54v2/GUI_Paint.obj
-
-# target to build an object file
-Lib/WaveShare1in54v2/GUI_Paint.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/GUI_Paint.c.obj
-.PHONY : Lib/WaveShare1in54v2/GUI_Paint.c.obj
-
-Lib/WaveShare1in54v2/GUI_Paint.i: Lib/WaveShare1in54v2/GUI_Paint.c.i
-.PHONY : Lib/WaveShare1in54v2/GUI_Paint.i
-
-# target to preprocess a source file
-Lib/WaveShare1in54v2/GUI_Paint.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/GUI_Paint.c.i
-.PHONY : Lib/WaveShare1in54v2/GUI_Paint.c.i
-
-Lib/WaveShare1in54v2/GUI_Paint.s: Lib/WaveShare1in54v2/GUI_Paint.c.s
-.PHONY : Lib/WaveShare1in54v2/GUI_Paint.s
-
-# target to generate assembly for a file
-Lib/WaveShare1in54v2/GUI_Paint.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/GUI_Paint.c.s
-.PHONY : Lib/WaveShare1in54v2/GUI_Paint.c.s
-
-Lib/WaveShare1in54v2/Imgs/ImageData.obj: Lib/WaveShare1in54v2/Imgs/ImageData.c.obj
-.PHONY : Lib/WaveShare1in54v2/Imgs/ImageData.obj
-
-# target to build an object file
-Lib/WaveShare1in54v2/Imgs/ImageData.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Imgs/ImageData.c.obj
-.PHONY : Lib/WaveShare1in54v2/Imgs/ImageData.c.obj
-
-Lib/WaveShare1in54v2/Imgs/ImageData.i: Lib/WaveShare1in54v2/Imgs/ImageData.c.i
-.PHONY : Lib/WaveShare1in54v2/Imgs/ImageData.i
-
-# target to preprocess a source file
-Lib/WaveShare1in54v2/Imgs/ImageData.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Imgs/ImageData.c.i
-.PHONY : Lib/WaveShare1in54v2/Imgs/ImageData.c.i
-
-Lib/WaveShare1in54v2/Imgs/ImageData.s: Lib/WaveShare1in54v2/Imgs/ImageData.c.s
-.PHONY : Lib/WaveShare1in54v2/Imgs/ImageData.s
-
-# target to generate assembly for a file
-Lib/WaveShare1in54v2/Imgs/ImageData.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/WaveShare1in54v2/Imgs/ImageData.c.s
-.PHONY : Lib/WaveShare1in54v2/Imgs/ImageData.c.s
+Lib/wm8960/WM8960.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/Lib/wm8960/WM8960.c.s
+.PHONY : Lib/wm8960/WM8960.c.s
 
 Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.obj: Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c.obj
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.obj
@@ -4912,557 +4744,509 @@ USB_DEVICE/Target/usbd_conf.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/USB_DEVICE/Target/usbd_conf.c.s
 .PHONY : USB_DEVICE/Target/usbd_conf.c.s
 
-User/Src/CustomFonts/custom_yaheiBold_18.obj: User/Src/CustomFonts/custom_yaheiBold_18.c.obj
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_18.obj
+User/WM8960Apps.obj: User/WM8960Apps.c.obj
+.PHONY : User/WM8960Apps.obj
 
 # target to build an object file
-User/Src/CustomFonts/custom_yaheiBold_18.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yaheiBold_18.c.obj
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_18.c.obj
+User/WM8960Apps.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/WM8960Apps.c.obj
+.PHONY : User/WM8960Apps.c.obj
 
-User/Src/CustomFonts/custom_yaheiBold_18.i: User/Src/CustomFonts/custom_yaheiBold_18.c.i
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_18.i
+User/WM8960Apps.i: User/WM8960Apps.c.i
+.PHONY : User/WM8960Apps.i
 
 # target to preprocess a source file
-User/Src/CustomFonts/custom_yaheiBold_18.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yaheiBold_18.c.i
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_18.c.i
+User/WM8960Apps.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/WM8960Apps.c.i
+.PHONY : User/WM8960Apps.c.i
 
-User/Src/CustomFonts/custom_yaheiBold_18.s: User/Src/CustomFonts/custom_yaheiBold_18.c.s
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_18.s
+User/WM8960Apps.s: User/WM8960Apps.c.s
+.PHONY : User/WM8960Apps.s
 
 # target to generate assembly for a file
-User/Src/CustomFonts/custom_yaheiBold_18.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yaheiBold_18.c.s
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_18.c.s
+User/WM8960Apps.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/WM8960Apps.c.s
+.PHONY : User/WM8960Apps.c.s
 
-User/Src/CustomFonts/custom_yaheiBold_22.obj: User/Src/CustomFonts/custom_yaheiBold_22.c.obj
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_22.obj
+User/broker_app.obj: User/broker_app.c.obj
+.PHONY : User/broker_app.obj
 
 # target to build an object file
-User/Src/CustomFonts/custom_yaheiBold_22.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yaheiBold_22.c.obj
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_22.c.obj
+User/broker_app.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/broker_app.c.obj
+.PHONY : User/broker_app.c.obj
 
-User/Src/CustomFonts/custom_yaheiBold_22.i: User/Src/CustomFonts/custom_yaheiBold_22.c.i
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_22.i
+User/broker_app.i: User/broker_app.c.i
+.PHONY : User/broker_app.i
 
 # target to preprocess a source file
-User/Src/CustomFonts/custom_yaheiBold_22.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yaheiBold_22.c.i
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_22.c.i
+User/broker_app.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/broker_app.c.i
+.PHONY : User/broker_app.c.i
 
-User/Src/CustomFonts/custom_yaheiBold_22.s: User/Src/CustomFonts/custom_yaheiBold_22.c.s
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_22.s
+User/broker_app.s: User/broker_app.c.s
+.PHONY : User/broker_app.s
 
 # target to generate assembly for a file
-User/Src/CustomFonts/custom_yaheiBold_22.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yaheiBold_22.c.s
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_22.c.s
+User/broker_app.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/broker_app.c.s
+.PHONY : User/broker_app.c.s
 
-User/Src/CustomFonts/custom_yaheiBold_26.obj: User/Src/CustomFonts/custom_yaheiBold_26.c.obj
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_26.obj
+User/bsp_delay.obj: User/bsp_delay.c.obj
+.PHONY : User/bsp_delay.obj
 
 # target to build an object file
-User/Src/CustomFonts/custom_yaheiBold_26.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yaheiBold_26.c.obj
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_26.c.obj
+User/bsp_delay.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/bsp_delay.c.obj
+.PHONY : User/bsp_delay.c.obj
 
-User/Src/CustomFonts/custom_yaheiBold_26.i: User/Src/CustomFonts/custom_yaheiBold_26.c.i
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_26.i
+User/bsp_delay.i: User/bsp_delay.c.i
+.PHONY : User/bsp_delay.i
 
 # target to preprocess a source file
-User/Src/CustomFonts/custom_yaheiBold_26.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yaheiBold_26.c.i
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_26.c.i
+User/bsp_delay.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/bsp_delay.c.i
+.PHONY : User/bsp_delay.c.i
 
-User/Src/CustomFonts/custom_yaheiBold_26.s: User/Src/CustomFonts/custom_yaheiBold_26.c.s
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_26.s
+User/bsp_delay.s: User/bsp_delay.c.s
+.PHONY : User/bsp_delay.s
 
 # target to generate assembly for a file
-User/Src/CustomFonts/custom_yaheiBold_26.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yaheiBold_26.c.s
-.PHONY : User/Src/CustomFonts/custom_yaheiBold_26.c.s
+User/bsp_delay.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/bsp_delay.c.s
+.PHONY : User/bsp_delay.c.s
 
-User/Src/CustomFonts/custom_yahei_18.obj: User/Src/CustomFonts/custom_yahei_18.c.obj
-.PHONY : User/Src/CustomFonts/custom_yahei_18.obj
+User/bsp_key.obj: User/bsp_key.c.obj
+.PHONY : User/bsp_key.obj
 
 # target to build an object file
-User/Src/CustomFonts/custom_yahei_18.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_18.c.obj
-.PHONY : User/Src/CustomFonts/custom_yahei_18.c.obj
+User/bsp_key.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/bsp_key.c.obj
+.PHONY : User/bsp_key.c.obj
 
-User/Src/CustomFonts/custom_yahei_18.i: User/Src/CustomFonts/custom_yahei_18.c.i
-.PHONY : User/Src/CustomFonts/custom_yahei_18.i
+User/bsp_key.i: User/bsp_key.c.i
+.PHONY : User/bsp_key.i
 
 # target to preprocess a source file
-User/Src/CustomFonts/custom_yahei_18.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_18.c.i
-.PHONY : User/Src/CustomFonts/custom_yahei_18.c.i
+User/bsp_key.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/bsp_key.c.i
+.PHONY : User/bsp_key.c.i
 
-User/Src/CustomFonts/custom_yahei_18.s: User/Src/CustomFonts/custom_yahei_18.c.s
-.PHONY : User/Src/CustomFonts/custom_yahei_18.s
+User/bsp_key.s: User/bsp_key.c.s
+.PHONY : User/bsp_key.s
 
 # target to generate assembly for a file
-User/Src/CustomFonts/custom_yahei_18.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_18.c.s
-.PHONY : User/Src/CustomFonts/custom_yahei_18.c.s
+User/bsp_key.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/bsp_key.c.s
+.PHONY : User/bsp_key.c.s
 
-User/Src/CustomFonts/custom_yahei_22.obj: User/Src/CustomFonts/custom_yahei_22.c.obj
-.PHONY : User/Src/CustomFonts/custom_yahei_22.obj
+User/bsp_usart.obj: User/bsp_usart.c.obj
+.PHONY : User/bsp_usart.obj
 
 # target to build an object file
-User/Src/CustomFonts/custom_yahei_22.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_22.c.obj
-.PHONY : User/Src/CustomFonts/custom_yahei_22.c.obj
+User/bsp_usart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/bsp_usart.c.obj
+.PHONY : User/bsp_usart.c.obj
 
-User/Src/CustomFonts/custom_yahei_22.i: User/Src/CustomFonts/custom_yahei_22.c.i
-.PHONY : User/Src/CustomFonts/custom_yahei_22.i
+User/bsp_usart.i: User/bsp_usart.c.i
+.PHONY : User/bsp_usart.i
 
 # target to preprocess a source file
-User/Src/CustomFonts/custom_yahei_22.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_22.c.i
-.PHONY : User/Src/CustomFonts/custom_yahei_22.c.i
+User/bsp_usart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/bsp_usart.c.i
+.PHONY : User/bsp_usart.c.i
 
-User/Src/CustomFonts/custom_yahei_22.s: User/Src/CustomFonts/custom_yahei_22.c.s
-.PHONY : User/Src/CustomFonts/custom_yahei_22.s
+User/bsp_usart.s: User/bsp_usart.c.s
+.PHONY : User/bsp_usart.s
 
 # target to generate assembly for a file
-User/Src/CustomFonts/custom_yahei_22.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_22.c.s
-.PHONY : User/Src/CustomFonts/custom_yahei_22.c.s
+User/bsp_usart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/bsp_usart.c.s
+.PHONY : User/bsp_usart.c.s
 
-User/Src/CustomFonts/custom_yahei_26.obj: User/Src/CustomFonts/custom_yahei_26.c.obj
-.PHONY : User/Src/CustomFonts/custom_yahei_26.obj
+User/fops.obj: User/fops.c.obj
+.PHONY : User/fops.obj
 
 # target to build an object file
-User/Src/CustomFonts/custom_yahei_26.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_26.c.obj
-.PHONY : User/Src/CustomFonts/custom_yahei_26.c.obj
+User/fops.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/fops.c.obj
+.PHONY : User/fops.c.obj
 
-User/Src/CustomFonts/custom_yahei_26.i: User/Src/CustomFonts/custom_yahei_26.c.i
-.PHONY : User/Src/CustomFonts/custom_yahei_26.i
+User/fops.i: User/fops.c.i
+.PHONY : User/fops.i
 
 # target to preprocess a source file
-User/Src/CustomFonts/custom_yahei_26.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_26.c.i
-.PHONY : User/Src/CustomFonts/custom_yahei_26.c.i
+User/fops.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/fops.c.i
+.PHONY : User/fops.c.i
 
-User/Src/CustomFonts/custom_yahei_26.s: User/Src/CustomFonts/custom_yahei_26.c.s
-.PHONY : User/Src/CustomFonts/custom_yahei_26.s
+User/fops.s: User/fops.c.s
+.PHONY : User/fops.s
 
 # target to generate assembly for a file
-User/Src/CustomFonts/custom_yahei_26.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/CustomFonts/custom_yahei_26.c.s
-.PHONY : User/Src/CustomFonts/custom_yahei_26.c.s
+User/fops.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/fops.c.s
+.PHONY : User/fops.c.s
 
-User/Src/Img/me.obj: User/Src/Img/me.c.obj
-.PHONY : User/Src/Img/me.obj
+User/gui/CustomFonts/custom_yaheiBold_18.obj: User/gui/CustomFonts/custom_yaheiBold_18.c.obj
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_18.obj
 
 # target to build an object file
-User/Src/Img/me.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me.c.obj
-.PHONY : User/Src/Img/me.c.obj
+User/gui/CustomFonts/custom_yaheiBold_18.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yaheiBold_18.c.obj
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_18.c.obj
 
-User/Src/Img/me.i: User/Src/Img/me.c.i
-.PHONY : User/Src/Img/me.i
+User/gui/CustomFonts/custom_yaheiBold_18.i: User/gui/CustomFonts/custom_yaheiBold_18.c.i
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_18.i
 
 # target to preprocess a source file
-User/Src/Img/me.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me.c.i
-.PHONY : User/Src/Img/me.c.i
+User/gui/CustomFonts/custom_yaheiBold_18.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yaheiBold_18.c.i
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_18.c.i
 
-User/Src/Img/me.s: User/Src/Img/me.c.s
-.PHONY : User/Src/Img/me.s
+User/gui/CustomFonts/custom_yaheiBold_18.s: User/gui/CustomFonts/custom_yaheiBold_18.c.s
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_18.s
 
 # target to generate assembly for a file
-User/Src/Img/me.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me.c.s
-.PHONY : User/Src/Img/me.c.s
+User/gui/CustomFonts/custom_yaheiBold_18.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yaheiBold_18.c.s
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_18.c.s
 
-User/Src/Img/me2.obj: User/Src/Img/me2.c.obj
-.PHONY : User/Src/Img/me2.obj
+User/gui/CustomFonts/custom_yaheiBold_22.obj: User/gui/CustomFonts/custom_yaheiBold_22.c.obj
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_22.obj
 
 # target to build an object file
-User/Src/Img/me2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.obj
-.PHONY : User/Src/Img/me2.c.obj
+User/gui/CustomFonts/custom_yaheiBold_22.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yaheiBold_22.c.obj
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_22.c.obj
 
-User/Src/Img/me2.i: User/Src/Img/me2.c.i
-.PHONY : User/Src/Img/me2.i
+User/gui/CustomFonts/custom_yaheiBold_22.i: User/gui/CustomFonts/custom_yaheiBold_22.c.i
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_22.i
 
 # target to preprocess a source file
-User/Src/Img/me2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.i
-.PHONY : User/Src/Img/me2.c.i
+User/gui/CustomFonts/custom_yaheiBold_22.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yaheiBold_22.c.i
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_22.c.i
 
-User/Src/Img/me2.s: User/Src/Img/me2.c.s
-.PHONY : User/Src/Img/me2.s
+User/gui/CustomFonts/custom_yaheiBold_22.s: User/gui/CustomFonts/custom_yaheiBold_22.c.s
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_22.s
 
 # target to generate assembly for a file
-User/Src/Img/me2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/Img/me2.c.s
-.PHONY : User/Src/Img/me2.c.s
+User/gui/CustomFonts/custom_yaheiBold_22.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yaheiBold_22.c.s
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_22.c.s
 
-User/Src/audio.obj: User/Src/audio.c.obj
-.PHONY : User/Src/audio.obj
+User/gui/CustomFonts/custom_yaheiBold_26.obj: User/gui/CustomFonts/custom_yaheiBold_26.c.obj
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_26.obj
 
 # target to build an object file
-User/Src/audio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.obj
-.PHONY : User/Src/audio.c.obj
+User/gui/CustomFonts/custom_yaheiBold_26.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yaheiBold_26.c.obj
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_26.c.obj
 
-User/Src/audio.i: User/Src/audio.c.i
-.PHONY : User/Src/audio.i
+User/gui/CustomFonts/custom_yaheiBold_26.i: User/gui/CustomFonts/custom_yaheiBold_26.c.i
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_26.i
 
 # target to preprocess a source file
-User/Src/audio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.i
-.PHONY : User/Src/audio.c.i
+User/gui/CustomFonts/custom_yaheiBold_26.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yaheiBold_26.c.i
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_26.c.i
 
-User/Src/audio.s: User/Src/audio.c.s
-.PHONY : User/Src/audio.s
+User/gui/CustomFonts/custom_yaheiBold_26.s: User/gui/CustomFonts/custom_yaheiBold_26.c.s
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_26.s
 
 # target to generate assembly for a file
-User/Src/audio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/audio.c.s
-.PHONY : User/Src/audio.c.s
+User/gui/CustomFonts/custom_yaheiBold_26.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yaheiBold_26.c.s
+.PHONY : User/gui/CustomFonts/custom_yaheiBold_26.c.s
 
-User/Src/broker_app.obj: User/Src/broker_app.c.obj
-.PHONY : User/Src/broker_app.obj
+User/gui/CustomFonts/custom_yahei_18.obj: User/gui/CustomFonts/custom_yahei_18.c.obj
+.PHONY : User/gui/CustomFonts/custom_yahei_18.obj
 
 # target to build an object file
-User/Src/broker_app.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.obj
-.PHONY : User/Src/broker_app.c.obj
+User/gui/CustomFonts/custom_yahei_18.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yahei_18.c.obj
+.PHONY : User/gui/CustomFonts/custom_yahei_18.c.obj
 
-User/Src/broker_app.i: User/Src/broker_app.c.i
-.PHONY : User/Src/broker_app.i
+User/gui/CustomFonts/custom_yahei_18.i: User/gui/CustomFonts/custom_yahei_18.c.i
+.PHONY : User/gui/CustomFonts/custom_yahei_18.i
 
 # target to preprocess a source file
-User/Src/broker_app.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.i
-.PHONY : User/Src/broker_app.c.i
+User/gui/CustomFonts/custom_yahei_18.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yahei_18.c.i
+.PHONY : User/gui/CustomFonts/custom_yahei_18.c.i
 
-User/Src/broker_app.s: User/Src/broker_app.c.s
-.PHONY : User/Src/broker_app.s
+User/gui/CustomFonts/custom_yahei_18.s: User/gui/CustomFonts/custom_yahei_18.c.s
+.PHONY : User/gui/CustomFonts/custom_yahei_18.s
 
 # target to generate assembly for a file
-User/Src/broker_app.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/broker_app.c.s
-.PHONY : User/Src/broker_app.c.s
+User/gui/CustomFonts/custom_yahei_18.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yahei_18.c.s
+.PHONY : User/gui/CustomFonts/custom_yahei_18.c.s
 
-User/Src/bsp_delay.obj: User/Src/bsp_delay.c.obj
-.PHONY : User/Src/bsp_delay.obj
+User/gui/CustomFonts/custom_yahei_22.obj: User/gui/CustomFonts/custom_yahei_22.c.obj
+.PHONY : User/gui/CustomFonts/custom_yahei_22.obj
 
 # target to build an object file
-User/Src/bsp_delay.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.obj
-.PHONY : User/Src/bsp_delay.c.obj
+User/gui/CustomFonts/custom_yahei_22.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yahei_22.c.obj
+.PHONY : User/gui/CustomFonts/custom_yahei_22.c.obj
 
-User/Src/bsp_delay.i: User/Src/bsp_delay.c.i
-.PHONY : User/Src/bsp_delay.i
+User/gui/CustomFonts/custom_yahei_22.i: User/gui/CustomFonts/custom_yahei_22.c.i
+.PHONY : User/gui/CustomFonts/custom_yahei_22.i
 
 # target to preprocess a source file
-User/Src/bsp_delay.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.i
-.PHONY : User/Src/bsp_delay.c.i
+User/gui/CustomFonts/custom_yahei_22.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yahei_22.c.i
+.PHONY : User/gui/CustomFonts/custom_yahei_22.c.i
 
-User/Src/bsp_delay.s: User/Src/bsp_delay.c.s
-.PHONY : User/Src/bsp_delay.s
+User/gui/CustomFonts/custom_yahei_22.s: User/gui/CustomFonts/custom_yahei_22.c.s
+.PHONY : User/gui/CustomFonts/custom_yahei_22.s
 
 # target to generate assembly for a file
-User/Src/bsp_delay.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_delay.c.s
-.PHONY : User/Src/bsp_delay.c.s
+User/gui/CustomFonts/custom_yahei_22.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yahei_22.c.s
+.PHONY : User/gui/CustomFonts/custom_yahei_22.c.s
 
-User/Src/bsp_ink_paper.obj: User/Src/bsp_ink_paper.c.obj
-.PHONY : User/Src/bsp_ink_paper.obj
+User/gui/CustomFonts/custom_yahei_26.obj: User/gui/CustomFonts/custom_yahei_26.c.obj
+.PHONY : User/gui/CustomFonts/custom_yahei_26.obj
 
 # target to build an object file
-User/Src/bsp_ink_paper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.obj
-.PHONY : User/Src/bsp_ink_paper.c.obj
+User/gui/CustomFonts/custom_yahei_26.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yahei_26.c.obj
+.PHONY : User/gui/CustomFonts/custom_yahei_26.c.obj
 
-User/Src/bsp_ink_paper.i: User/Src/bsp_ink_paper.c.i
-.PHONY : User/Src/bsp_ink_paper.i
+User/gui/CustomFonts/custom_yahei_26.i: User/gui/CustomFonts/custom_yahei_26.c.i
+.PHONY : User/gui/CustomFonts/custom_yahei_26.i
 
 # target to preprocess a source file
-User/Src/bsp_ink_paper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.i
-.PHONY : User/Src/bsp_ink_paper.c.i
+User/gui/CustomFonts/custom_yahei_26.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yahei_26.c.i
+.PHONY : User/gui/CustomFonts/custom_yahei_26.c.i
 
-User/Src/bsp_ink_paper.s: User/Src/bsp_ink_paper.c.s
-.PHONY : User/Src/bsp_ink_paper.s
+User/gui/CustomFonts/custom_yahei_26.s: User/gui/CustomFonts/custom_yahei_26.c.s
+.PHONY : User/gui/CustomFonts/custom_yahei_26.s
 
 # target to generate assembly for a file
-User/Src/bsp_ink_paper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_ink_paper.c.s
-.PHONY : User/Src/bsp_ink_paper.c.s
+User/gui/CustomFonts/custom_yahei_26.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/CustomFonts/custom_yahei_26.c.s
+.PHONY : User/gui/CustomFonts/custom_yahei_26.c.s
 
-User/Src/bsp_key.obj: User/Src/bsp_key.c.obj
-.PHONY : User/Src/bsp_key.obj
+User/gui/Img/me.obj: User/gui/Img/me.c.obj
+.PHONY : User/gui/Img/me.obj
 
 # target to build an object file
-User/Src/bsp_key.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.obj
-.PHONY : User/Src/bsp_key.c.obj
+User/gui/Img/me.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/Img/me.c.obj
+.PHONY : User/gui/Img/me.c.obj
 
-User/Src/bsp_key.i: User/Src/bsp_key.c.i
-.PHONY : User/Src/bsp_key.i
+User/gui/Img/me.i: User/gui/Img/me.c.i
+.PHONY : User/gui/Img/me.i
 
 # target to preprocess a source file
-User/Src/bsp_key.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.i
-.PHONY : User/Src/bsp_key.c.i
+User/gui/Img/me.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/Img/me.c.i
+.PHONY : User/gui/Img/me.c.i
 
-User/Src/bsp_key.s: User/Src/bsp_key.c.s
-.PHONY : User/Src/bsp_key.s
+User/gui/Img/me.s: User/gui/Img/me.c.s
+.PHONY : User/gui/Img/me.s
 
 # target to generate assembly for a file
-User/Src/bsp_key.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_key.c.s
-.PHONY : User/Src/bsp_key.c.s
+User/gui/Img/me.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/Img/me.c.s
+.PHONY : User/gui/Img/me.c.s
 
-User/Src/bsp_usart.obj: User/Src/bsp_usart.c.obj
-.PHONY : User/Src/bsp_usart.obj
+User/gui/Img/me2.obj: User/gui/Img/me2.c.obj
+.PHONY : User/gui/Img/me2.obj
 
 # target to build an object file
-User/Src/bsp_usart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.obj
-.PHONY : User/Src/bsp_usart.c.obj
+User/gui/Img/me2.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/Img/me2.c.obj
+.PHONY : User/gui/Img/me2.c.obj
 
-User/Src/bsp_usart.i: User/Src/bsp_usart.c.i
-.PHONY : User/Src/bsp_usart.i
+User/gui/Img/me2.i: User/gui/Img/me2.c.i
+.PHONY : User/gui/Img/me2.i
 
 # target to preprocess a source file
-User/Src/bsp_usart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.i
-.PHONY : User/Src/bsp_usart.c.i
+User/gui/Img/me2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/Img/me2.c.i
+.PHONY : User/gui/Img/me2.c.i
 
-User/Src/bsp_usart.s: User/Src/bsp_usart.c.s
-.PHONY : User/Src/bsp_usart.s
+User/gui/Img/me2.s: User/gui/Img/me2.c.s
+.PHONY : User/gui/Img/me2.s
 
 # target to generate assembly for a file
-User/Src/bsp_usart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_usart.c.s
-.PHONY : User/Src/bsp_usart.c.s
+User/gui/Img/me2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/Img/me2.c.s
+.PHONY : User/gui/Img/me2.c.s
 
-User/Src/bsp_vs10xx.obj: User/Src/bsp_vs10xx.c.obj
-.PHONY : User/Src/bsp_vs10xx.obj
+User/gui/gui_setup.obj: User/gui/gui_setup.c.obj
+.PHONY : User/gui/gui_setup.obj
 
 # target to build an object file
-User/Src/bsp_vs10xx.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.obj
-.PHONY : User/Src/bsp_vs10xx.c.obj
+User/gui/gui_setup.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/gui_setup.c.obj
+.PHONY : User/gui/gui_setup.c.obj
 
-User/Src/bsp_vs10xx.i: User/Src/bsp_vs10xx.c.i
-.PHONY : User/Src/bsp_vs10xx.i
+User/gui/gui_setup.i: User/gui/gui_setup.c.i
+.PHONY : User/gui/gui_setup.i
 
 # target to preprocess a source file
-User/Src/bsp_vs10xx.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.i
-.PHONY : User/Src/bsp_vs10xx.c.i
+User/gui/gui_setup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/gui_setup.c.i
+.PHONY : User/gui/gui_setup.c.i
 
-User/Src/bsp_vs10xx.s: User/Src/bsp_vs10xx.c.s
-.PHONY : User/Src/bsp_vs10xx.s
+User/gui/gui_setup.s: User/gui/gui_setup.c.s
+.PHONY : User/gui/gui_setup.s
 
 # target to generate assembly for a file
-User/Src/bsp_vs10xx.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/bsp_vs10xx.c.s
-.PHONY : User/Src/bsp_vs10xx.c.s
+User/gui/gui_setup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/gui_setup.c.s
+.PHONY : User/gui/gui_setup.c.s
 
-User/Src/fops.obj: User/Src/fops.c.obj
-.PHONY : User/Src/fops.obj
+User/gui/pages/page_audio.obj: User/gui/pages/page_audio.c.obj
+.PHONY : User/gui/pages/page_audio.obj
 
 # target to build an object file
-User/Src/fops.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.obj
-.PHONY : User/Src/fops.c.obj
+User/gui/pages/page_audio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_audio.c.obj
+.PHONY : User/gui/pages/page_audio.c.obj
 
-User/Src/fops.i: User/Src/fops.c.i
-.PHONY : User/Src/fops.i
+User/gui/pages/page_audio.i: User/gui/pages/page_audio.c.i
+.PHONY : User/gui/pages/page_audio.i
 
 # target to preprocess a source file
-User/Src/fops.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.i
-.PHONY : User/Src/fops.c.i
+User/gui/pages/page_audio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_audio.c.i
+.PHONY : User/gui/pages/page_audio.c.i
 
-User/Src/fops.s: User/Src/fops.c.s
-.PHONY : User/Src/fops.s
+User/gui/pages/page_audio.s: User/gui/pages/page_audio.c.s
+.PHONY : User/gui/pages/page_audio.s
 
 # target to generate assembly for a file
-User/Src/fops.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/fops.c.s
-.PHONY : User/Src/fops.c.s
+User/gui/pages/page_audio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_audio.c.s
+.PHONY : User/gui/pages/page_audio.c.s
 
-User/Src/gui_setup.obj: User/Src/gui_setup.c.obj
-.PHONY : User/Src/gui_setup.obj
+User/gui/pages/page_bind.obj: User/gui/pages/page_bind.c.obj
+.PHONY : User/gui/pages/page_bind.obj
 
 # target to build an object file
-User/Src/gui_setup.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.obj
-.PHONY : User/Src/gui_setup.c.obj
+User/gui/pages/page_bind.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_bind.c.obj
+.PHONY : User/gui/pages/page_bind.c.obj
 
-User/Src/gui_setup.i: User/Src/gui_setup.c.i
-.PHONY : User/Src/gui_setup.i
+User/gui/pages/page_bind.i: User/gui/pages/page_bind.c.i
+.PHONY : User/gui/pages/page_bind.i
 
 # target to preprocess a source file
-User/Src/gui_setup.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.i
-.PHONY : User/Src/gui_setup.c.i
+User/gui/pages/page_bind.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_bind.c.i
+.PHONY : User/gui/pages/page_bind.c.i
 
-User/Src/gui_setup.s: User/Src/gui_setup.c.s
-.PHONY : User/Src/gui_setup.s
+User/gui/pages/page_bind.s: User/gui/pages/page_bind.c.s
+.PHONY : User/gui/pages/page_bind.s
 
 # target to generate assembly for a file
-User/Src/gui_setup.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/Src/gui_setup.c.s
-.PHONY : User/Src/gui_setup.c.s
+User/gui/pages/page_bind.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_bind.c.s
+.PHONY : User/gui/pages/page_bind.c.s
 
-User/gui_pages/page_audio.obj: User/gui_pages/page_audio.c.obj
-.PHONY : User/gui_pages/page_audio.obj
+User/gui/pages/page_filelist.obj: User/gui/pages/page_filelist.c.obj
+.PHONY : User/gui/pages/page_filelist.obj
 
 # target to build an object file
-User/gui_pages/page_audio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.obj
-.PHONY : User/gui_pages/page_audio.c.obj
+User/gui/pages/page_filelist.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_filelist.c.obj
+.PHONY : User/gui/pages/page_filelist.c.obj
 
-User/gui_pages/page_audio.i: User/gui_pages/page_audio.c.i
-.PHONY : User/gui_pages/page_audio.i
+User/gui/pages/page_filelist.i: User/gui/pages/page_filelist.c.i
+.PHONY : User/gui/pages/page_filelist.i
 
 # target to preprocess a source file
-User/gui_pages/page_audio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.i
-.PHONY : User/gui_pages/page_audio.c.i
+User/gui/pages/page_filelist.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_filelist.c.i
+.PHONY : User/gui/pages/page_filelist.c.i
 
-User/gui_pages/page_audio.s: User/gui_pages/page_audio.c.s
-.PHONY : User/gui_pages/page_audio.s
+User/gui/pages/page_filelist.s: User/gui/pages/page_filelist.c.s
+.PHONY : User/gui/pages/page_filelist.s
 
 # target to generate assembly for a file
-User/gui_pages/page_audio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_audio.c.s
-.PHONY : User/gui_pages/page_audio.c.s
+User/gui/pages/page_filelist.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_filelist.c.s
+.PHONY : User/gui/pages/page_filelist.c.s
 
-User/gui_pages/page_bind.obj: User/gui_pages/page_bind.c.obj
-.PHONY : User/gui_pages/page_bind.obj
+User/gui/pages/page_main.obj: User/gui/pages/page_main.c.obj
+.PHONY : User/gui/pages/page_main.obj
 
 # target to build an object file
-User/gui_pages/page_bind.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.obj
-.PHONY : User/gui_pages/page_bind.c.obj
+User/gui/pages/page_main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_main.c.obj
+.PHONY : User/gui/pages/page_main.c.obj
 
-User/gui_pages/page_bind.i: User/gui_pages/page_bind.c.i
-.PHONY : User/gui_pages/page_bind.i
+User/gui/pages/page_main.i: User/gui/pages/page_main.c.i
+.PHONY : User/gui/pages/page_main.i
 
 # target to preprocess a source file
-User/gui_pages/page_bind.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.i
-.PHONY : User/gui_pages/page_bind.c.i
+User/gui/pages/page_main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_main.c.i
+.PHONY : User/gui/pages/page_main.c.i
 
-User/gui_pages/page_bind.s: User/gui_pages/page_bind.c.s
-.PHONY : User/gui_pages/page_bind.s
+User/gui/pages/page_main.s: User/gui/pages/page_main.c.s
+.PHONY : User/gui/pages/page_main.s
 
 # target to generate assembly for a file
-User/gui_pages/page_bind.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_bind.c.s
-.PHONY : User/gui_pages/page_bind.c.s
+User/gui/pages/page_main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_main.c.s
+.PHONY : User/gui/pages/page_main.c.s
 
-User/gui_pages/page_filelist.obj: User/gui_pages/page_filelist.c.obj
-.PHONY : User/gui_pages/page_filelist.obj
+User/gui/pages/page_main_select.obj: User/gui/pages/page_main_select.c.obj
+.PHONY : User/gui/pages/page_main_select.obj
 
 # target to build an object file
-User/gui_pages/page_filelist.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.obj
-.PHONY : User/gui_pages/page_filelist.c.obj
+User/gui/pages/page_main_select.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_main_select.c.obj
+.PHONY : User/gui/pages/page_main_select.c.obj
 
-User/gui_pages/page_filelist.i: User/gui_pages/page_filelist.c.i
-.PHONY : User/gui_pages/page_filelist.i
+User/gui/pages/page_main_select.i: User/gui/pages/page_main_select.c.i
+.PHONY : User/gui/pages/page_main_select.i
 
 # target to preprocess a source file
-User/gui_pages/page_filelist.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.i
-.PHONY : User/gui_pages/page_filelist.c.i
+User/gui/pages/page_main_select.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_main_select.c.i
+.PHONY : User/gui/pages/page_main_select.c.i
 
-User/gui_pages/page_filelist.s: User/gui_pages/page_filelist.c.s
-.PHONY : User/gui_pages/page_filelist.s
+User/gui/pages/page_main_select.s: User/gui/pages/page_main_select.c.s
+.PHONY : User/gui/pages/page_main_select.s
 
 # target to generate assembly for a file
-User/gui_pages/page_filelist.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_filelist.c.s
-.PHONY : User/gui_pages/page_filelist.c.s
+User/gui/pages/page_main_select.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_main_select.c.s
+.PHONY : User/gui/pages/page_main_select.c.s
 
-User/gui_pages/page_main.obj: User/gui_pages/page_main.c.obj
-.PHONY : User/gui_pages/page_main.obj
+User/gui/pages/page_play.obj: User/gui/pages/page_play.c.obj
+.PHONY : User/gui/pages/page_play.obj
 
 # target to build an object file
-User/gui_pages/page_main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main.c.obj
-.PHONY : User/gui_pages/page_main.c.obj
+User/gui/pages/page_play.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_play.c.obj
+.PHONY : User/gui/pages/page_play.c.obj
 
-User/gui_pages/page_main.i: User/gui_pages/page_main.c.i
-.PHONY : User/gui_pages/page_main.i
-
-# target to preprocess a source file
-User/gui_pages/page_main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main.c.i
-.PHONY : User/gui_pages/page_main.c.i
-
-User/gui_pages/page_main.s: User/gui_pages/page_main.c.s
-.PHONY : User/gui_pages/page_main.s
-
-# target to generate assembly for a file
-User/gui_pages/page_main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main.c.s
-.PHONY : User/gui_pages/page_main.c.s
-
-User/gui_pages/page_main_select.obj: User/gui_pages/page_main_select.c.obj
-.PHONY : User/gui_pages/page_main_select.obj
-
-# target to build an object file
-User/gui_pages/page_main_select.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main_select.c.obj
-.PHONY : User/gui_pages/page_main_select.c.obj
-
-User/gui_pages/page_main_select.i: User/gui_pages/page_main_select.c.i
-.PHONY : User/gui_pages/page_main_select.i
+User/gui/pages/page_play.i: User/gui/pages/page_play.c.i
+.PHONY : User/gui/pages/page_play.i
 
 # target to preprocess a source file
-User/gui_pages/page_main_select.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main_select.c.i
-.PHONY : User/gui_pages/page_main_select.c.i
+User/gui/pages/page_play.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_play.c.i
+.PHONY : User/gui/pages/page_play.c.i
 
-User/gui_pages/page_main_select.s: User/gui_pages/page_main_select.c.s
-.PHONY : User/gui_pages/page_main_select.s
-
-# target to generate assembly for a file
-User/gui_pages/page_main_select.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_main_select.c.s
-.PHONY : User/gui_pages/page_main_select.c.s
-
-User/gui_pages/page_play.obj: User/gui_pages/page_play.c.obj
-.PHONY : User/gui_pages/page_play.obj
-
-# target to build an object file
-User/gui_pages/page_play.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.obj
-.PHONY : User/gui_pages/page_play.c.obj
-
-User/gui_pages/page_play.i: User/gui_pages/page_play.c.i
-.PHONY : User/gui_pages/page_play.i
-
-# target to preprocess a source file
-User/gui_pages/page_play.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.i
-.PHONY : User/gui_pages/page_play.c.i
-
-User/gui_pages/page_play.s: User/gui_pages/page_play.c.s
-.PHONY : User/gui_pages/page_play.s
+User/gui/pages/page_play.s: User/gui/pages/page_play.c.s
+.PHONY : User/gui/pages/page_play.s
 
 # target to generate assembly for a file
-User/gui_pages/page_play.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui_pages/page_play.c.s
-.PHONY : User/gui_pages/page_play.c.s
+User/gui/pages/page_play.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ink-Paper.elf.dir\build.make CMakeFiles/Ink-Paper.elf.dir/User/gui/pages/page_play.c.s
+.PHONY : User/gui/pages/page_play.c.s
 
 # Help Target
 help:
@@ -5482,6 +5266,9 @@ help:
 	@echo ... Core/Src/gpio.obj
 	@echo ... Core/Src/gpio.i
 	@echo ... Core/Src/gpio.s
+	@echo ... Core/Src/i2s.obj
+	@echo ... Core/Src/i2s.i
+	@echo ... Core/Src/i2s.s
 	@echo ... Core/Src/main.obj
 	@echo ... Core/Src/main.i
 	@echo ... Core/Src/main.s
@@ -5540,6 +5327,9 @@ help:
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.obj
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.i
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.s
+	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.obj
+	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.i
+	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.s
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.obj
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.i
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.s
@@ -5960,39 +5750,12 @@ help:
 	@echo ... Lib/Lvgl/src/widgets/lv_textarea.obj
 	@echo ... Lib/Lvgl/src/widgets/lv_textarea.i
 	@echo ... Lib/Lvgl/src/widgets/lv_textarea.s
-	@echo ... Lib/WaveShare1in54v2/DEV_Config.obj
-	@echo ... Lib/WaveShare1in54v2/DEV_Config.i
-	@echo ... Lib/WaveShare1in54v2/DEV_Config.s
-	@echo ... Lib/WaveShare1in54v2/EPD_1in54_V2.obj
-	@echo ... Lib/WaveShare1in54v2/EPD_1in54_V2.i
-	@echo ... Lib/WaveShare1in54v2/EPD_1in54_V2.s
-	@echo ... Lib/WaveShare1in54v2/Fonts/font12.obj
-	@echo ... Lib/WaveShare1in54v2/Fonts/font12.i
-	@echo ... Lib/WaveShare1in54v2/Fonts/font12.s
-	@echo ... Lib/WaveShare1in54v2/Fonts/font12CN.obj
-	@echo ... Lib/WaveShare1in54v2/Fonts/font12CN.i
-	@echo ... Lib/WaveShare1in54v2/Fonts/font12CN.s
-	@echo ... Lib/WaveShare1in54v2/Fonts/font16.obj
-	@echo ... Lib/WaveShare1in54v2/Fonts/font16.i
-	@echo ... Lib/WaveShare1in54v2/Fonts/font16.s
-	@echo ... Lib/WaveShare1in54v2/Fonts/font20.obj
-	@echo ... Lib/WaveShare1in54v2/Fonts/font20.i
-	@echo ... Lib/WaveShare1in54v2/Fonts/font20.s
-	@echo ... Lib/WaveShare1in54v2/Fonts/font24.obj
-	@echo ... Lib/WaveShare1in54v2/Fonts/font24.i
-	@echo ... Lib/WaveShare1in54v2/Fonts/font24.s
-	@echo ... Lib/WaveShare1in54v2/Fonts/font24CN.obj
-	@echo ... Lib/WaveShare1in54v2/Fonts/font24CN.i
-	@echo ... Lib/WaveShare1in54v2/Fonts/font24CN.s
-	@echo ... Lib/WaveShare1in54v2/Fonts/font8.obj
-	@echo ... Lib/WaveShare1in54v2/Fonts/font8.i
-	@echo ... Lib/WaveShare1in54v2/Fonts/font8.s
-	@echo ... Lib/WaveShare1in54v2/GUI_Paint.obj
-	@echo ... Lib/WaveShare1in54v2/GUI_Paint.i
-	@echo ... Lib/WaveShare1in54v2/GUI_Paint.s
-	@echo ... Lib/WaveShare1in54v2/Imgs/ImageData.obj
-	@echo ... Lib/WaveShare1in54v2/Imgs/ImageData.i
-	@echo ... Lib/WaveShare1in54v2/Imgs/ImageData.s
+	@echo ... Lib/mlcd/mlcd.obj
+	@echo ... Lib/mlcd/mlcd.i
+	@echo ... Lib/mlcd/mlcd.s
+	@echo ... Lib/wm8960/WM8960.obj
+	@echo ... Lib/wm8960/WM8960.i
+	@echo ... Lib/wm8960/WM8960.s
 	@echo ... Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.obj
 	@echo ... Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.i
 	@echo ... Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.s
@@ -6071,75 +5834,69 @@ help:
 	@echo ... USB_DEVICE/Target/usbd_conf.obj
 	@echo ... USB_DEVICE/Target/usbd_conf.i
 	@echo ... USB_DEVICE/Target/usbd_conf.s
-	@echo ... User/Src/CustomFonts/custom_yaheiBold_18.obj
-	@echo ... User/Src/CustomFonts/custom_yaheiBold_18.i
-	@echo ... User/Src/CustomFonts/custom_yaheiBold_18.s
-	@echo ... User/Src/CustomFonts/custom_yaheiBold_22.obj
-	@echo ... User/Src/CustomFonts/custom_yaheiBold_22.i
-	@echo ... User/Src/CustomFonts/custom_yaheiBold_22.s
-	@echo ... User/Src/CustomFonts/custom_yaheiBold_26.obj
-	@echo ... User/Src/CustomFonts/custom_yaheiBold_26.i
-	@echo ... User/Src/CustomFonts/custom_yaheiBold_26.s
-	@echo ... User/Src/CustomFonts/custom_yahei_18.obj
-	@echo ... User/Src/CustomFonts/custom_yahei_18.i
-	@echo ... User/Src/CustomFonts/custom_yahei_18.s
-	@echo ... User/Src/CustomFonts/custom_yahei_22.obj
-	@echo ... User/Src/CustomFonts/custom_yahei_22.i
-	@echo ... User/Src/CustomFonts/custom_yahei_22.s
-	@echo ... User/Src/CustomFonts/custom_yahei_26.obj
-	@echo ... User/Src/CustomFonts/custom_yahei_26.i
-	@echo ... User/Src/CustomFonts/custom_yahei_26.s
-	@echo ... User/Src/Img/me.obj
-	@echo ... User/Src/Img/me.i
-	@echo ... User/Src/Img/me.s
-	@echo ... User/Src/Img/me2.obj
-	@echo ... User/Src/Img/me2.i
-	@echo ... User/Src/Img/me2.s
-	@echo ... User/Src/audio.obj
-	@echo ... User/Src/audio.i
-	@echo ... User/Src/audio.s
-	@echo ... User/Src/broker_app.obj
-	@echo ... User/Src/broker_app.i
-	@echo ... User/Src/broker_app.s
-	@echo ... User/Src/bsp_delay.obj
-	@echo ... User/Src/bsp_delay.i
-	@echo ... User/Src/bsp_delay.s
-	@echo ... User/Src/bsp_ink_paper.obj
-	@echo ... User/Src/bsp_ink_paper.i
-	@echo ... User/Src/bsp_ink_paper.s
-	@echo ... User/Src/bsp_key.obj
-	@echo ... User/Src/bsp_key.i
-	@echo ... User/Src/bsp_key.s
-	@echo ... User/Src/bsp_usart.obj
-	@echo ... User/Src/bsp_usart.i
-	@echo ... User/Src/bsp_usart.s
-	@echo ... User/Src/bsp_vs10xx.obj
-	@echo ... User/Src/bsp_vs10xx.i
-	@echo ... User/Src/bsp_vs10xx.s
-	@echo ... User/Src/fops.obj
-	@echo ... User/Src/fops.i
-	@echo ... User/Src/fops.s
-	@echo ... User/Src/gui_setup.obj
-	@echo ... User/Src/gui_setup.i
-	@echo ... User/Src/gui_setup.s
-	@echo ... User/gui_pages/page_audio.obj
-	@echo ... User/gui_pages/page_audio.i
-	@echo ... User/gui_pages/page_audio.s
-	@echo ... User/gui_pages/page_bind.obj
-	@echo ... User/gui_pages/page_bind.i
-	@echo ... User/gui_pages/page_bind.s
-	@echo ... User/gui_pages/page_filelist.obj
-	@echo ... User/gui_pages/page_filelist.i
-	@echo ... User/gui_pages/page_filelist.s
-	@echo ... User/gui_pages/page_main.obj
-	@echo ... User/gui_pages/page_main.i
-	@echo ... User/gui_pages/page_main.s
-	@echo ... User/gui_pages/page_main_select.obj
-	@echo ... User/gui_pages/page_main_select.i
-	@echo ... User/gui_pages/page_main_select.s
-	@echo ... User/gui_pages/page_play.obj
-	@echo ... User/gui_pages/page_play.i
-	@echo ... User/gui_pages/page_play.s
+	@echo ... User/WM8960Apps.obj
+	@echo ... User/WM8960Apps.i
+	@echo ... User/WM8960Apps.s
+	@echo ... User/broker_app.obj
+	@echo ... User/broker_app.i
+	@echo ... User/broker_app.s
+	@echo ... User/bsp_delay.obj
+	@echo ... User/bsp_delay.i
+	@echo ... User/bsp_delay.s
+	@echo ... User/bsp_key.obj
+	@echo ... User/bsp_key.i
+	@echo ... User/bsp_key.s
+	@echo ... User/bsp_usart.obj
+	@echo ... User/bsp_usart.i
+	@echo ... User/bsp_usart.s
+	@echo ... User/fops.obj
+	@echo ... User/fops.i
+	@echo ... User/fops.s
+	@echo ... User/gui/CustomFonts/custom_yaheiBold_18.obj
+	@echo ... User/gui/CustomFonts/custom_yaheiBold_18.i
+	@echo ... User/gui/CustomFonts/custom_yaheiBold_18.s
+	@echo ... User/gui/CustomFonts/custom_yaheiBold_22.obj
+	@echo ... User/gui/CustomFonts/custom_yaheiBold_22.i
+	@echo ... User/gui/CustomFonts/custom_yaheiBold_22.s
+	@echo ... User/gui/CustomFonts/custom_yaheiBold_26.obj
+	@echo ... User/gui/CustomFonts/custom_yaheiBold_26.i
+	@echo ... User/gui/CustomFonts/custom_yaheiBold_26.s
+	@echo ... User/gui/CustomFonts/custom_yahei_18.obj
+	@echo ... User/gui/CustomFonts/custom_yahei_18.i
+	@echo ... User/gui/CustomFonts/custom_yahei_18.s
+	@echo ... User/gui/CustomFonts/custom_yahei_22.obj
+	@echo ... User/gui/CustomFonts/custom_yahei_22.i
+	@echo ... User/gui/CustomFonts/custom_yahei_22.s
+	@echo ... User/gui/CustomFonts/custom_yahei_26.obj
+	@echo ... User/gui/CustomFonts/custom_yahei_26.i
+	@echo ... User/gui/CustomFonts/custom_yahei_26.s
+	@echo ... User/gui/Img/me.obj
+	@echo ... User/gui/Img/me.i
+	@echo ... User/gui/Img/me.s
+	@echo ... User/gui/Img/me2.obj
+	@echo ... User/gui/Img/me2.i
+	@echo ... User/gui/Img/me2.s
+	@echo ... User/gui/gui_setup.obj
+	@echo ... User/gui/gui_setup.i
+	@echo ... User/gui/gui_setup.s
+	@echo ... User/gui/pages/page_audio.obj
+	@echo ... User/gui/pages/page_audio.i
+	@echo ... User/gui/pages/page_audio.s
+	@echo ... User/gui/pages/page_bind.obj
+	@echo ... User/gui/pages/page_bind.i
+	@echo ... User/gui/pages/page_bind.s
+	@echo ... User/gui/pages/page_filelist.obj
+	@echo ... User/gui/pages/page_filelist.i
+	@echo ... User/gui/pages/page_filelist.s
+	@echo ... User/gui/pages/page_main.obj
+	@echo ... User/gui/pages/page_main.i
+	@echo ... User/gui/pages/page_main.s
+	@echo ... User/gui/pages/page_main_select.obj
+	@echo ... User/gui/pages/page_main_select.i
+	@echo ... User/gui/pages/page_main_select.s
+	@echo ... User/gui/pages/page_play.obj
+	@echo ... User/gui/pages/page_play.i
+	@echo ... User/gui/pages/page_play.s
 .PHONY : help
 
 

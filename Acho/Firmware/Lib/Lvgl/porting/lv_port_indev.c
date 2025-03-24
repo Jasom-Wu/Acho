@@ -11,7 +11,7 @@
  *********************/
 #include "lv_port_indev.h"
 #include "lvgl.h"
-#include "bsp_key.h"
+#include "../../../User/bsp_key.h"
 
 /*********************
  *      DEFINES

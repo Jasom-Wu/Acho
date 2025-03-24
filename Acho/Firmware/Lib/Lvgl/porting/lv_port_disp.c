@@ -11,8 +11,7 @@
  *********************/
 #include "lv_port_disp.h"
 #include "lvgl.h"
-#include "EPD_1in54_V2.h"
-#include "GUI_Paint.h"
+#include "mlcd.h"
 /*********************
  *      DEFINES
  *********************/
@@ -129,6 +128,11 @@ void lv_port_disp_init(void)
 /*Initialize your display and the required peripherals.*/
 static void disp_init(void)
 {
+  HAL_GPIO_WritePin(MLCD_CS_GPIO_Port, MLCD_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(MLCD_DISP_GPIO_Port, MLCD_DISP_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(MLCD_MODE_GPIO_Port, MLCD_MODE_Pin, GPIO_PIN_SET);///use extcomin
+  HAL_GPIO_WritePin(MLCD_EXTCOMIN_GPIO_Port, MLCD_EXTCOMIN_Pin, GPIO_PIN_RESET);
+  mlcd_Init();
     /*You code here*/
 }
 
@@ -145,7 +149,8 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
         for(x = area->x1; x <= area->x2; x++) {
             /*Put a pixel to the display. For example:*/
             /*put_px(x, y, *color_p)*/
-            Paint_SetPixel(x,y,*(uint8_t *)(color_p));
+
+          mlcd_DrawPixel(x,y,color_p->ch.blue<<2|color_p->ch.green<<1|color_p->ch.red);
             color_p++;
 //            if(color_p->full==0)
 //            {
@@ -153,8 +158,9 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
 //            }
         }
     }
-		if(disp_drv->draw_buf->flushing_last)//Custom_EPD_FillColor(area->x1,area->y1,area->x2,area->y2,BlackImage);
-		    EPD_1IN54_V2_DisplayPart(BlackImage);
+//		if(disp_drv->draw_buf->flushing_last)//Custom_EPD_FillColor(area->x1,area->y1,area->x2,area->y2,BlackImage);
+//      mlcd_fill(0);
+      mlcd_Refresh();
 		
 		//printf("x1:%d	y1:%d \nx2:%d	y2:%d \n",area->x1,area->y1,area->x2,area->y2);
 		

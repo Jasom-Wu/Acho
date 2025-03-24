@@ -1,4 +1,4 @@
-#���ļ���ģ���Զ�����! �������!
+#此文件从模板自动生成! 请勿更改!
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_VERSION 1)
 cmake_minimum_required(VERSION 3.24)
@@ -49,19 +49,20 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(Core/Inc FATFS/Target FATFS/App USB_DEVICE/App USB_DEVICE/Target Drivers/STM32F1xx_HAL_Driver/Inc Drivers/STM32F1xx_HAL_Driver/Inc/Legacy Middlewares/Third_Party/FreeRTOS/Source/include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 Middlewares/Third_Party/FatFs/src Middlewares/Third_Party/FatFs/src/drivers Middlewares/ST/STM32_USB_Device_Library/Core/Inc Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include
+include_directories(
         Lib/Lvgl/src
         Lib/Lvgl/porting
-        Lib/Lvgl
-        Lib/WaveShare1in54v2
-        User/Inc
-        User/gui_pages
-        Lib/WaveShare1in54v2/Fonts
-        )
+        Lib/LvgL
+        Lib/mlcd
+        Lib/wm8960
+        User
+        User/gui
+        User/gui/pages
+        Core/Inc FATFS/Target FATFS/App USB_DEVICE/App USB_DEVICE/Target Drivers/STM32F1xx_HAL_Driver/Inc Drivers/STM32F1xx_HAL_Driver/Inc/Legacy Middlewares/Third_Party/FreeRTOS/Source/include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 Middlewares/Third_Party/FatFs/src Middlewares/Third_Party/FatFs/src/drivers Middlewares/ST/STM32_USB_Device_Library/Core/Inc Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include)
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "FATFS/*.*" "Middlewares/*.*" "USB_DEVICE/*.*" "Drivers/*.*" "Lib/*.*" "User/*.*")
+file(GLOB_RECURSE SOURCES "User/*.*" "Lib/*.*" "Core/*.*" "FATFS/*.*" "Middlewares/*.*" "USB_DEVICE/*.*" "Drivers/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103VETX_FLASH.ld)
 

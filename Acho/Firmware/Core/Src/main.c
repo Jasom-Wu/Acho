@@ -15,18 +15,15 @@
   *
   ******************************************************************************
   */
-	#include "bsp_ink_paper.h"
-    #include "fops.h"
-    #include "audio.h"
-    #include "ff.h"
-    #include "bsp_vs10xx.h"
-    #include "bsp_delay.h"
+
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
 #include "dma.h"
 #include "fatfs.h"
+#include "i2s.h"
 #include "sdio.h"
 #include "spi.h"
 #include "tim.h"
@@ -36,7 +33,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "../../User/fops.h"
+#include "ff.h"
+#include "../../User/bsp_delay.h"
+#include "lvgl.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,13 +104,13 @@ int main(void)
   MX_USART1_UART_Init();
   MX_SDIO_SD_Init();
   MX_FATFS_Init();
-  MX_SPI2_Init();
   MX_TIM4_Init();
+  MX_I2S2_Init();
   /* USER CODE BEGIN 2 */
     delay_init();
     printf("%d",f_mount(&SDFatFS,SDPath,0));
     exf_showfree((uint8_t*)"0:");
-    VS_HD_Reset();  // 初始化一定要硬复位VS1053b 不然DREQ一直为低
+    delay_ms(1000);
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
@@ -170,7 +170,8 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_I2S2|RCC_PERIPHCLK_USB;
+  PeriphClkInit.I2s2ClockSelection = RCC_I2S2CLKSOURCE_SYSCLK;
   PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
@@ -199,10 +200,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
-    if (htim->Instance == TIM1) {  // 1ms
-        lv_tick_inc(1);
-
-    }
+  if (htim->Instance == TIM1) {  // 1ms
+    lv_tick_inc(1);
+  }
   /* USER CODE END Callback 1 */
 }
 
