@@ -1,9 +1,10 @@
 # 基于Django的微型物联网平台及多媒体联网终端设计
 <div align="center">
-   <img src="docs/solid.png" style="width:35%">
-   <img src="docs/acho_pcb.png" style="width:35%">
+   <img src="docs/solid.jpg" style="width:35%">
+   <img src="docs/top.jpg" style="width:35%">
     <img src="docs/app.jpg" style="width:20%">
 </div>
+
 
 <div align="center">
    <img src="docs/platform.png" style="width:90%">
